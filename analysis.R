@@ -9,6 +9,7 @@ mc <- rcrea::measurements(country=country, city=city, source="eea",poll="no2", w
 ms <- rcrea::measurements(country=country, city=city, source="eea",poll="no2", with_metadata = T, deweathered=T, aggregate_level="station")
 
 l <- rcrea::locations(country=country, city=city, source="eea", with_meta = T)
+write.csv(l, file.path(dir_results, "stations.csv"), row.names = F)
 
 ms.city <- ms %>%
   left_join(l %>%
