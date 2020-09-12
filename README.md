@@ -1,6 +1,7 @@
 # 202009_uk_cities
 
 ## Stations considered
+[stations.csv](results/stations.csv)
 
 
 ## Results
