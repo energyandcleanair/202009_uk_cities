@@ -1,4 +1,4 @@
-plot_city_vs_stations <- function(ms.city, mc.city, running_days, file=NULL){
+plot_city_vs_stations <- function(ms.city, mc.city, running_days, unit=NULL, file=NULL){
 
   d.plot <- bind_rows(ms.city %>% mutate(alpha=0),
                       ms.city %>%
@@ -26,8 +26,8 @@ plot_city_vs_stations <- function(ms.city, mc.city, running_days, file=NULL){
                color=rcrea::CREAtheme.pal_crea['Turquoise']) +
     rcrea::theme_crea() +
     labs(x=NULL,
-         y=paste0("Anomaly [", unit, "]"),
-         subtitle=paste0("Weather-corrected values. ", running_days,"-day running average"),
+         y=paste0(unit),
+         subtitle=paste0("NO2 weather-corrected values. ", running_days,"-day running average"),
          caption="Source: CREA based on EEA")
 
   p <- p +
