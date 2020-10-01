@@ -2,6 +2,11 @@
 dir_results <- "results"
 dir.create(dir_results, showWarnings = F)
 
+dir_results_plots <- file.path(dir_results, "plots")
+dir.create(dir_results_plots, showWarnings = F)
+
+dir_results_data <- file.path(dir_results, "data")
+dir.create(dir_results_data, showWarnings = F)
 
 country <- "GB"
 city <- c(
