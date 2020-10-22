@@ -177,3 +177,21 @@ utils.export.meas <- function( ms.city, mc.city, filename, running_days=30){
 
 
 }
+
+
+utils.anomaly_rel_counterfactual <- function(m, process_observation="city_day_mad", process_anomaly="anomaly_gbm_lag1_city_mad"){
+
+  recoder <- c("observation","anomaly")
+  names(recoder) <- c(process_observation, process_anomaly)
+
+  m %>%
+    filter(process_id %in% c(process_observation, process_anomaly)) %>%
+    mutate(process_id=recode(process_id, !!!recoder)) %>%
+    mutate(unit=recode(unit, "Δ µg/m3"="µg/m3")) %>%
+    tidyr::pivot_wider(names_from=process_id, values_from=value) %>%
+    mutate(value=anomaly/(observation-anomaly),
+           process_id="anomaly_rel_counterfactual") %>%
+    filter(!is.na(value)) %>%
+    select(-c(observation, anomaly))
+
+}

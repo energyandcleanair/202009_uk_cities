@@ -31,13 +31,22 @@ ms.city <- ms %>%
               dplyr::select(id, city, type),
             by=c("region_id"="id")) %>%
   mutate(city=tolower(city),
-         level=paste0("station-", type))
+         level=paste0("station-", type)) %>%
+  # Adding relative vs counterfactual
+  rbind(utils.anomaly_rel_counterfactual(.,
+                                         process_observation = "station_day_mad",
+                                         process_anomaly="anomaly_gbm_lag1_station")
+
+  )
+
+
+
 
 mc.city <- mc %>%
   mutate(city=tolower(region_id),
-         level="city")
-
-
+         level="city") %>%
+  # Adding relative vs counterfactual
+  rbind(utils.anomaly_rel_counterfactual(.))
 
 
 plot_poll("no2", ms.city, mc.city)
@@ -49,41 +58,25 @@ plot_poll("o3", ms.city, mc.city)
 
 # Transportation ----------------------------------------------------------
 tc <- rcrea::transport.tomtom_congestion(cities=tibble(city=city, country="GB"))
+plot_traffic_poll(mc.city, tc)
 
-d.plot <- mc.city %>%
-  mutate(date=lubridate::date(date),
-         value=value/100) %>%
-  filter(process_id=="anomaly_percent_gbm_lag1_city_mad",
-         poll=="no2") %>%
+
+# Other charts ------------------------------------------------------------
+plot_corr_traffic_poll(mc.city, tc)
+
+
+# Other tables ------------------------------------------------------------
+
+mc.city %>%
+  filter(process_id=="anomaly_rel_counterfactual") %>%
   utils.add_lockdown() %>%
-  right_join(tc %>%
-               mutate(date=lubridate::date(date),
-                      region_id=tolower(city)) %>%
-               select(-c(value, weekday, week, city)),
-             by=c("region_id","country","date")) %>%
-  rename(no2=value, traffic=diffRatio) %>%
-  mutate(movement=lubridate::date(movement),
-         first_measures=lubridate::date(first_measures))
+  filter(date>=lubridate::date(movement),
+         date<=lubridate::date(movement)+lubridate::days(61)) %>%
+  # rcrea::utils.rolling_average("day", 30, "value") %>%
+  group_by(region_id, poll) %>%
+  summarise(min=min(value/100, na.rm=T),
+            avg_1month=mean(value/100, na.rm=T)) %>%
+  tidyr::pivot_wider(names_from=poll, values_from=c(min, avg_1month)) %>%
+  write_csv(file.path("results","data","lockdown_impact.csv"), na = "")
 
-d.plot <- d.plot %>%
-  tidyr::pivot_longer(c(no2, traffic), names_to="indicator") %>%
-  rcrea::utils.rolling_average("day",14,"value")
-
-ggplot(d.plot) +
-  geom_line(aes(date,value,col=indicator)) +
-  facet_wrap(~region_id) +
-  scale_y_continuous(labels=scales::percent) +
-  theme_light() +
-  geom_vline(data=d.plot, aes(xintercept=movement, linetype="National lockdown"),
-             color=rcrea::CREAtheme.pal_crea['Turquoise']) +
-  geom_vline(data=d.plot, aes(xintercept=partial_restriction, linetype="Partial restrictions"),
-                 color=rcrea::CREAtheme.pal_crea['Turquoise']) +
-  scale_linetype_manual(values=c("dashed","dotted"), name=NULL) +
-  labs(
-    subtitle="2020 vs 2019 NO2 weather-corrected concentration and traffic congestion levels",
-    caption="Source: CREA based on DEFRA and TomTom",
-       y="Year-on-year variation",
-    x=NULL)
-
-ggsave(file.path(dir_results_plots, "no2.traffic.png"), width=10, height=8)
 

@@ -73,6 +73,13 @@ plot_poll <- function(poll, ms.city, mc.city){
   #                        file=file.path(dir_results_plots,
   #                                       paste0("plot_",poll,"_anomaly.png"))))
 
+  poll_name <- recode(poll,
+                      "no2"="NO2",
+                      "pm25"="PM2.5",
+                      "pm10"="PM10",
+                      "o3"="O3",
+                      .default = poll)
+
   (plot_city_vs_stations(ms.city=ms.city %>% filter(poll==!!poll,
                                                     process_id=="anomaly_offsetted_gbm_lag1_station"),
                          mc.city=mc.city %>% filter(poll==!!poll,
@@ -84,15 +91,6 @@ plot_poll <- function(poll, ms.city, mc.city){
                          plot_add=ylim(0, NA)))
 
   (plot_city_vs_stations(ms.city=ms.city %>% filter(poll==!!poll,
-                                                    process_id=="anomaly_percent_gbm_lag1_station"),
-                         mc.city=mc.city %>% filter(poll==!!poll,
-                                                    process_id=="anomaly_percent_gbm_lag1_city_mad"),
-                         running_days=30,
-                         unit="Anomaly [%]",
-                         file=file.path(dir_results_plots,
-                                        paste0("plot_",poll,"_anomaly_percent.png"))))
-
-  (plot_city_vs_stations(ms.city=ms.city %>% filter(poll==!!poll,
                                                     process_id=="station_day_mad") %>%
                            filter(date>="2018-01-01"),
                          mc.city=mc.city %>% filter(poll==!!poll,
@@ -100,8 +98,99 @@ plot_poll <- function(poll, ms.city, mc.city){
                            filter(date>="2018-01-01"),
                          running_days=30,
                          unit="Observed concentration [µg/m3]",
-                         subtitle="NO2 concentration levels. 30-day running average",
+                         subtitle=paste0(poll_name, " concentration levels. 30-day running average"),
                          file=file.path(dir_results_plots,
                                         paste0("plot_",poll,"_observations.png")),
                          plot_add=ylim(0, NA)))
+
+  # Version representing anomaly vs counterfactual
+  (plot_city_vs_stations(ms.city=ms.city %>% filter(poll==!!poll,
+                                                    process_id=="anomaly_percent_gbm_lag1_station"),
+                         mc.city=mc.city %>% filter(poll==!!poll,
+                                                    process_id=="anomaly_percent_gbm_lag1_city_mad"),
+                         running_days=30,
+                         unit="Anomaly [%]",
+                         file=file.path(dir_results_plots,
+                                        paste0("plot_",poll,"_anomaly_vs_average.png"))))
+
+
+
+  # Version representing anomaly vs counterfactual
+  (plot_city_vs_stations(ms.city=ms.city %>%
+                           filter(poll==!!poll,
+                                  process_id=="anomaly_rel_counterfactual") %>%
+                           mutate(value=value*100),
+                         mc.city=mc.city %>%
+                           filter(poll==!!poll,
+                                  process_id=="anomaly_rel_counterfactual") %>%
+                           mutate(value=value*100),
+                         running_days=30,
+                         unit="Anomaly [%]",
+                         file=file.path(dir_results_plots,
+                                        paste0("plot_",poll,"_anomaly_vs_counterfactual.png"))))
+}
+
+
+plot_traffic_poll <- function(mc.city, tc){
+
+  d.plot <- mc.city %>%
+    mutate(date=lubridate::date(date),
+           value=value/100) %>%
+    filter(process_id=="anomaly_percent_gbm_lag1_city_mad",
+           poll=="no2") %>%
+    utils.add_lockdown() %>%
+    right_join(tc %>%
+                 mutate(date=lubridate::date(date),
+                        region_id=tolower(city)) %>%
+                 dplyr::select(-c(value, weekday, week, city)),
+               by=c("region_id","country","date")) %>%
+    rename(no2=value, traffic=diffRatio) %>%
+    mutate(movement=lubridate::date(movement),
+           first_measures=lubridate::date(first_measures))
+
+  d.plot <- d.plot %>%
+    tidyr::pivot_longer(c(no2, traffic), names_to="indicator") %>%
+    rcrea::utils.rolling_average("day", 14, "value")
+
+  ggplot(d.plot) +
+    geom_line(aes(date,value,col=indicator)) +
+    facet_wrap(~region_id) +
+    scale_y_continuous(labels=scales::percent) +
+    theme_light() +
+    geom_vline(data=d.plot, aes(xintercept=movement, linetype="National lockdown"),
+               color=rcrea::CREAtheme.pal_crea['Turquoise']) +
+    geom_vline(data=d.plot, aes(xintercept=partial_restriction, linetype="Partial restrictions"),
+               color=rcrea::CREAtheme.pal_crea['Turquoise']) +
+    scale_linetype_manual(values=c("dashed","dotted"), name=NULL) +
+    labs(
+      subtitle="2020 vs 2019 NO2 weather-corrected concentration and traffic congestion levels",
+      caption="Source: CREA based on DEFRA and TomTom",
+      y="Year-on-year variation",
+      x=NULL)
+
+  ggsave(file.path(dir_results_plots, "no2.traffic.png"), width=10, height=8)
+
+}
+
+plot_corr_traffic_poll <- function(mc.city, tc){
+
+  d.plot <- mc.city %>%
+    mutate(date=lubridate::date(date)) %>%
+    filter(process_id=="anomaly_rel_counterfactual",
+           poll=="no2") %>%
+    utils.add_lockdown() %>%
+    right_join(tc %>%
+                 mutate(date=lubridate::date(date),
+                        region_id=tolower(city)) %>%
+                 dplyr::select(-c(value, weekday, week, city)),
+               by=c("region_id","country","date")) %>%
+    rename(no2=value, traffic=diffRatio) %>%
+    mutate(movement=lubridate::date(movement),
+           first_measures=lubridate::date(first_measures)) %>%
+    filter(date>=movement) %>%
+    rcrea::utils.rolling_average("day", 30, c("no2","traffic")) %>%
+    group_by(region_id) %>%
+    summarise_at(c("no2","traffic"), min, na.rm=T)
+
+  ggplot(d.plot) + geom_point(aes(traffic, no2))
 }
