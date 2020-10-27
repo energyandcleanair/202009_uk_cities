@@ -1,3 +1,12 @@
+require(rcrea)
+require(dplyr)
+require(ggplot2)
+require(rdefra)
+require(zoo)
+require(revgeo)
+require(openxlsx)
+require(RColorBrewer)
+require(sf)
 
 dir_results <- "results"
 dir.create(dir_results, showWarnings = F)

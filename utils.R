@@ -1,4 +1,5 @@
 utils.read.stations <- function(){
+  require(rdefra)
   ukair_catalogue(
     site_name = "",
     pollutant = 9999,
@@ -10,15 +11,19 @@ utils.read.stations <- function(){
 }
 
 utils.upload.stations <- function(){
-  s = utils.read.stations()
 
+  require(devtools)
+  devtools::install_github("hubert-thieriot/revgeo")
+  library(revgeo)
+
+  s = utils.read.stations()
   s.filtered <- s %>%
     filter(!is.na(EU.Site.ID)) %>%
     mutate(
       source="defra",
       timezone="Europe/London"
     ) %>%
-    rename(id=UK.AIR.ID,
+    dplyr::rename(id=UK.AIR.ID,
            name=Site.Name,
            type=Environment.Type)
 
@@ -26,7 +31,6 @@ utils.upload.stations <- function(){
     filter(!is.na(Latitude))
 
   # cities.google <- revgeo(s.filtered.geocoded$Longitude, s.filtered.geocoded$Latitude, provider='google', API="AIzaSyAM2hj3VbXCSjAXIjLjLH_DfPPSiV8Bhg0", output = 'frame')
-
   cities.photon <- revgeo(s.filtered.geocoded$Longitude, s.filtered.geocoded$Latitude, provider='photon', output = 'frame')
 
   s.filtered.geocoded$city <- cities.photon$city
@@ -34,12 +38,40 @@ utils.upload.stations <- function(){
   s.result <- s.filtered.geocoded %>%
     mutate(country="GB")
 
-  s.sf <- sf::st_as_sf(s.result, coords=c("Longitude","Latitude"), crs=4326) %>%
-    tibble() %>%
-    mutate(geometry=sf::st_as_text(geometry, EWKT=T))
+
+  s.result <- s.result %>%
+    mutate(city=recode(city,
+                       "Aberdeen City"="Aberdeen",
+                       "City of Edinburgh"="Edinburgh",
+                       "GLASGOW"="Glasgow",
+                       "Royal Borough of Greenwich"="Greenwich",
+                       "City of Nottingham"="Nottingham"
+                       ))
+
+  s.result$city[stringr::str_detect(s.result$city,"London Borough of *")] <- "London"
+  s.result$city[stringr::str_detect(s.result$name, "^London")] <- "London"
+
+  cities <- read.csv(file.path("data","stations_validated.csv"))
+  s.result <- s.result %>%
+    select(-c(city)) %>%
+    left_join(cities %>% distinct(id, city))
+
+
+  s.sf <- sf::st_as_sf(s.result, coords=c("Longitude","Latitude"), crs=4326)
 
   required_cols <- c("id","name","city","country","timezone","source","geometry","type")
-  s.upload <- s.sf %>% select_at(required_cols)
+
+  s.upload <- s.sf %>% tibble %>%
+    mutate(geometry=sf::st_as_text(geometry, EWKT=T)) %>%
+    select_at(required_cols)
+
+  s.sf %>%
+    cbind(., st_coordinates(.)) %>%
+    st_set_geometry(NULL) %>%
+    write.csv(file.path("results","data","stations.csv"), row.names = F)
+
+  s.sf %>% sf::st_write(file.path("results","data","stations.kml"), append=F)
+
 
   rcrea::upsert_locations(s.upload)
 
@@ -75,8 +107,8 @@ utils.read.measurements.file <- function(file){
   data.long$value <- as.numeric(data.long$value)
   data.long$date = as.POSIXct(paste(data.long$Date,data.long$Time))
 
-  data.long$unit <- data.lon$status
-  data.long$unit[stringr::str_detect(data.long$unit$unit,"ugm-3")] <- "µg/m3"
+  data.long$unit <- data.long$status
+  data.long$unit[stringr::str_detect(data.long$unit,"ugm-3")] <- "µg/m3"
   data.long$source <- "defra"
 
   return(data.long %>% dplyr::select(-c(Date,Time)))
@@ -147,16 +179,16 @@ utils.export.meas <- function( ms.city, mc.city, filename, running_days=30){
 
 
   ms.running <- ms.city %>% rcrea::utils.rolling_average("day", running_days, "value") %>%
-    select(station=region_id, city, poll, unit, date, value, type, source, process_id) %>%
+    dplyr::select(station=region_id, city, poll, unit, date, value, type, source, process_id) %>%
     arrange(station, poll, date)
 
   mc.running <- mc.city %>% rcrea::utils.rolling_average("day", running_days, "value") %>%
-    select(city=region_id, poll, unit, date, value, source, process_id) %>%
+    dplyr::select(city=region_id, poll, unit, date, value, source, process_id) %>%
     arrange(city, poll, date)
 
   format <- function(x){ x %>% mutate(poll=paste0(poll," [",unit,"]"), date=lubridate::date(date)) %>%
-    select(-c(process_id, unit)) %>%
-    pivot_wider(names_from=poll)}
+      dplyr::select(-c(process_id, unit)) %>%
+      pivot_wider(names_from=poll)}
 
   list_of_datasets <- list(
     mc.running %>% filter(process_id=="city_day_mad") %>% format(),
@@ -192,6 +224,46 @@ utils.anomaly_rel_counterfactual <- function(m, process_observation="city_day_ma
     mutate(value=anomaly/(observation-anomaly),
            process_id="anomaly_rel_counterfactual") %>%
     filter(!is.na(value)) %>%
-    select(-c(observation, anomaly))
+    dplyr::select(-c(observation, anomaly))
 
 }
+
+
+utils.anomaly_lockdown <- function(m, lockdown_running_day=7,
+                                   process_anomaly="anomaly_gbm_lag1_city_mad",
+                                   process_observation="city_day_mad"){
+
+  m.offset <- m %>%
+    filter(process_id==process_anomaly) %>%
+    dplyr::select_at(setdiff(names(.), "geometry")) %>% #running average doesn't work with geometry fields
+    # rcrea::utils.running_average(running_day) %>%
+    rcrea::utils.add_lockdown() %>%
+    filter(date>=lubridate::date(movement)-lockdown_running_day,
+           date<=lubridate::date(movement)) %>%
+    group_by(region_id, country, poll) %>%
+    dplyr::summarise(offset=mean(value, na.rm=T)) %>%
+    ungroup()
+
+
+  ren <- function(p){
+    if(p==process_anomaly){return("anomaly")}
+    if(p==process_observation){return("observation")}
+    return(p)
+  }
+
+   m %>%
+    filter(process_id %in% c(process_anomaly, process_observation)) %>%
+    rowwise() %>%
+    mutate(process_id=ren(process_id),
+           unit=gsub("Δ ","",unit)) %>%
+    tidyr::pivot_wider(names_from=process_id, values_from=value) %>%
+    left_join(m.offset) %>%
+    mutate(anomaly_lockdown=anomaly-offset,
+           anomaly_lockdown_relative=anomaly_lockdown/(observation-anomaly)) %>%
+    select(-c(anomaly,observation,offset)) %>%
+    tidyr::pivot_longer(cols=c(anomaly_lockdown, anomaly_lockdown_relative), names_to="process_id")
+
+
+}
+
+
