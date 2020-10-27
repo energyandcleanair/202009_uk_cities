@@ -7,6 +7,7 @@ require(revgeo)
 require(openxlsx)
 require(RColorBrewer)
 require(sf)
+require(ggrepel)
 
 dir_results <- "results"
 dir.create(dir_results, showWarnings = F)

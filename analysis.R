@@ -31,16 +31,16 @@ ms.city <- ms %>%
               dplyr::select(id, city, type),
             by=c("region_id"="id")) %>%
   mutate(city=tolower(city),
-         level=paste0("station-", type)) %>%
+         level=paste0("station-", type))
   # Adding anomaly vs lockdown starting date
-  rbind(utils.anomaly_lockdown(.,process_anomaly="anomaly_gbm_lag1_station"))
+  # rbind(utils.anomaly_lockdown(.,process_anomaly="anomaly_gbm_lag1_station"))
 
 
 mc.city <- mc %>%
   mutate(city=tolower(region_id),
-         level="city") %>%
+         level="city")
   # Adding anomaly vs lockdown starting date
-  rbind(utils.anomaly_lockdown(.))
+  # rbind(utils.anomaly_lockdown(.))
 
 
 plot_poll("no2", ms.city, mc.city)
@@ -57,7 +57,7 @@ plot_traffic_poll(mc.city, tc, n_day=30)
 
 
 # Other charts ------------------------------------------------------------
-plot_corr_traffic_poll(mc.city, tc)
+# plot_corr_traffic_poll(mc.city, tc)
 
 
 

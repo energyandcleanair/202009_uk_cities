@@ -221,28 +221,22 @@ plot_traffic_poll <- function(mc.city, tc, n_day){
 
 }
 
-plot_corr_traffic_poll <- function(mc.city, tc){
-
-  d.plot <- mc.city %>%
-    mutate(date=lubridate::date(date)) %>%
-    filter(process_id=="anomaly_rel_counterfactual",
-           poll=="no2") %>%
-    utils.add_lockdown() %>%
-    right_join(tc %>%
-                 mutate(date=lubridate::date(date),
-                        region_id=tolower(city)) %>%
-                 dplyr::select(-c(value, weekday, week, city)),
-               by=c("region_id","country","date")) %>%
-    dplyr::rename(no2=value, traffic=diffRatio) %>%
-    mutate(movement=lubridate::date(movement),
-           first_measures=lubridate::date(first_measures)) %>%
-    filter(date>=movement) %>%
-    rcrea::utils.rolling_average("day", 30, c("no2","traffic")) %>%
-    group_by(region_id) %>%
-    summarise_at(c("no2","traffic"), min, na.rm=T)
-
-  ggplot(d.plot) + geom_point(aes(traffic, no2))
+plot_corr_traffic_poll <- function(t.impact){
+  ggplot(t.impact %>% filter(region_id!="edinburgh"),
+         aes(x=avg_relative_traffic, y=avg_relative_no2)) +
+    geom_point() +
+    geom_text_repel(aes(label = tools::toTitleCase(region_id)),  show.legend = FALSE,
+                  box.padding = unit(0.45, "lines")) +
+    stat_smooth(method="lm", col="red") +
+    theme_light() +
+    scale_x_continuous(label=scales::percent) +
+    scale_y_continuous(label=scales::percent) +
+    labs(title="Average anomalies during lockdown",
+         y="NO2 level",
+         x="Traffic congestion",
+         caption="Source: CREA based on DEFRA and TomTom")
 }
+
 
 plot_anomaly_average <- function(m, process_anomaly="anomaly_lockdown", date_from="2020-03-23", date_to="2020-12-31", filename=paste("anomaly_average.jpg")){
   (plt <- ggplot(m %>%

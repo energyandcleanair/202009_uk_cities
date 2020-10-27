@@ -26,7 +26,7 @@ m <- rcrea::measurements(city=city,
 # devtools::reload('/Users/ht/Library/R/3.6/library/rcrea', quiet = FALSE)
 
 
-health.run <- function(m, n_day){
+health.run <- function(m, n_day, date_from, date_to){
 
   m.lockdowns <- rbind(m, utils.anomaly_lockdown(m, n_day))
 
@@ -37,8 +37,8 @@ health.run <- function(m, n_day){
       process_observation ="city_day_mad",
       process_anomaly = "anomaly_lockdown")
 
-  movement <- "2020-03-23"
-  hi.detailed <- health.impact(m.scenarios, date_from=movement, date_to="2020-05-23")
+
+  hi.detailed <- health.impact(m.scenarios, date_from=movement, date_to=date_to)
   write.csv(hi.detailed, file.path(dir_results_data,"health.details.csv"), row.names = F)
 
   hi.simplified <- health.simplify(hi.detailed)
@@ -50,9 +50,12 @@ health.run <- function(m, n_day){
   plot_causes(hi.detailed, filename=paste0("plot_causes_",n_day,"day.jpg"))
 }
 
-health.run(m,0)
-health.run(m,7)
-health.run(m,14)
-health.run(m,30)
+date_from <- "2020-03-23"
+date_to <- "2020-05-12"
+
+health.run(m, 0, date_from, date_to)
+health.run(m, 7, date_from, date_to)
+health.run(m, 14, date_from, date_to)
+health.run(m, 30, date_from, date_to)
 
 
