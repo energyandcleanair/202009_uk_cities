@@ -1,28 +1,28 @@
 "region_id","population","Outcome","Cause","Pollutant","number_central","cost.mlnUSD"
 "aberdeen",184031,"asthma emergency room visits, adults","asthma emergency room visits, adults","O3_8h",0,0
-"aberdeen",184031,"asthma emergency room visits, adults","asthma emergency room visits, adults","PM2.5",0.275070068462277,0.00018705295669078
+"aberdeen",184031,"asthma emergency room visits, adults","asthma emergency room visits, adults","PM2.5",-0.0341833561631688,-2.32453420893071e-05
 "aberdeen",184031,"asthma emergency room visits, children","asthma emergency room visits, children","O3_8h",0,0
-"aberdeen",184031,"asthma emergency room visits, children","asthma emergency room visits, children","PM2.5",0.164198822957463,0.000111658369414887
+"aberdeen",184031,"asthma emergency room visits, children","asthma emergency room visits, children","PM2.5",-0.0204021559978496,-1.38738599353921e-05
 "aberdeen",184031,"deaths","chronic obstructive pulmonary disease","O3_8h",0,0
-"aberdeen",184031,"deaths","chronic obstructive pulmonary disease","PM2.5",NA,0.0936240260654371
-"aberdeen",184031,"deaths","lower respiratory infections in children","PM2.5",0.000306765637572877,0.00257585639999819
-"aberdeen",184031,"deaths","non-communicable diseases and lower respiratory infections","NO2",6.82862040240025,9.19000223112828
-"aberdeen",184031,"deaths","non-communicable diseases and lower respiratory infections","PM2.5",0.979907011847843,1.31876529877317
-"aberdeen",184031,"disability","chronic obstructive pulmonary disease","PM2.5",0.620313556091396,0.0519698681343365
-"aberdeen",184031,"disability","diabetes","PM2.5",1.84131474456416,0.154265344565045
-"aberdeen",184031,"disability","ischaemic heart disease","PM2.5",0.208958180585192,0.0175065158321364
-"aberdeen",184031,"disability","lower respiratory infections","PM2.5",0.00461378420320735,0.000386542828681369
-"aberdeen",184031,"disability","lung cancer","PM2.5",0.0269636691326975,0.00225901613060618
-"aberdeen",184031,"disability","stroke","PM2.5",0.253007278696423,0.0211969491586329
-"aberdeen",184031,"new cases of asthma in children","new cases of asthma in children","NO2",5.44528127689682,0
-"aberdeen",184031,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.125732215076121
+"aberdeen",184031,"deaths","chronic obstructive pulmonary disease","PM2.5",NA,-0.0115915386346839
+"aberdeen",184031,"deaths","lower respiratory infections in children","PM2.5",-3.79348532696389e-05,-0.000318532203771989
+"aberdeen",184031,"deaths","non-communicable diseases and lower respiratory infections","NO2",8.86259957889818,11.9273447789018
+"aberdeen",184031,"deaths","non-communicable diseases and lower respiratory infections","PM2.5",-0.121368500307341,-0.163338525629729
+"aberdeen",184031,"disability","chronic obstructive pulmonary disease","PM2.5",-0.0768006766342779,-0.00643436049094237
+"aberdeen",184031,"disability","diabetes","PM2.5",-0.226088886204991,-0.0189417263049167
+"aberdeen",184031,"disability","ischaemic heart disease","PM2.5",-0.0257811413810778,-0.00215994395861588
+"aberdeen",184031,"disability","lower respiratory infections","PM2.5",-0.00056901795444142,-4.76723227599978e-05
+"aberdeen",184031,"disability","lung cancer","PM2.5",-0.00333713992249152,-0.00027958557412558
+"aberdeen",184031,"disability","stroke","PM2.5",-0.0313435731659233,-0.00262596447924734
+"aberdeen",184031,"new cases of asthma in children","new cases of asthma in children","NO2",6.78069848033216,0
+"aberdeen",184031,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.156567162712539
 "aberdeen",184031,"preterm births","preterm births","PM2.5",0,0
-"aberdeen",184031,"work absence (sick leave days)","work absence (sick leave days)","PM2.5",210.301905494674,0.0482372826242754
-"barnsley",71332,"asthma emergency room visits, adults","asthma emergency room visits, adults","O3_8h",1.76987148878459,0.00120354677915556
+"aberdeen",184031,"work absence (sick leave days)","work absence (sick leave days)","PM2.5",-26.1243802036988,-0.00599219064756203
+"barnsley",71332,"asthma emergency room visits, adults","asthma emergency room visits, adults","O3_8h",-0.14201279988329,-9.6571445430629e-05
 "barnsley",71332,"asthma emergency room visits, adults","asthma emergency room visits, adults","PM2.5",0,0
-"barnsley",71332,"asthma emergency room visits, children","asthma emergency room visits, children","O3_8h",0.382539185322663,0.0002601340308115
+"barnsley",71332,"asthma emergency room visits, children","asthma emergency room visits, children","O3_8h",-0.0304313843067305,-2.0693928796356e-05
 "barnsley",71332,"asthma emergency room visits, children","asthma emergency room visits, children","PM2.5",0,0
-"barnsley",71332,"deaths","chronic obstructive pulmonary disease","O3_8h",0.249041956811914,0.308854137344799
+"barnsley",71332,"deaths","chronic obstructive pulmonary disease","O3_8h",0,0
 "barnsley",71332,"deaths","chronic obstructive pulmonary disease","PM2.5",NA,0
 "barnsley",71332,"deaths","lower respiratory infections in children","PM2.5",0,0
 "barnsley",71332,"deaths","non-communicable diseases and lower respiratory infections","NO2",0,0
@@ -33,67 +33,67 @@
 "barnsley",71332,"disability","lower respiratory infections","PM2.5",0,0
 "barnsley",71332,"disability","lung cancer","PM2.5",0,0
 "barnsley",71332,"disability","stroke","PM2.5",0,0
-"barnsley",71332,"new cases of asthma in children","new cases of asthma in children","NO2",1.85180382783156,0
-"barnsley",71332,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.0427583783683601
+"barnsley",71332,"new cases of asthma in children","new cases of asthma in children","NO2",1.94692650534495,0
+"barnsley",71332,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.0449547727031162
 "barnsley",71332,"preterm births","preterm births","PM2.5",0,0
 "barnsley",71332,"work absence (sick leave days)","work absence (sick leave days)","PM2.5",0,0
-"belfast",274678,"asthma emergency room visits, adults","asthma emergency room visits, adults","O3_8h",-5.03768259711916,-0.00342572141683259
-"belfast",274678,"asthma emergency room visits, adults","asthma emergency room visits, adults","PM2.5",3.20671928073271,0.00218063101555028
-"belfast",274678,"asthma emergency room visits, children","asthma emergency room visits, children","O3_8h",-1.08249252268728,-0.000736115812586417
-"belfast",274678,"asthma emergency room visits, children","asthma emergency room visits, children","PM2.5",1.9076467978639,0.00129723664903612
-"belfast",274678,"deaths","chronic obstructive pulmonary disease","O3_8h",-0.724465907670233,-0.89846022659625
-"belfast",274678,"deaths","chronic obstructive pulmonary disease","PM2.5",NA,0.887878689697839
-"belfast",274678,"deaths","lower respiratory infections in children","PM2.5",0.00246389926394206,0.0206889231081769
-"belfast",274678,"deaths","non-communicable diseases and lower respiratory infections","NO2",17.2909872581323,23.270324328585
-"belfast",274678,"deaths","non-communicable diseases and lower respiratory infections","PM2.5",7.96810605088115,10.7235295082042
-"belfast",274678,"disability","chronic obstructive pulmonary disease","PM2.5",5.88271206153087,0.492853601388941
-"belfast",274678,"disability","diabetes","PM2.5",6.93078296748951,0.580660979195263
-"belfast",274678,"disability","ischaemic heart disease","PM2.5",1.63449521009311,0.136938004498851
-"belfast",274678,"disability","lower respiratory infections","PM2.5",0.0542429886209502,0.00454447744718913
-"belfast",274678,"disability","lung cancer","PM2.5",0.259394360790314,0.0217320588800363
-"belfast",274678,"disability","stroke","PM2.5",2.61771066767331,0.219311793006796
-"belfast",274678,"new cases of asthma in children","new cases of asthma in children","NO2",13.035275833595,0
-"belfast",274678,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.300986123827956
-"belfast",274678,"preterm births","preterm births","PM2.5",1.33642977481929,0.381280450141342
-"belfast",274678,"work absence (sick leave days)","work absence (sick leave days)","PM2.5",2430.06273629066,0.557387355713418
-"birkenhead",81230,"asthma emergency room visits, adults","asthma emergency room visits, adults","O3_8h",-1.70640030142388,-0.00116038514646004
-"birkenhead",81230,"asthma emergency room visits, adults","asthma emergency room visits, adults","PM2.5",1.08396012333595,0.000737113809359082
-"birkenhead",81230,"asthma emergency room visits, children","asthma emergency room visits, children","O3_8h",-0.369046890792308,-0.000250959010066581
-"birkenhead",81230,"asthma emergency room visits, children","asthma emergency room visits, children","PM2.5",0.643014530713728,0.000437262294067564
-"birkenhead",81230,"deaths","chronic obstructive pulmonary disease","O3_8h",-0.239562968057075,-0.29709858847161
-"birkenhead",81230,"deaths","chronic obstructive pulmonary disease","PM2.5",NA,0.268786546155326
-"birkenhead",81230,"deaths","lower respiratory infections in children","PM2.5",0.000710294747998472,0.00596421844047753
-"birkenhead",81230,"deaths","non-communicable diseases and lower respiratory infections","NO2",0,0
-"birkenhead",81230,"deaths","non-communicable diseases and lower respiratory infections","PM2.5",2.31674818700048,3.11789494112355
-"birkenhead",81230,"disability","chronic obstructive pulmonary disease","PM2.5",1.78086699837707,0.149201032544918
-"birkenhead",81230,"disability","diabetes","PM2.5",1.35905067970558,0.113861262451228
-"birkenhead",81230,"disability","ischaemic heart disease","PM2.5",0.459085729150086,0.0384622012077549
-"birkenhead",81230,"disability","lower respiratory infections","PM2.5",0.0172908431387389,0.0014486267937039
-"birkenhead",81230,"disability","lung cancer","PM2.5",0.0793366782779401,0.00664682670212878
-"birkenhead",81230,"disability","stroke","PM2.5",0.839047234206546,0.0702953751243965
-"birkenhead",81230,"new cases of asthma in children","new cases of asthma in children","NO2",1.99115571285159,0
-"birkenhead",81230,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.0459760305496972
-"birkenhead",81230,"preterm births","preterm births","PM2.5",0.436295284350179,0.124474076787219
-"birkenhead",81230,"work absence (sick leave days)","work absence (sick leave days)","PM2.5",815.450597357638,0.187041200783936
-"birmingham",986969,"asthma emergency room visits, adults","asthma emergency room visits, adults","O3_8h",-11.7435785316902,-0.00798586010743747
-"birmingham",986969,"asthma emergency room visits, adults","asthma emergency room visits, adults","PM2.5",7.70817976387835,0.00524171104329081
-"birmingham",986969,"asthma emergency room visits, children","asthma emergency room visits, children","O3_8h",-2.53190624503259,-0.0017217451242324
-"birmingham",986969,"asthma emergency room visits, children","asthma emergency room visits, children","PM2.5",4.5746547111377,0.00311085351576541
-"birmingham",986969,"deaths","chronic obstructive pulmonary disease","O3_8h",-1.66793024800566,-2.06851554048838
-"birmingham",986969,"deaths","chronic obstructive pulmonary disease","PM2.5",NA,1.94598555862981
-"birmingham",986969,"deaths","lower respiratory infections in children","PM2.5",0.00518844090755297,0.0435664138378536
-"birmingham",986969,"deaths","non-communicable diseases and lower respiratory infections","NO2",39.5491766783264,53.22554198288
-"birmingham",986969,"deaths","non-communicable diseases and lower respiratory infections","PM2.5",16.877226987064,22.7134830355864
-"birmingham",986969,"disability","chronic obstructive pulmonary disease","PM2.5",12.8932846909662,1.08019935825686
-"birmingham",986969,"disability","diabetes","PM2.5",10.622607661955,0.889962042604893
-"birmingham",986969,"disability","ischaemic heart disease","PM2.5",3.36078738078425,0.28156675812057
-"birmingham",986969,"disability","lower respiratory infections","PM2.5",0.123987379436827,0.0103876623304107
-"birmingham",986969,"disability","lung cancer","PM2.5",0.572974833406441,0.0480038300695117
-"birmingham",986969,"disability","stroke","PM2.5",6.00668246629752,0.503239841581523
-"birmingham",986969,"new cases of asthma in children","new cases of asthma in children","NO2",31.3696679555203,0
-"birmingham",986969,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.724329495151017
-"birmingham",986969,"preterm births","preterm births","PM2.5",3.12007864002138,0.89015151469863
-"birmingham",986969,"work absence (sick leave days)","work absence (sick leave days)","PM2.5",5805.63325850363,1.33164733645468
+"belfast",274678,"asthma emergency room visits, adults","asthma emergency room visits, adults","O3_8h",-15.7469247634349,-0.0107082128282951
+"belfast",274678,"asthma emergency room visits, adults","asthma emergency room visits, adults","PM2.5",3.58558897974114,0.00243826972482989
+"belfast",274678,"asthma emergency room visits, children","asthma emergency room visits, children","O3_8h",-3.34336919238255,-0.0022735555934534
+"belfast",274678,"asthma emergency room visits, children","asthma emergency room visits, children","PM2.5",2.12975302655458,0.00144827317223286
+"belfast",274678,"deaths","chronic obstructive pulmonary disease","O3_8h",0,0
+"belfast",274678,"deaths","chronic obstructive pulmonary disease","PM2.5",NA,0.93724898071124
+"belfast",274678,"deaths","lower respiratory infections in children","PM2.5",0.00254019982060926,0.0213296052874771
+"belfast",274678,"deaths","non-communicable diseases and lower respiratory infections","NO2",21.6757862398894,29.1714156253325
+"belfast",274678,"deaths","non-communicable diseases and lower respiratory infections","PM2.5",8.24302963246743,11.0935234717402
+"belfast",274678,"disability","chronic obstructive pulmonary disease","PM2.5",6.20981891722602,0.520258612917995
+"belfast",274678,"disability","diabetes","PM2.5",5.94067744622038,0.497709941169191
+"belfast",274678,"disability","ischaemic heart disease","PM2.5",1.656411706814,0.138774168537774
+"belfast",274678,"disability","lower respiratory infections","PM2.5",0.0583798663446242,0.00489106505224145
+"belfast",274678,"disability","lung cancer","PM2.5",0.274809378906252,0.0230235290581534
+"belfast",274678,"disability","stroke","PM2.5",2.83539164390555,0.237549104635812
+"belfast",274678,"new cases of asthma in children","new cases of asthma in children","NO2",15.3912307726592,0
+"belfast",274678,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.355385413422942
+"belfast",274678,"preterm births","preterm births","PM2.5",1.46632003723582,0.418337853872002
+"belfast",274678,"work absence (sick leave days)","work absence (sick leave days)","PM2.5",2706.405629972,0.620772564860055
+"birkenhead",81230,"asthma emergency room visits, adults","asthma emergency room visits, adults","O3_8h",-3.095443853912,-0.00210496157717702
+"birkenhead",81230,"asthma emergency room visits, adults","asthma emergency room visits, adults","PM2.5",0.69476014919697,0.000472450313568168
+"birkenhead",81230,"asthma emergency room visits, children","asthma emergency room visits, children","O3_8h",-0.665193899747972,-0.000452344693176216
+"birkenhead",81230,"asthma emergency room visits, children","asthma emergency room visits, children","PM2.5",0.411906873312507,0.000280104625578063
+"birkenhead",81230,"deaths","chronic obstructive pulmonary disease","O3_8h",-0.445035331098033,-0.551919062288961
+"birkenhead",81230,"deaths","chronic obstructive pulmonary disease","PM2.5",NA,0.169348061263235
+"birkenhead",81230,"deaths","lower respiratory infections in children","PM2.5",0.000444515750567063,0.00373251955485455
+"birkenhead",81230,"deaths","non-communicable diseases and lower respiratory infections","NO2",3.19337376998979,4.2976634139331
+"birkenhead",81230,"deaths","non-communicable diseases and lower respiratory infections","PM2.5",1.45483539683616,1.95792704162456
+"birkenhead",81230,"disability","chronic obstructive pulmonary disease","PM2.5",1.12202927511318,0.0940036097839279
+"birkenhead",81230,"disability","diabetes","PM2.5",0.807472950478868,0.0676500817148779
+"birkenhead",81230,"disability","ischaemic heart disease","PM2.5",0.286290393586725,0.0239854084385622
+"birkenhead",81230,"disability","lower respiratory infections","PM2.5",0.0108693967760809,0.000910638033951764
+"birkenhead",81230,"disability","lung cancer","PM2.5",0.0500451571002105,0.0041927831331754
+"birkenhead",81230,"disability","stroke","PM2.5",0.532968435981029,0.0446520941960774
+"birkenhead",81230,"new cases of asthma in children","new cases of asthma in children","NO2",2.5365576065233,0
+"birkenhead",81230,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.0585694274214072
+"birkenhead",81230,"preterm births","preterm births","PM2.5",0.27772161289732,0.0792333600871682
+"birkenhead",81230,"work absence (sick leave days)","work absence (sick leave days)","PM2.5",521.904955268346,0.119710169867795
+"birmingham",986969,"asthma emergency room visits, adults","asthma emergency room visits, adults","O3_8h",-17.4488605390834,-0.0118655620110414
+"birmingham",986969,"asthma emergency room visits, adults","asthma emergency room visits, adults","PM2.5",10.89078339183,0.00740594294940529
+"birmingham",986969,"asthma emergency room visits, children","asthma emergency room visits, children","O3_8h",-3.75326000663392,-0.00255228925995054
+"birmingham",986969,"asthma emergency room visits, children","asthma emergency room visits, children","PM2.5",6.4484265870914,0.00438505456395845
+"birmingham",986969,"deaths","chronic obstructive pulmonary disease","O3_8h",-2.49970235286431,-3.10005359617274
+"birmingham",986969,"deaths","chronic obstructive pulmonary disease","PM2.5",NA,2.54466669964547
+"birmingham",986969,"deaths","lower respiratory infections in children","PM2.5",0.00654514862639771,0.0549584468183499
+"birmingham",986969,"deaths","non-communicable diseases and lower respiratory infections","NO2",39.8126759758878,53.5801610698686
+"birmingham",986969,"deaths","non-communicable diseases and lower respiratory infections","PM2.5",21.6589785143112,29.1487956777501
+"birmingham",986969,"disability","chronic obstructive pulmonary disease","PM2.5",16.8598950062367,1.41252196027095
+"birmingham",986969,"disability","diabetes","PM2.5",10.2278031687354,0.856885323178083
+"birmingham",986969,"disability","ischaemic heart disease","PM2.5",4.20143511201891,0.351996222881868
+"birmingham",986969,"disability","lower respiratory infections","PM2.5",0.163530585633768,0.0137005920439137
+"birmingham",986969,"disability","lung cancer","PM2.5",0.755957109030089,0.0633340846507614
+"birmingham",986969,"disability","stroke","PM2.5",8.21632241487453,0.688363470791697
+"birmingham",986969,"new cases of asthma in children","new cases of asthma in children","NO2",30.8951296750814,0
+"birmingham",986969,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.713372347833184
+"birmingham",986969,"preterm births","preterm births","PM2.5",4.28382435414098,1.22216558538901
+"birmingham",986969,"work absence (sick leave days)","work absence (sick leave days)","PM2.5",8153.54266797611,1.87019105290131
 "blackburn",106330,"asthma emergency room visits, adults","asthma emergency room visits, adults","O3_8h",0,0
 "blackburn",106330,"asthma emergency room visits, adults","asthma emergency room visits, adults","PM2.5",0,0
 "blackburn",106330,"asthma emergency room visits, children","asthma emergency room visits, children","O3_8h",0,0
@@ -101,7 +101,7 @@
 "blackburn",106330,"deaths","chronic obstructive pulmonary disease","O3_8h",0,0
 "blackburn",106330,"deaths","chronic obstructive pulmonary disease","PM2.5",NA,0
 "blackburn",106330,"deaths","lower respiratory infections in children","PM2.5",0,0
-"blackburn",106330,"deaths","non-communicable diseases and lower respiratory infections","NO2",0,0
+"blackburn",106330,"deaths","non-communicable diseases and lower respiratory infections","NO2",3.30825679415136,4.45227374312822
 "blackburn",106330,"deaths","non-communicable diseases and lower respiratory infections","PM2.5",0,0
 "blackburn",106330,"disability","chronic obstructive pulmonary disease","PM2.5",0,0
 "blackburn",106330,"disability","diabetes","PM2.5",0,0
@@ -109,48 +109,48 @@
 "blackburn",106330,"disability","lower respiratory infections","PM2.5",0,0
 "blackburn",106330,"disability","lung cancer","PM2.5",0,0
 "blackburn",106330,"disability","stroke","PM2.5",0,0
-"blackburn",106330,"new cases of asthma in children","new cases of asthma in children","NO2",1.17474612373051,0
-"blackburn",106330,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.0271250326251094
+"blackburn",106330,"new cases of asthma in children","new cases of asthma in children","NO2",2.88906525867639,0
+"blackburn",106330,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.0667088725083924
 "blackburn",106330,"preterm births","preterm births","PM2.5",0,0
 "blackburn",106330,"work absence (sick leave days)","work absence (sick leave days)","PM2.5",0,0
-"blackpool",143154,"asthma emergency room visits, adults","asthma emergency room visits, adults","O3_8h",-3.46565281700947,-0.00235671081884456
-"blackpool",143154,"asthma emergency room visits, adults","asthma emergency room visits, adults","PM2.5",-0.175532175873833,-0.00011936526818464
-"blackpool",143154,"asthma emergency room visits, children","asthma emergency room visits, children","O3_8h",-0.750712265324545,-0.000510498832671969
-"blackpool",143154,"asthma emergency room visits, children","asthma emergency room visits, children","PM2.5",-0.104444770084443,-7.10244599290618e-05
-"blackpool",143154,"deaths","chronic obstructive pulmonary disease","O3_8h",-0.483685637515602,-0.599851977688135
-"blackpool",143154,"deaths","chronic obstructive pulmonary disease","PM2.5",NA,-0.0498494934792984
-"blackpool",143154,"deaths","lower respiratory infections in children","PM2.5",-0.000140608517125468,-0.00118066466504365
+"blackpool",143154,"asthma emergency room visits, adults","asthma emergency room visits, adults","O3_8h",-3.7457647266956,-0.00254719232489855
+"blackpool",143154,"asthma emergency room visits, adults","asthma emergency room visits, adults","PM2.5",-1.44513918371846,-0.000982722542861139
+"blackpool",143154,"asthma emergency room visits, children","asthma emergency room visits, children","O3_8h",-0.809639173812819,-0.000550570268008414
+"blackpool",143154,"asthma emergency room visits, children","asthma emergency room visits, children","PM2.5",-0.861243926270693,-0.000585662495892393
+"blackpool",143154,"deaths","chronic obstructive pulmonary disease","O3_8h",-0.526997672352322,-0.653566224586082
+"blackpool",143154,"deaths","chronic obstructive pulmonary disease","PM2.5",NA,-0.43773083978131
+"blackpool",143154,"deaths","lower respiratory infections in children","PM2.5",-0.00127269423803121,-0.0106865867514082
 "blackpool",143154,"deaths","non-communicable diseases and lower respiratory infections","NO2",0,0
-"blackpool",143154,"deaths","non-communicable diseases and lower respiratory infections","PM2.5",-0.457364488556721,-0.615524135563016
-"blackpool",143154,"disability","chronic obstructive pulmonary disease","PM2.5",-0.330281850386186,-0.0276710125761069
-"blackpool",143154,"disability","diabetes","PM2.5",-0.451580533424249,-0.0378334159291424
-"blackpool",143154,"disability","ischaemic heart disease","PM2.5",-0.0937113623993149,-0.00785113770085666
-"blackpool",143154,"disability","lower respiratory infections","PM2.5",-0.00289681363047323,-0.000242695038512516
-"blackpool",143154,"disability","lung cancer","PM2.5",-0.0144974294678177,-0.0012145946035368
-"blackpool",143154,"disability","stroke","PM2.5",-0.144524887111615,-0.0121082946705972
-"blackpool",143154,"new cases of asthma in children","new cases of asthma in children","NO2",1.80259151330214,0
-"blackpool",143154,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.0416220599671308
-"blackpool",143154,"preterm births","preterm births","PM2.5",-0.073347312238031,-0.0209258254744853
-"blackpool",143154,"work absence (sick leave days)","work absence (sick leave days)","PM2.5",-133.092334024572,-0.030527600386532
-"bournemouth",176795,"asthma emergency room visits, adults","asthma emergency room visits, adults","O3_8h",2.39788521853831,0.00163060823898483
-"bournemouth",176795,"asthma emergency room visits, adults","asthma emergency room visits, adults","PM2.5",-2.13607004312215,-0.00145256886544671
-"bournemouth",176795,"asthma emergency room visits, children","asthma emergency room visits, children","O3_8h",0.5252591166077,0.000357186339246255
-"bournemouth",176795,"asthma emergency room visits, children","asthma emergency room visits, children","PM2.5",-1.26656753193653,-0.000861290372382926
-"bournemouth",176795,"deaths","chronic obstructive pulmonary disease","O3_8h",0.321014788617601,0.398112618783716
-"bournemouth",176795,"deaths","chronic obstructive pulmonary disease","PM2.5",NA,-0.521748718496021
-"bournemouth",176795,"deaths","lower respiratory infections in children","PM2.5",-0.00136968129073489,-0.0115009697520608
+"blackpool",143154,"deaths","non-communicable diseases and lower respiratory infections","PM2.5",-4.133481225121,-5.56286620762178
+"blackpool",143154,"disability","chronic obstructive pulmonary disease","PM2.5",-2.90022107835687,-0.24298051448745
+"blackpool",143154,"disability","diabetes","PM2.5",-4.9857148181182,-0.417703174642257
+"blackpool",143154,"disability","ischaemic heart disease","PM2.5",-0.867545639669782,-0.0726829714608293
+"blackpool",143154,"disability","lower respiratory infections","PM2.5",-0.024751224878754,-0.00207365755669961
+"blackpool",143154,"disability","lung cancer","PM2.5",-0.127016542895281,-0.0106414456371712
+"blackpool",143154,"disability","stroke","PM2.5",-1.23880984867908,-0.103787485937003
+"blackpool",143154,"new cases of asthma in children","new cases of asthma in children","NO2",2.63017472339991,0
+"blackpool",143154,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.0607310581757041
+"blackpool",143154,"preterm births","preterm births","PM2.5",0,0
+"blackpool",143154,"work absence (sick leave days)","work absence (sick leave days)","PM2.5",-1100.21417157172,-0.252357874820495
+"bournemouth",176795,"asthma emergency room visits, adults","asthma emergency room visits, adults","O3_8h",-3.39299131193599,-0.00230729959268827
+"bournemouth",176795,"asthma emergency room visits, adults","asthma emergency room visits, adults","PM2.5",-1.49197321605573,-0.00101457058896594
+"bournemouth",176795,"asthma emergency room visits, children","asthma emergency room visits, children","O3_8h",-0.737021549582323,-0.000501188881672519
+"bournemouth",176795,"asthma emergency room visits, children","asthma emergency room visits, children","PM2.5",-0.883136834716435,-0.000600550096270836
+"bournemouth",176795,"deaths","chronic obstructive pulmonary disease","O3_8h",-0.468662094415523,-0.581220243889391
+"bournemouth",176795,"deaths","chronic obstructive pulmonary disease","PM2.5",NA,-0.344347035528962
+"bournemouth",176795,"deaths","lower respiratory infections in children","PM2.5",-0.000878380355568587,-0.00737560333818855
 "bournemouth",176795,"deaths","non-communicable diseases and lower respiratory infections","NO2",0,0
-"bournemouth",176795,"deaths","non-communicable diseases and lower respiratory infections","PM2.5",-4.47945267422517,-6.02847685835531
-"bournemouth",176795,"disability","chronic obstructive pulmonary disease","PM2.5",-3.45688832832482,-0.289618095258417
-"bournemouth",176795,"disability","diabetes","PM2.5",-2.48647244131553,-0.208316654739995
-"bournemouth",176795,"disability","ischaemic heart disease","PM2.5",-0.883023442058992,-0.0739797017052001
-"bournemouth",176795,"disability","lower respiratory infections","PM2.5",-0.0336332481595055,-0.00281779344432277
-"bournemouth",176795,"disability","lung cancer","PM2.5",-0.154231128136865,-0.0129214835187347
-"bournemouth",176795,"disability","stroke","PM2.5",-1.6419747616744,-0.137564641311101
-"bournemouth",176795,"new cases of asthma in children","new cases of asthma in children","NO2",2.83417641271478,0
-"bournemouth",176795,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.0654414822975309
-"bournemouth",176795,"preterm births","preterm births","PM2.5",-0.855046231344742,-0.243942793045647
-"bournemouth",176795,"work absence (sick leave days)","work absence (sick leave days)","PM2.5",-1605.08383126821,-0.368160631842196
+"bournemouth",176795,"deaths","non-communicable diseases and lower respiratory infections","PM2.5",-2.91770717228744,-3.92666949442327
+"bournemouth",176795,"disability","chronic obstructive pulmonary disease","PM2.5",-2.28149913131489,-0.191143991355181
+"bournemouth",176795,"disability","diabetes","PM2.5",-1.28554745193608,-0.107703162217699
+"bournemouth",176795,"disability","ischaemic heart disease","PM2.5",-0.564788462978683,-0.047317975976123
+"bournemouth",176795,"disability","lower respiratory infections","PM2.5",-0.0222988436220618,-0.00186819706131969
+"bournemouth",176795,"disability","lung cancer","PM2.5",-0.102594471435022,-0.00859536455302668
+"bournemouth",176795,"disability","stroke","PM2.5",-1.12361060830052,-0.0941360938742971
+"bournemouth",176795,"new cases of asthma in children","new cases of asthma in children","NO2",3.51297996572838,0
+"bournemouth",176795,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.0811151399071114
+"bournemouth",176795,"preterm births","preterm births","PM2.5",-0.584741105830926,-0.166825340356929
+"bournemouth",176795,"work absence (sick leave days)","work absence (sick leave days)","PM2.5",-1116.14050912938,-0.256010924202675
 "bradford",300478,"asthma emergency room visits, adults","asthma emergency room visits, adults","O3_8h",0,0
 "bradford",300478,"asthma emergency room visits, adults","asthma emergency room visits, adults","PM2.5",0,0
 "bradford",300478,"asthma emergency room visits, children","asthma emergency room visits, children","O3_8h",0,0
@@ -158,7 +158,7 @@
 "bradford",300478,"deaths","chronic obstructive pulmonary disease","O3_8h",0,0
 "bradford",300478,"deaths","chronic obstructive pulmonary disease","PM2.5",NA,0
 "bradford",300478,"deaths","lower respiratory infections in children","PM2.5",0,0
-"bradford",300478,"deaths","non-communicable diseases and lower respiratory infections","NO2",19.805382463026,26.6542139257854
+"bradford",300478,"deaths","non-communicable diseases and lower respiratory infections","NO2",27.097920076753,36.4685589898602
 "bradford",300478,"deaths","non-communicable diseases and lower respiratory infections","PM2.5",0,0
 "bradford",300478,"disability","chronic obstructive pulmonary disease","PM2.5",0,0
 "bradford",300478,"disability","diabetes","PM2.5",0,0
@@ -166,15 +166,15 @@
 "bradford",300478,"disability","lower respiratory infections","PM2.5",0,0
 "bradford",300478,"disability","lung cancer","PM2.5",0,0
 "bradford",300478,"disability","stroke","PM2.5",0,0
-"bradford",300478,"new cases of asthma in children","new cases of asthma in children","NO2",12.7318945242965,0
-"bradford",300478,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.293981012045647
+"bradford",300478,"new cases of asthma in children","new cases of asthma in children","NO2",16.1473849546392,0
+"bradford",300478,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.372845106578336
 "bradford",300478,"preterm births","preterm births","PM2.5",0,0
 "bradford",300478,"work absence (sick leave days)","work absence (sick leave days)","PM2.5",0,0
-"brighton",140152,"asthma emergency room visits, adults","asthma emergency room visits, adults","O3_8h",-3.15190958337649,-0.00214335936326507
+"brighton",140152,"asthma emergency room visits, adults","asthma emergency room visits, adults","O3_8h",-4.4656178543861,-0.00303670634825394
 "brighton",140152,"asthma emergency room visits, adults","asthma emergency room visits, adults","PM2.5",0,0
-"brighton",140152,"asthma emergency room visits, children","asthma emergency room visits, children","O3_8h",-0.681901982561435,-0.000463706512033357
+"brighton",140152,"asthma emergency room visits, children","asthma emergency room visits, children","O3_8h",-0.964062385363398,-0.000655581032951683
 "brighton",140152,"asthma emergency room visits, children","asthma emergency room visits, children","PM2.5",0,0
-"brighton",140152,"deaths","chronic obstructive pulmonary disease","O3_8h",-0.441939848329234,-0.548080140235579
+"brighton",140152,"deaths","chronic obstructive pulmonary disease","O3_8h",-0.63112232378296,-0.782698398961926
 "brighton",140152,"deaths","chronic obstructive pulmonary disease","PM2.5",NA,0
 "brighton",140152,"deaths","lower respiratory infections in children","PM2.5",0,0
 "brighton",140152,"deaths","non-communicable diseases and lower respiratory infections","NO2",0,0
@@ -185,29 +185,29 @@
 "brighton",140152,"disability","lower respiratory infections","PM2.5",0,0
 "brighton",140152,"disability","lung cancer","PM2.5",0,0
 "brighton",140152,"disability","stroke","PM2.5",0,0
-"brighton",140152,"new cases of asthma in children","new cases of asthma in children","NO2",3.58428423851191,0
-"brighton",140152,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.0827615643442667
+"brighton",140152,"new cases of asthma in children","new cases of asthma in children","NO2",3.13140573932025,0
+"brighton",140152,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.0723045440420639
 "brighton",140152,"preterm births","preterm births","PM2.5",0,0
 "brighton",140152,"work absence (sick leave days)","work absence (sick leave days)","PM2.5",0,0
-"bristol",432967,"asthma emergency room visits, adults","asthma emergency room visits, adults","O3_8h",-0.57768777596209,-0.000392838839725126
-"bristol",432967,"asthma emergency room visits, adults","asthma emergency room visits, adults","PM2.5",-4.26325881533732,-0.00289909829522669
-"bristol",432967,"asthma emergency room visits, children","asthma emergency room visits, children","O3_8h",-0.125728680274676,-8.54979297372338e-05
-"bristol",432967,"asthma emergency room visits, children","asthma emergency room visits, children","PM2.5",-2.53450576160925,-0.00172351284568732
-"bristol",432967,"deaths","chronic obstructive pulmonary disease","O3_8h",-0.0792189107283505,-0.0982448445539475
-"bristol",432967,"deaths","chronic obstructive pulmonary disease","PM2.5",NA,-1.1591443257232
-"bristol",432967,"deaths","lower respiratory infections in children","PM2.5",-0.00319991368198619,-0.026869105035364
-"bristol",432967,"deaths","non-communicable diseases and lower respiratory infections","NO2",16.3890855608747,22.0565390950198
-"bristol",432967,"deaths","non-communicable diseases and lower respiratory infections","PM2.5",-10.3816898874559,-13.971746503154
-"bristol",432967,"disability","chronic obstructive pulmonary disease","PM2.5",-7.68000447032634,-0.643430754776478
-"bristol",432967,"disability","diabetes","PM2.5",-8.68617091742169,-0.727727377126977
-"bristol",432967,"disability","ischaemic heart disease","PM2.5",-2.10687120390806,-0.176513664046055
-"bristol",432967,"disability","lower respiratory infections","PM2.5",-0.0700819407006246,-0.00587146481169784
-"bristol",432967,"disability","lung cancer","PM2.5",-0.338484848468788,-0.0283582597343749
-"bristol",432967,"disability","stroke","PM2.5",-3.43405668079316,-0.28770525988692
-"bristol",432967,"new cases of asthma in children","new cases of asthma in children","NO2",12.8315378543208,0
-"bristol",432967,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.296281788803434
-"bristol",432967,"preterm births","preterm births","PM2.5",-1.76245104154056,-0.502823372489983
-"bristol",432967,"work absence (sick leave days)","work absence (sick leave days)","PM2.5",-3225.23828240944,-0.739778035739921
+"bristol",432967,"asthma emergency room visits, adults","asthma emergency room visits, adults","O3_8h",-17.5956571833678,-0.0119653865630156
+"bristol",432967,"asthma emergency room visits, adults","asthma emergency room visits, adults","PM2.5",-2.42876307288678,-0.0016516057760285
+"bristol",432967,"asthma emergency room visits, children","asthma emergency room visits, children","O3_8h",-3.78270170998343,-0.00257231018659053
+"bristol",432967,"asthma emergency room visits, children","asthma emergency room visits, children","PM2.5",-1.44178548356889,-0.000980441962017372
+"bristol",432967,"deaths","chronic obstructive pulmonary disease","O3_8h",-2.52603590687456,-3.13271165592771
+"bristol",432967,"deaths","chronic obstructive pulmonary disease","PM2.5",NA,-0.616094395364329
+"bristol",432967,"deaths","lower respiratory infections in children","PM2.5",-0.00164323106108533,-0.0137979184333087
+"bristol",432967,"deaths","non-communicable diseases and lower respiratory infections","NO2",21.5367760531396,28.9843348021063
+"bristol",432967,"deaths","non-communicable diseases and lower respiratory infections","PM2.5",-5.33592218832479,-7.1811191611402
+"bristol",432967,"disability","chronic obstructive pulmonary disease","PM2.5",-4.08198324017062,-0.341988545365561
+"bristol",432967,"disability","diabetes","PM2.5",-3.36110983785295,-0.281593773572959
+"bristol",432967,"disability","ischaemic heart disease","PM2.5",-1.06687996297049,-0.0893832005544156
+"bristol",432967,"disability","lower respiratory infections","PM2.5",-0.0396300842112924,-0.00332020835332197
+"bristol",432967,"disability","lung cancer","PM2.5",-0.181520615012532,-0.0152077966590093
+"bristol",432967,"disability","stroke","PM2.5",-1.90135104967422,-0.159295186052797
+"bristol",432967,"new cases of asthma in children","new cases of asthma in children","NO2",16.0418783594235,0
+"bristol",432967,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.370408946305423
+"bristol",432967,"preterm births","preterm births","PM2.5",-0.986141278268207,-0.281343919123549
+"bristol",432967,"work absence (sick leave days)","work absence (sick leave days)","PM2.5",-1830.4765130395,-0.41985930982836
 "cambridge",131301,"asthma emergency room visits, adults","asthma emergency room visits, adults","O3_8h",0,0
 "cambridge",131301,"asthma emergency room visits, adults","asthma emergency room visits, adults","PM2.5",0,0
 "cambridge",131301,"asthma emergency room visits, children","asthma emergency room visits, children","O3_8h",0,0
@@ -215,7 +215,7 @@
 "cambridge",131301,"deaths","chronic obstructive pulmonary disease","O3_8h",0,0
 "cambridge",131301,"deaths","chronic obstructive pulmonary disease","PM2.5",NA,0
 "cambridge",131301,"deaths","lower respiratory infections in children","PM2.5",0,0
-"cambridge",131301,"deaths","non-communicable diseases and lower respiratory infections","NO2",1.8972398382974,2.55331784745421
+"cambridge",131301,"deaths","non-communicable diseases and lower respiratory infections","NO2",0,0
 "cambridge",131301,"deaths","non-communicable diseases and lower respiratory infections","PM2.5",0,0
 "cambridge",131301,"disability","chronic obstructive pulmonary disease","PM2.5",0,0
 "cambridge",131301,"disability","diabetes","PM2.5",0,0
@@ -223,67 +223,67 @@
 "cambridge",131301,"disability","lower respiratory infections","PM2.5",0,0
 "cambridge",131301,"disability","lung cancer","PM2.5",0,0
 "cambridge",131301,"disability","stroke","PM2.5",0,0
-"cambridge",131301,"new cases of asthma in children","new cases of asthma in children","NO2",1.46426664412411,0
-"cambridge",131301,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.0338100970851451
+"cambridge",131301,"new cases of asthma in children","new cases of asthma in children","NO2",0,0
+"cambridge",131301,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0
 "cambridge",131301,"preterm births","preterm births","PM2.5",0,0
 "cambridge",131301,"work absence (sick leave days)","work absence (sick leave days)","PM2.5",0,0
-"cardiff",304777,"asthma emergency room visits, adults","asthma emergency room visits, adults","O3_8h",-7.43121561887995,-0.00505337007799098
-"cardiff",304777,"asthma emergency room visits, adults","asthma emergency room visits, adults","PM2.5",-2.36620775311629,-0.00160906695097487
-"cardiff",304777,"asthma emergency room visits, children","asthma emergency room visits, children","O3_8h",-1.60477437867287,-0.00109127755713463
-"cardiff",304777,"asthma emergency room visits, children","asthma emergency room visits, children","PM2.5",-1.40883589890508,-0.000958035608365171
-"cardiff",304777,"deaths","chronic obstructive pulmonary disease","O3_8h",-1.0490727975989,-1.30102765839977
-"cardiff",304777,"deaths","chronic obstructive pulmonary disease","PM2.5",NA,-0.681140388313837
-"cardiff",304777,"deaths","lower respiratory infections in children","PM2.5",-0.00192487696586432,-0.0161628489128053
-"cardiff",304777,"deaths","non-communicable diseases and lower respiratory infections","NO2",11.7102373478702,15.7597144096838
-"cardiff",304777,"deaths","non-communicable diseases and lower respiratory infections","PM2.5",-6.22965841591036,-8.38391525193864
-"cardiff",304777,"disability","chronic obstructive pulmonary disease","PM2.5",-4.51295072674091,-0.37809500028228
-"cardiff",304777,"disability","diabetes","PM2.5",-6.2138741167422,-0.520598357523032
-"cardiff",304777,"disability","ischaemic heart disease","PM2.5",-1.29228954272129,-0.108268014566347
-"cardiff",304777,"disability","lower respiratory infections","PM2.5",-0.0404411777498693,-0.00338816176789835
-"cardiff",304777,"disability","lung cancer","PM2.5",-0.198403898265197,-0.0166222780865058
-"cardiff",304777,"disability","stroke","PM2.5",-1.97207782414121,-0.165220675035781
-"cardiff",304777,"new cases of asthma in children","new cases of asthma in children","NO2",9.46595427991372,0
-"cardiff",304777,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.218570049718551
-"cardiff",304777,"preterm births","preterm births","PM2.5",-0.996537218647742,-0.284309857852419
-"cardiff",304777,"work absence (sick leave days)","work absence (sick leave days)","PM2.5",-1797.07135107341,-0.412197114685249
+"cardiff",304777,"asthma emergency room visits, adults","asthma emergency room visits, adults","O3_8h",-14.7583646250943,-0.0100359728503978
+"cardiff",304777,"asthma emergency room visits, adults","asthma emergency room visits, adults","PM2.5",-0.0921136270246521,-6.26390445997786e-05
+"cardiff",304777,"asthma emergency room visits, children","asthma emergency room visits, children","O3_8h",-3.16280724424252,-0.00215076998302965
+"cardiff",304777,"asthma emergency room visits, children","asthma emergency room visits, children","PM2.5",-0.054700629082518,-3.71974837536109e-05
+"cardiff",304777,"deaths","chronic obstructive pulmonary disease","O3_8h",-0.438340542991532,-0.543616393004599
+"cardiff",304777,"deaths","chronic obstructive pulmonary disease","PM2.5",NA,-0.0239691868065074
+"cardiff",304777,"deaths","lower respiratory infections in children","PM2.5",-6.4935779282016e-05,-0.000545254168543266
+"cardiff",304777,"deaths","non-communicable diseases and lower respiratory infections","NO2",12.0394587352319,16.2027827172041
+"cardiff",304777,"deaths","non-communicable diseases and lower respiratory infections","PM2.5",-0.211069068794473,-0.284058140420437
+"cardiff",304777,"disability","chronic obstructive pulmonary disease","PM2.5",-0.158809785579734,-0.0133050834275261
+"cardiff",304777,"disability","diabetes","PM2.5",-0.151902239845299,-0.0127263692636564
+"cardiff",304777,"disability","ischaemic heart disease","PM2.5",-0.0422478903301453,-0.00353952814322803
+"cardiff",304777,"disability","lower respiratory infections","PM2.5",-0.00148043663773501,-0.000124030977702816
+"cardiff",304777,"disability","lung cancer","PM2.5",-0.00702385991509935,-0.000588458965626662
+"cardiff",304777,"disability","stroke","PM2.5",-0.0725316959772471,-0.00607670530247316
+"cardiff",304777,"new cases of asthma in children","new cases of asthma in children","NO2",9.5013508520997,0
+"cardiff",304777,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.219387360928153
+"cardiff",304777,"preterm births","preterm births","PM2.5",-0.0375628274782187,-0.0107165913535659
+"cardiff",304777,"work absence (sick leave days)","work absence (sick leave days)","PM2.5",-69.4860257201944,-0.0159381202620007
 "chatham",75948,"asthma emergency room visits, adults","asthma emergency room visits, adults","O3_8h",0,0
-"chatham",75948,"asthma emergency room visits, adults","asthma emergency room visits, adults","PM2.5",-0.471166296851475,-0.000320402177568078
+"chatham",75948,"asthma emergency room visits, adults","asthma emergency room visits, adults","PM2.5",-0.685817337412317,-0.000466369028916588
 "chatham",75948,"asthma emergency room visits, children","asthma emergency room visits, children","O3_8h",0,0
-"chatham",75948,"asthma emergency room visits, children","asthma emergency room visits, children","PM2.5",-0.279044423737547,-0.000189755595001573
+"chatham",75948,"asthma emergency room visits, children","asthma emergency room visits, children","PM2.5",-0.405108060009104,-0.000275481301282915
 "chatham",75948,"deaths","chronic obstructive pulmonary disease","O3_8h",0,0
-"chatham",75948,"deaths","chronic obstructive pulmonary disease","PM2.5",NA,-0.111093550015213
-"chatham",75948,"deaths","lower respiratory infections in children","PM2.5",-0.000287344618071811,-0.00241278155963446
-"chatham",75948,"deaths","non-communicable diseases and lower respiratory infections","NO2",2.43813193299519,3.28125398449957
-"chatham",75948,"deaths","non-communicable diseases and lower respiratory infections","PM2.5",-0.948208762961855,-1.27610558702777
-"chatham",75948,"disability","chronic obstructive pulmonary disease","PM2.5",-0.736059299784721,-0.0616670462433472
-"chatham",75948,"disability","diabetes","PM2.5",-0.467718652134025,-0.0391854674731512
-"chatham",75948,"disability","ischaemic heart disease","PM2.5",-0.184317619620174,-0.0154421296978456
-"chatham",75948,"disability","lower respiratory infections","PM2.5",-0.0071129309961675,-0.000595921340569563
-"chatham",75948,"disability","lung cancer","PM2.5",-0.0329421504137297,-0.0027598932769587
-"chatham",75948,"disability","stroke","PM2.5",-0.356144600012513,-0.0298377936732995
-"chatham",75948,"new cases of asthma in children","new cases of asthma in children","NO2",1.98194194162855,0
-"chatham",75948,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.045763283437809
-"chatham",75948,"preterm births","preterm births","PM2.5",-0.185879399673827,-0.0530309803889415
-"chatham",75948,"work absence (sick leave days)","work absence (sick leave days)","PM2.5",-352.964495798737,-0.0809600279185735
-"coventry",309323,"asthma emergency room visits, adults","asthma emergency room visits, adults","O3_8h",-6.2599730931687,-0.00425690255005879
-"coventry",309323,"asthma emergency room visits, adults","asthma emergency room visits, adults","PM2.5",1.02547238927577,0.00069734102111185
-"coventry",309323,"asthma emergency room visits, children","asthma emergency room visits, children","O3_8h",-1.34977915834294,-0.000917875884712121
-"coventry",309323,"asthma emergency room visits, children","asthma emergency room visits, children","PM2.5",0.60958674121148,0.000414530751893648
-"coventry",309323,"deaths","chronic obstructive pulmonary disease","O3_8h",-0.888770518228961,-1.10222572621531
-"coventry",309323,"deaths","chronic obstructive pulmonary disease","PM2.5",NA,0.278295740431949
-"coventry",309323,"deaths","lower respiratory infections in children","PM2.5",0.000768094931061003,0.00644955627896771
-"coventry",309323,"deaths","non-communicable diseases and lower respiratory infections","NO2",13.471552329389,18.1301036912711
-"coventry",309323,"deaths","non-communicable diseases and lower respiratory infections","PM2.5",2.49370924494605,3.35605029630649
-"coventry",309323,"disability","chronic obstructive pulmonary disease","PM2.5",1.84387093406735,0.15447950211505
-"coventry",309323,"disability","diabetes","PM2.5",2.08449404791924,0.174638905974846
-"coventry",309323,"disability","ischaemic heart disease","PM2.5",0.505237161489717,0.0423287680905005
-"coventry",309323,"disability","lower respiratory infections","PM2.5",0.0167712261631088,0.00140509328482169
-"coventry",309323,"disability","lung cancer","PM2.5",0.0812472292964737,0.00680689266154915
-"coventry",309323,"disability","stroke","PM2.5",0.824596860528615,0.0690847228548145
-"coventry",309323,"new cases of asthma in children","new cases of asthma in children","NO2",10.7520947174551,0
-"coventry",309323,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.248267190763797
-"coventry",309323,"preterm births","preterm births","PM2.5",0.423454427522901,0.120810608819389
-"coventry",309323,"work absence (sick leave days)","work absence (sick leave days)","PM2.5",775.605284302714,0.177901817940198
+"chatham",75948,"deaths","chronic obstructive pulmonary disease","PM2.5",NA,-0.149814594772946
+"chatham",75948,"deaths","lower respiratory infections in children","PM2.5",-0.000371867899656906,-0.00312250849496658
+"chatham",75948,"deaths","non-communicable diseases and lower respiratory infections","NO2",2.57588178794339,3.46663864490133
+"chatham",75948,"deaths","non-communicable diseases and lower respiratory infections","PM2.5",-1.26423998530974,-1.70142248375589
+"chatham",75948,"disability","chronic obstructive pulmonary disease","PM2.5",-0.992608713206209,-0.0831607554401383
+"chatham",75948,"disability","diabetes","PM2.5",-0.451495418913282,-0.0378262850356326
+"chatham",75948,"disability","ischaemic heart disease","PM2.5",-0.239326092266811,-0.0200507393947386
+"chatham",75948,"disability","lower respiratory infections","PM2.5",-0.00936773964226739,-0.000784829203142057
+"chatham",75948,"disability","lung cancer","PM2.5",-0.0449195416383672,-0.0037633590829616
+"chatham",75948,"disability","stroke","PM2.5",-0.504973897025895,-0.0423067117943983
+"chatham",75948,"new cases of asthma in children","new cases of asthma in children","NO2",2.05959829140835,0
+"chatham",75948,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.0475563781148406
+"chatham",75948,"preterm births","preterm births","PM2.5",-0.261992592964195,-0.074745905592079
+"chatham",75948,"work absence (sick leave days)","work absence (sick leave days)","PM2.5",-510.308248611258,-0.117050214813117
+"coventry",309323,"asthma emergency room visits, adults","asthma emergency room visits, adults","O3_8h",-5.93800958199722,-0.00403796114706347
+"coventry",309323,"asthma emergency room visits, adults","asthma emergency room visits, adults","PM2.5",2.85743034618616,0.00194310779715161
+"coventry",309323,"asthma emergency room visits, children","asthma emergency room visits, children","O3_8h",-1.27955983323474,-0.000870125388077766
+"coventry",309323,"asthma emergency room visits, children","asthma emergency room visits, children","PM2.5",1.69404803281883,0.00115198536535217
+"coventry",309323,"deaths","chronic obstructive pulmonary disease","O3_8h",-0.84501664781282,-1.04796352848821
+"coventry",309323,"deaths","chronic obstructive pulmonary disease","PM2.5",NA,0.696083819435529
+"coventry",309323,"deaths","lower respiratory infections in children","PM2.5",0.0018270639427333,0.0153415303856437
+"coventry",309323,"deaths","non-communicable diseases and lower respiratory infections","NO2",12.1796846278933,16.3914996454385
+"coventry",309323,"deaths","non-communicable diseases and lower respiratory infections","PM2.5",5.98098685364238,8.0492514285903
+"coventry",309323,"disability","chronic obstructive pulmonary disease","PM2.5",4.61195963811622,0.386389966622721
+"coventry",309323,"disability","diabetes","PM2.5",3.31951123984328,0.278108643138677
+"coventry",309323,"disability","ischaemic heart disease","PM2.5",1.17638385649082,0.0985574364719838
+"coventry",309323,"disability","lower respiratory infections","PM2.5",0.0446219285184626,0.00373842505654118
+"coventry",309323,"disability","lung cancer","PM2.5",0.205686767475514,0.0172324368502197
+"coventry",309323,"disability","stroke","PM2.5",2.19072290076384,0.183538758993028
+"coventry",309323,"new cases of asthma in children","new cases of asthma in children","NO2",9.61055072517948,0
+"coventry",309323,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.221908799441644
+"coventry",309323,"preterm births","preterm births","PM2.5",1.14176690892403,0.325743566323872
+"coventry",309323,"work absence (sick leave days)","work absence (sick leave days)","PM2.5",2146.32690540825,0.492306416799843
 "derby",236245,"asthma emergency room visits, adults","asthma emergency room visits, adults","O3_8h",0,0
 "derby",236245,"asthma emergency room visits, adults","asthma emergency room visits, adults","PM2.5",0,0
 "derby",236245,"asthma emergency room visits, children","asthma emergency room visits, children","O3_8h",0,0
@@ -291,7 +291,7 @@
 "derby",236245,"deaths","chronic obstructive pulmonary disease","O3_8h",0,0
 "derby",236245,"deaths","chronic obstructive pulmonary disease","PM2.5",NA,0
 "derby",236245,"deaths","lower respiratory infections in children","PM2.5",0,0
-"derby",236245,"deaths","non-communicable diseases and lower respiratory infections","NO2",11.5412567468186,15.532299205855
+"derby",236245,"deaths","non-communicable diseases and lower respiratory infections","NO2",12.6700011694304,17.0513708705401
 "derby",236245,"deaths","non-communicable diseases and lower respiratory infections","PM2.5",0,0
 "derby",236245,"disability","chronic obstructive pulmonary disease","PM2.5",0,0
 "derby",236245,"disability","diabetes","PM2.5",0,0
@@ -299,8 +299,8 @@
 "derby",236245,"disability","lower respiratory infections","PM2.5",0,0
 "derby",236245,"disability","lung cancer","PM2.5",0,0
 "derby",236245,"disability","stroke","PM2.5",0,0
-"derby",236245,"new cases of asthma in children","new cases of asthma in children","NO2",8.94824026623488,0
-"derby",236245,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.206615969404653
+"derby",236245,"new cases of asthma in children","new cases of asthma in children","NO2",9.52424487817729,0
+"derby",236245,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.219915986808869
 "derby",236245,"preterm births","preterm births","PM2.5",0,0
 "derby",236245,"work absence (sick leave days)","work absence (sick leave days)","PM2.5",0,0
 "doncaster",67523,"asthma emergency room visits, adults","asthma emergency room visits, adults","O3_8h",0,0
@@ -310,7 +310,7 @@
 "doncaster",67523,"deaths","chronic obstructive pulmonary disease","O3_8h",0,0
 "doncaster",67523,"deaths","chronic obstructive pulmonary disease","PM2.5",NA,0
 "doncaster",67523,"deaths","lower respiratory infections in children","PM2.5",0,0
-"doncaster",67523,"deaths","non-communicable diseases and lower respiratory infections","NO2",4.11832119292362,5.54246373662353
+"doncaster",67523,"deaths","non-communicable diseases and lower respiratory infections","NO2",3.11533017034779,4.19263182445082
 "doncaster",67523,"deaths","non-communicable diseases and lower respiratory infections","PM2.5",0,0
 "doncaster",67523,"disability","chronic obstructive pulmonary disease","PM2.5",0,0
 "doncaster",67523,"disability","diabetes","PM2.5",0,0
@@ -318,8 +318,8 @@
 "doncaster",67523,"disability","lower respiratory infections","PM2.5",0,0
 "doncaster",67523,"disability","lung cancer","PM2.5",0,0
 "doncaster",67523,"disability","stroke","PM2.5",0,0
-"doncaster",67523,"new cases of asthma in children","new cases of asthma in children","NO2",3.03505792900294,0
-"doncaster",67523,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.0700798612400331
+"doncaster",67523,"new cases of asthma in children","new cases of asthma in children","NO2",2.2971309890119,0
+"doncaster",67523,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.0530410373462036
 "doncaster",67523,"preterm births","preterm births","PM2.5",0,0
 "doncaster",67523,"work absence (sick leave days)","work absence (sick leave days)","PM2.5",0,0
 "dundee",151236,"asthma emergency room visits, adults","asthma emergency room visits, adults","O3_8h",0,0
@@ -337,37 +337,37 @@
 "dundee",151236,"disability","lower respiratory infections","PM2.5",0,0
 "dundee",151236,"disability","lung cancer","PM2.5",0,0
 "dundee",151236,"disability","stroke","PM2.5",0,0
-"dundee",151236,"new cases of asthma in children","new cases of asthma in children","NO2",1.61546509773709,0
-"dundee",151236,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.037301287993776
+"dundee",151236,"new cases of asthma in children","new cases of asthma in children","NO2",1.77486297897602,0
+"dundee",151236,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.0409818046957586
 "dundee",151236,"preterm births","preterm births","PM2.5",0,0
 "dundee",151236,"work absence (sick leave days)","work absence (sick leave days)","PM2.5",0,0
-"edinburgh",438501,"asthma emergency room visits, adults","asthma emergency room visits, adults","O3_8h",4.77892111919846,0.00324975861654198
-"edinburgh",438501,"asthma emergency room visits, adults","asthma emergency room visits, adults","PM2.5",2.72890145466464,0.00185570566970936
-"edinburgh",438501,"asthma emergency room visits, children","asthma emergency room visits, children","O3_8h",1.0429324602255,0.000709214206418575
-"edinburgh",438501,"asthma emergency room visits, children","asthma emergency room visits, children","PM2.5",1.62860287357558,0.00110748139366966
-"edinburgh",438501,"deaths","chronic obstructive pulmonary disease","O3_8h",0.648714251130343,0.80451536351949
-"edinburgh",438501,"deaths","chronic obstructive pulmonary disease","PM2.5",NA,0.923579604056574
-"edinburgh",438501,"deaths","lower respiratory infections in children","PM2.5",0.0030206573031361,0.0253639211615939
-"edinburgh",438501,"deaths","non-communicable diseases and lower respiratory infections","NO2",0,0
-"edinburgh",438501,"deaths","non-communicable diseases and lower respiratory infections","PM2.5",9.67221479517247,13.0169302596383
-"edinburgh",438501,"disability","chronic obstructive pulmonary disease","PM2.5",6.11925135675514,0.512670862934619
-"edinburgh",438501,"disability","diabetes","PM2.5",17.9372835209376,1.50278556726232
-"edinburgh",438501,"disability","ischaemic heart disease","PM2.5",2.05047532083567,0.171788817107261
-"edinburgh",438501,"disability","lower respiratory infections","PM2.5",0.0452468816139554,0.00379078362527465
-"edinburgh",438501,"disability","lung cancer","PM2.5",0.265843267204553,0.0222723482428392
-"edinburgh",438501,"disability","stroke","PM2.5",2.4981433890951,0.209294446714955
-"edinburgh",438501,"new cases of asthma in children","new cases of asthma in children","NO2",-3.44597392802328,0
-"edinburgh",438501,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,-0.0795679622470927
+"edinburgh",438501,"asthma emergency room visits, adults","asthma emergency room visits, adults","O3_8h",-10.5440401498397,-0.00717015085108869
+"edinburgh",438501,"asthma emergency room visits, adults","asthma emergency room visits, adults","PM2.5",1.19410715784697,0.000812015919178536
+"edinburgh",438501,"asthma emergency room visits, children","asthma emergency room visits, children","O3_8h",-2.28052723004197,-0.00155080254125025
+"edinburgh",438501,"asthma emergency room visits, children","asthma emergency room visits, children","PM2.5",0.712689711296862,0.000484642761920343
+"edinburgh",438501,"deaths","chronic obstructive pulmonary disease","O3_8h",-1.47993697886133,-1.83537209867047
+"edinburgh",438501,"deaths","chronic obstructive pulmonary disease","PM2.5",NA,0.404824314671274
+"edinburgh",438501,"deaths","lower respiratory infections in children","PM2.5",0.00132474030638474,0.0111236083139401
+"edinburgh",438501,"deaths","non-communicable diseases and lower respiratory infections","NO2",25.1434802164191,33.8382609766976
+"edinburgh",438501,"deaths","non-communicable diseases and lower respiratory infections","PM2.5",4.23879222456293,5.70459444301951
+"edinburgh",438501,"disability","chronic obstructive pulmonary disease","PM2.5",2.68219623508264,0.224714393678538
+"edinburgh",438501,"disability","diabetes","PM2.5",7.89181741683223,0.661176442890108
+"edinburgh",438501,"disability","ischaemic heart disease","PM2.5",0.90018510320904,0.0754175056322236
+"edinburgh",438501,"disability","lower respiratory infections","PM2.5",0.0198675650052325,0.00166450454505323
+"edinburgh",438501,"disability","lung cancer","PM2.5",0.116543982667086,0.00976405456818093
+"edinburgh",438501,"disability","stroke","PM2.5",1.0946887405024,0.0917130198645359
+"edinburgh",438501,"new cases of asthma in children","new cases of asthma in children","NO2",20.006857113868,0
+"edinburgh",438501,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.461960793891552
 "edinburgh",438501,"preterm births","preterm births","PM2.5",0,0
-"edinburgh",438501,"work absence (sick leave days)","work absence (sick leave days)","PM2.5",2085.12157232891,0.478267652182296
-"exeter",114697,"asthma emergency room visits, adults","asthma emergency room visits, adults","O3_8h",-2.79662825395741,-0.00190176120067184
+"edinburgh",438501,"work absence (sick leave days)","work absence (sick leave days)","PM2.5",912.565031565173,0.209316493053623
+"exeter",114697,"asthma emergency room visits, adults","asthma emergency room visits, adults","O3_8h",-9.20836127019535,-0.00626186342809275
 "exeter",114697,"asthma emergency room visits, adults","asthma emergency room visits, adults","PM2.5",0,0
-"exeter",114697,"asthma emergency room visits, children","asthma emergency room visits, children","O3_8h",-0.599734944120449,-0.000407831339686065
+"exeter",114697,"asthma emergency room visits, children","asthma emergency room visits, children","O3_8h",-1.94182015438786,-0.00132047519117772
 "exeter",114697,"asthma emergency room visits, children","asthma emergency room visits, children","PM2.5",0,0
-"exeter",114697,"deaths","chronic obstructive pulmonary disease","O3_8h",-0.226657323572158,-0.281093407074493
+"exeter",114697,"deaths","chronic obstructive pulmonary disease","O3_8h",0,0
 "exeter",114697,"deaths","chronic obstructive pulmonary disease","PM2.5",NA,0
 "exeter",114697,"deaths","lower respiratory infections in children","PM2.5",0,0
-"exeter",114697,"deaths","non-communicable diseases and lower respiratory infections","NO2",8.21424381534641,11.0547833298115
+"exeter",114697,"deaths","non-communicable diseases and lower respiratory infections","NO2",8.57787794139819,11.5441645273014
 "exeter",114697,"deaths","non-communicable diseases and lower respiratory infections","PM2.5",0,0
 "exeter",114697,"disability","chronic obstructive pulmonary disease","PM2.5",0,0
 "exeter",114697,"disability","diabetes","PM2.5",0,0
@@ -375,105 +375,105 @@
 "exeter",114697,"disability","lower respiratory infections","PM2.5",0,0
 "exeter",114697,"disability","lung cancer","PM2.5",0,0
 "exeter",114697,"disability","stroke","PM2.5",0,0
-"exeter",114697,"new cases of asthma in children","new cases of asthma in children","NO2",6.27737559914617,0
-"exeter",114697,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.144945375419657
+"exeter",114697,"new cases of asthma in children","new cases of asthma in children","NO2",6.27295041191158,0
+"exeter",114697,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.144843197301606
 "exeter",114697,"preterm births","preterm births","PM2.5",0,0
 "exeter",114697,"work absence (sick leave days)","work absence (sick leave days)","PM2.5",0,0
-"glasgow",607192,"asthma emergency room visits, adults","asthma emergency room visits, adults","O3_8h",-3.43528497021452,-0.00233606009678263
-"glasgow",607192,"asthma emergency room visits, adults","asthma emergency room visits, adults","PM2.5",2.72378106110732,0.00185222370324288
-"glasgow",607192,"asthma emergency room visits, children","asthma emergency room visits, children","O3_8h",-0.736516743784733,-0.000500845603985043
-"glasgow",607192,"asthma emergency room visits, children","asthma emergency room visits, children","PM2.5",1.62567955958835,0.00110549348372474
+"glasgow",607192,"asthma emergency room visits, adults","asthma emergency room visits, adults","O3_8h",-17.6168421137838,-0.0119797927246667
+"glasgow",607192,"asthma emergency room visits, adults","asthma emergency room visits, adults","PM2.5",1.65980156483042,0.00112869710600333
+"glasgow",607192,"asthma emergency room visits, children","asthma emergency room visits, children","O3_8h",-3.75362065884417,-0.00255253451041576
+"glasgow",607192,"asthma emergency room visits, children","asthma emergency room visits, children","PM2.5",0.990550275200905,0.000673593309381114
 "glasgow",607192,"deaths","chronic obstructive pulmonary disease","O3_8h",0,0
-"glasgow",607192,"deaths","chronic obstructive pulmonary disease","PM2.5",NA,0.923705023717433
-"glasgow",607192,"deaths","lower respiratory infections in children","PM2.5",0.00302302689230182,0.0253838181796112
-"glasgow",607192,"deaths","non-communicable diseases and lower respiratory infections","NO2",31.3379848765616,42.1748660730116
-"glasgow",607192,"deaths","non-communicable diseases and lower respiratory infections","PM2.5",9.6715164213486,13.0159903835545
-"glasgow",607192,"disability","chronic obstructive pulmonary disease","PM2.5",6.1200823348608,0.512740482278174
-"glasgow",607192,"disability","diabetes","PM2.5",18.019873261843,1.50970493554301
-"glasgow",607192,"disability","ischaemic heart disease","PM2.5",2.05460121887883,0.172134484834707
-"glasgow",607192,"disability","lower respiratory infections","PM2.5",0.045347697388689,0.0037992299706226
-"glasgow",607192,"disability","lung cancer","PM2.5",0.265931680856252,0.022279755538351
-"glasgow",607192,"disability","stroke","PM2.5",2.49766995127079,0.20925478209525
-"glasgow",607192,"new cases of asthma in children","new cases of asthma in children","NO2",25.0566943254977,0
-"glasgow",607192,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.578562156815791
+"glasgow",607192,"deaths","chronic obstructive pulmonary disease","PM2.5",NA,0.561525237771563
+"glasgow",607192,"deaths","lower respiratory infections in children","PM2.5",0.0018362859118371,0.0154189656170616
+"glasgow",607192,"deaths","non-communicable diseases and lower respiratory infections","NO2",52.1146733737345,70.1362700452346
+"glasgow",607192,"deaths","non-communicable diseases and lower respiratory infections","PM2.5",5.8808330045124,7.91446371998715
+"glasgow",607192,"disability","chronic obstructive pulmonary disease","PM2.5",3.72043087352046,0.311697689017262
+"glasgow",607192,"disability","diabetes","PM2.5",10.8958989135361,0.912858382959627
+"glasgow",607192,"disability","ischaemic heart disease","PM2.5",1.24619765336323,0.104406436194444
+"glasgow",607192,"disability","lower respiratory infections","PM2.5",0.0274980736276329,0.00230378853781775
+"glasgow",607192,"disability","lung cancer","PM2.5",0.161623163982616,0.0135407882628847
+"glasgow",607192,"disability","stroke","PM2.5",1.51893925526407,0.127256726900402
+"glasgow",607192,"new cases of asthma in children","new cases of asthma in children","NO2",37.8344972862181,0
+"glasgow",607192,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.873603200310452
 "glasgow",607192,"preterm births","preterm births","PM2.5",0,0
-"glasgow",607192,"work absence (sick leave days)","work absence (sick leave days)","PM2.5",2081.64691840319,0.477470665283658
-"leeds",457875,"asthma emergency room visits, adults","asthma emergency room visits, adults","O3_8h",1.67919630294341,0.00114188590232912
-"leeds",457875,"asthma emergency room visits, adults","asthma emergency room visits, adults","PM2.5",0.774531072399604,0.000526696081297174
-"leeds",457875,"asthma emergency room visits, children","asthma emergency room visits, children","O3_8h",0.364740759994618,0.00024803075799573
-"leeds",457875,"asthma emergency room visits, children","asthma emergency room visits, children","PM2.5",0.460482462465336,0.000313136963937624
-"leeds",457875,"deaths","chronic obstructive pulmonary disease","O3_8h",0.231970482372873,0.287682622397795
-"leeds",457875,"deaths","chronic obstructive pulmonary disease","PM2.5",NA,0.210810924099535
-"leeds",457875,"deaths","lower respiratory infections in children","PM2.5",0.000582030475744802,0.00488720620015694
-"leeds",457875,"deaths","non-communicable diseases and lower respiratory infections","NO2",22.0146805871086,29.6275018658221
-"leeds",457875,"deaths","non-communicable diseases and lower respiratory infections","PM2.5",1.88758421270745,2.54032324305594
-"leeds",457875,"disability","chronic obstructive pulmonary disease","PM2.5",1.39674482594558,0.117019277926292
-"leeds",457875,"disability","diabetes","PM2.5",1.58013553227931,0.13238375083138
-"leeds",457875,"disability","ischaemic heart disease","PM2.5",0.383424802149904,0.0321233289382244
-"leeds",457875,"disability","lower respiratory infections","PM2.5",0.0127687424359777,0.00106976520845416
-"leeds",457875,"disability","lung cancer","PM2.5",0.0615673974284974,0.00515811639825255
-"leeds",457875,"disability","stroke","PM2.5",0.62449138580736,0.0523198866971964
-"leeds",457875,"new cases of asthma in children","new cases of asthma in children","NO2",17.7462712091603,0
-"leeds",457875,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.409763587041157
-"leeds",457875,"preterm births","preterm births","PM2.5",0.320400047300065,0.091409422748303
-"leeds",457875,"work absence (sick leave days)","work absence (sick leave days)","PM2.5",586.026721236965,0.134417881336793
-"leicester",341201,"asthma emergency room visits, adults","asthma emergency room visits, adults","O3_8h",-1.75434795552064,-0.00119299047685933
-"leicester",341201,"asthma emergency room visits, adults","asthma emergency room visits, adults","PM2.5",-1.70886723848188,-0.00116206271128289
-"leicester",341201,"asthma emergency room visits, children","asthma emergency room visits, children","O3_8h",-0.378255663256965,-0.000257221153114835
-"leicester",341201,"asthma emergency room visits, children","asthma emergency room visits, children","PM2.5",-1.01826464296886,-0.000692439614479999
-"leicester",341201,"deaths","chronic obstructive pulmonary disease","O3_8h",-0.249120335616713,-0.308951340315944
-"leicester",341201,"deaths","chronic obstructive pulmonary disease","PM2.5",NA,-0.515914891408242
-"leicester",341201,"deaths","lower respiratory infections in children","PM2.5",-0.00149916476717527,-0.0125882194327026
-"leicester",341201,"deaths","non-communicable diseases and lower respiratory infections","NO2",12.8392934155276,17.2792054883202
-"leicester",341201,"deaths","non-communicable diseases and lower respiratory infections","PM2.5",-4.87503300956666,-6.56085147433192
-"leicester",341201,"disability","chronic obstructive pulmonary disease","PM2.5",-3.41823583517191,-0.286379789481452
-"leicester",341201,"disability","diabetes","PM2.5",-5.85879548707766,-0.490849870842747
-"leicester",341201,"disability","ischaemic heart disease","PM2.5",-1.01999745981858,-0.0854553845608979
-"leicester",341201,"disability","lower respiratory infections","PM2.5",-0.0290355000384471,-0.00243259411856261
-"leicester",341201,"disability","lung cancer","PM2.5",-0.149649015193012,-0.0125375941080805
-"leicester",341201,"disability","stroke","PM2.5",-1.46066279098594,-0.122374324873026
-"leicester",341201,"new cases of asthma in children","new cases of asthma in children","NO2",10.1335868382778,0
-"leicester",341201,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.233985767686363
-"leicester",341201,"preterm births","preterm births","PM2.5",0,0
-"leicester",341201,"work absence (sick leave days)","work absence (sick leave days)","PM2.5",-1300.49999575117,-0.29829775293931
-"liverpool",468584,"asthma emergency room visits, adults","asthma emergency room visits, adults","O3_8h",-15.4855616806539,-0.0105304808864762
-"liverpool",468584,"asthma emergency room visits, adults","asthma emergency room visits, adults","PM2.5",4.20939701792723,0.00286247123320369
-"liverpool",468584,"asthma emergency room visits, children","asthma emergency room visits, children","O3_8h",-3.33408982563259,-0.00226724544492832
-"liverpool",468584,"asthma emergency room visits, children","asthma emergency room visits, children","PM2.5",2.49969941073224,0.00169984385516589
-"liverpool",468584,"deaths","chronic obstructive pulmonary disease","O3_8h",-2.21068512902461,-2.74162336823241
-"liverpool",468584,"deaths","chronic obstructive pulmonary disease","PM2.5",NA,1.08786335995313
-"liverpool",468584,"deaths","lower respiratory infections in children","PM2.5",0.00293118492359774,0.0246126375325654
-"liverpool",468584,"deaths","non-communicable diseases and lower respiratory infections","NO2",16.2331490566189,21.8466787224148
-"liverpool",468584,"deaths","non-communicable diseases and lower respiratory infections","PM2.5",9.51576695429725,12.8063817268492
-"liverpool",468584,"disability","chronic obstructive pulmonary disease","PM2.5",7.20772666710985,0.603863321637362
-"liverpool",468584,"disability","diabetes","PM2.5",6.54520416331547,0.548357187973
-"liverpool",468584,"disability","ischaemic heart disease","PM2.5",1.90792113529936,0.159845627809573
-"liverpool",468584,"disability","lower respiratory infections","PM2.5",0.0685352577198723,0.00574188371554739
-"liverpool",468584,"disability","lung cancer","PM2.5",0.319518548275182,0.0267692631529224
-"liverpool",468584,"disability","stroke","PM2.5",3.31526217071564,0.277752656138079
-"liverpool",468584,"new cases of asthma in children","new cases of asthma in children","NO2",16.9482749343208,0
-"liverpool",468584,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.391337754810277
-"liverpool",468584,"preterm births","preterm births","PM2.5",1.71651630226535,0.489718293272225
-"liverpool",468584,"work absence (sick leave days)","work absence (sick leave days)","PM2.5",3175.35361391994,0.72833590996895
-"london",7489022,"asthma emergency room visits, adults","asthma emergency room visits, adults","O3_8h",-198.138583988028,-0.134738062111499
-"london",7489022,"asthma emergency room visits, adults","asthma emergency room visits, adults","PM2.5",-50.6063408638864,-0.0344132887260671
-"london",7489022,"asthma emergency room visits, children","asthma emergency room visits, children","O3_8h",-42.4737048519378,-0.0288829392401013
-"london",7489022,"asthma emergency room visits, children","asthma emergency room visits, children","PM2.5",-30.0732700835438,-0.0204504042113134
-"london",7489022,"deaths","chronic obstructive pulmonary disease","O3_8h",-5.73030300632782,-7.10654467383712
-"london",7489022,"deaths","chronic obstructive pulmonary disease","PM2.5",NA,-13.3525588988513
-"london",7489022,"deaths","lower respiratory infections in children","PM2.5",-0.0362205419157591,-0.304137436784942
-"london",7489022,"deaths","non-communicable diseases and lower respiratory infections","NO2",339.846193304522,457.367241208956
-"london",7489022,"deaths","non-communicable diseases and lower respiratory infections","PM2.5",-117.132953123937,-157.638298384436
-"london",7489022,"disability","chronic obstructive pulmonary disease","PM2.5",-88.4684588086084,-7.41188725150776
-"london",7489022,"disability","diabetes","PM2.5",-84.6624471272353,-7.09301960262883
-"london",7489022,"disability","ischaemic heart disease","PM2.5",-23.7294465377111,-1.9880529699143
-"london",7489022,"disability","lower respiratory infections","PM2.5",-0.846461667586116,-0.0709165563338725
-"london",7489022,"disability","lung cancer","PM2.5",-3.91983371540206,-0.328403658597386
-"london",7489022,"disability","stroke","PM2.5",-40.3720937162482,-3.38237390773919
-"london",7489022,"new cases of asthma in children","new cases of asthma in children","NO2",250.538866742535,0
-"london",7489022,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,5.78497327802902
-"london",7489022,"preterm births","preterm births","PM2.5",-20.8169799697858,-5.93903820687959
-"london",7489022,"work absence (sick leave days)","work absence (sick leave days)","PM2.5",-38244.7043683201,-8.77224868294501
+"glasgow",607192,"work absence (sick leave days)","work absence (sick leave days)","PM2.5",1268.18221838672,0.290884972932152
+"leeds",457875,"asthma emergency room visits, adults","asthma emergency room visits, adults","O3_8h",-11.5443676967028,-0.00785039289394708
+"leeds",457875,"asthma emergency room visits, adults","asthma emergency room visits, adults","PM2.5",0.239258367099481,0.000162700308431071
+"leeds",457875,"asthma emergency room visits, children","asthma emergency room visits, children","O3_8h",-2.48592448929122,-0.00169047664266572
+"leeds",457875,"asthma emergency room visits, children","asthma emergency room visits, children","PM2.5",0.142138055683439,9.66566217927575e-05
+"leeds",457875,"deaths","chronic obstructive pulmonary disease","O3_8h",-1.64709522975163,-2.04267659482724
+"leeds",457875,"deaths","chronic obstructive pulmonary disease","PM2.5",NA,0.0627509346715659
+"leeds",457875,"deaths","lower respiratory infections in children","PM2.5",0.000170125010869396,0.00142850940383971
+"leeds",457875,"deaths","non-communicable diseases and lower respiratory infections","NO2",27.8664544491701,37.5028576008546
+"leeds",457875,"deaths","non-communicable diseases and lower respiratory infections","PM2.5",0.551381223979149,0.742052476191044
+"leeds",457875,"disability","chronic obstructive pulmonary disease","PM2.5",0.415761392347861,0.0348324883818626
+"leeds",457875,"disability","diabetes","PM2.5",0.397789385596752,0.0333267937024534
+"leeds",457875,"disability","ischaemic heart disease","PM2.5",0.111120562653213,0.00930968045336287
+"leeds",457875,"disability","lower respiratory infections","PM2.5",0.00393320240998851,0.000329523687795503
+"leeds",457875,"disability","lung cancer","PM2.5",0.0184070898370532,0.00154214593921835
+"leeds",457875,"disability","stroke","PM2.5",0.189798123471419,0.0159012862964124
+"leeds",457875,"new cases of asthma in children","new cases of asthma in children","NO2",21.3712342533077,0
+"leeds",457875,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.493464430015696
+"leeds",457875,"preterm births","preterm births","PM2.5",0.0980507229234107,0.0279736537432191
+"leeds",457875,"work absence (sick leave days)","work absence (sick leave days)","PM2.5",180.672352732479,0.0414411049707271
+"leicester",341201,"asthma emergency room visits, adults","asthma emergency room visits, adults","O3_8h",-0.00318666163423131,-2.16699142864672e-06
+"leicester",341201,"asthma emergency room visits, adults","asthma emergency room visits, adults","PM2.5",0.302329901430639,0.000205590169351293
+"leicester",341201,"asthma emergency room visits, children","asthma emergency room visits, children","O3_8h",-0.000688947035655474,-4.68497284120531e-07
+"leicester",341201,"asthma emergency room visits, children","asthma emergency room visits, children","PM2.5",0.179788963322846,0.000122259965825837
+"leicester",341201,"deaths","chronic obstructive pulmonary disease","O3_8h",-0.000447956327443322,-0.000555541591677815
+"leicester",341201,"deaths","chronic obstructive pulmonary disease","PM2.5",NA,0.0827036006485149
+"leicester",341201,"deaths","lower respiratory infections in children","PM2.5",0.000228468300239135,0.00191840760922199
+"leicester",341201,"deaths","non-communicable diseases and lower respiratory infections","NO2",12.7822709873967,17.2024643296576
+"leicester",341201,"deaths","non-communicable diseases and lower respiratory infections","PM2.5",0.739563656191592,0.995309630635321
+"leicester",341201,"disability","chronic obstructive pulmonary disease","PM2.5",0.54795939435445,0.0459080366500579
+"leicester",341201,"disability","diabetes","PM2.5",0.620662750327142,0.0519991236265153
+"leicester",341201,"disability","ischaemic heart disease","PM2.5",0.150900410852401,0.0126424360332061
+"leicester",341201,"disability","lower respiratory infections","PM2.5",0.00505338427464319,0.000423372521535915
+"leicester",341201,"disability","lung cancer","PM2.5",0.0241685564386032,0.00202484159628209
+"leicester",341201,"disability","stroke","PM2.5",0.244896302455132,0.0205174115899932
+"leicester",341201,"new cases of asthma in children","new cases of asthma in children","NO2",9.98985581596122,0
+"leicester",341201,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.230667000685715
+"leicester",341201,"preterm births","preterm births","PM2.5",0.125446567372661,0.035789627392133
+"leicester",341201,"work absence (sick leave days)","work absence (sick leave days)","PM2.5",228.89561827993,0.0525021521058269
+"liverpool",468584,"asthma emergency room visits, adults","asthma emergency room visits, adults","O3_8h",-23.143481478079,-0.015738014182327
+"liverpool",468584,"asthma emergency room visits, adults","asthma emergency room visits, adults","PM2.5",4.50622661279878,0.00306432108791322
+"liverpool",468584,"asthma emergency room visits, children","asthma emergency room visits, children","O3_8h",-4.94840048161342,-0.00336500785472704
+"liverpool",468584,"asthma emergency room visits, children","asthma emergency room visits, children","PM2.5",2.67144466041379,0.00181663394043443
+"liverpool",468584,"deaths","chronic obstructive pulmonary disease","O3_8h",0,0
+"liverpool",468584,"deaths","chronic obstructive pulmonary disease","PM2.5",NA,1.09695068658888
+"liverpool",468584,"deaths","lower respiratory infections in children","PM2.5",0.00287913232673188,0.0241755611512788
+"liverpool",468584,"deaths","non-communicable diseases and lower respiratory infections","NO2",23.4479157042094,31.5563591089716
+"liverpool",468584,"deaths","non-communicable diseases and lower respiratory infections","PM2.5",9.42739643980588,12.6874521074699
+"liverpool",468584,"disability","chronic obstructive pulmonary disease","PM2.5",7.26793548462916,0.608907616214309
+"liverpool",468584,"disability","diabetes","PM2.5",5.23211943141507,0.4383469525107
+"liverpool",468584,"disability","ischaemic heart disease","PM2.5",1.85313703625684,0.155255816132659
+"liverpool",468584,"disability","lower respiratory infections","PM2.5",0.0702145069112055,0.00588257120847949
+"liverpool",468584,"disability","lung cancer","PM2.5",0.324106271865183,0.027153622623496
+"liverpool",468584,"disability","stroke","PM2.5",3.45238007298302,0.289240393637473
+"liverpool",468584,"new cases of asthma in children","new cases of asthma in children","NO2",18.4694984103773,0
+"liverpool",468584,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.426462992156947
+"liverpool",468584,"preterm births","preterm births","PM2.5",1.7997280660642,0.513458424894607
+"liverpool",468584,"work absence (sick leave days)","work absence (sick leave days)","PM2.5",3384.46174512968,0.776299374686349
+"london",7489022,"asthma emergency room visits, adults","asthma emergency room visits, adults","O3_8h",-402.074799465941,-0.273418625557476
+"london",7489022,"asthma emergency room visits, adults","asthma emergency room visits, adults","PM2.5",-23.8784784476206,-0.0162378263104878
+"london",7489022,"asthma emergency room visits, children","asthma emergency room visits, children","O3_8h",-85.4131101892563,-0.0580825638004551
+"london",7489022,"asthma emergency room visits, children","asthma emergency room visits, children","PM2.5",-14.1642939657295,-0.00963199333369266
+"london",7489022,"deaths","chronic obstructive pulmonary disease","O3_8h",0,0
+"london",7489022,"deaths","chronic obstructive pulmonary disease","PM2.5",NA,-5.87623579403532
+"london",7489022,"deaths","lower respiratory infections in children","PM2.5",-0.0154327070153915,-0.129585691048753
+"london",7489022,"deaths","non-communicable diseases and lower respiratory infections","NO2",530.450231139252,713.883408420056
+"london",7489022,"deaths","non-communicable diseases and lower respiratory infections","PM2.5",-50.3371489491019,-67.7440659885407
+"london",7489022,"disability","chronic obstructive pulmonary disease","PM2.5",-38.9334754658175,-3.26184647441727
+"london",7489022,"disability","diabetes","PM2.5",-27.9516893036198,-2.34179245798576
+"london",7489022,"disability","ischaemic heart disease","PM2.5",-9.98523188401464,-0.836562701567859
+"london",7489022,"disability","lower respiratory infections","PM2.5",-0.384777145797102,-0.0322366282855105
+"london",7489022,"disability","lung cancer","PM2.5",-1.73890028997548,-0.145685061822936
+"london",7489022,"disability","stroke","PM2.5",-18.4903846546963,-1.54912437882647
+"london",7489022,"new cases of asthma in children","new cases of asthma in children","NO2",360.31327749201,0
+"london",7489022,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,8.31967793704584
+"london",7489022,"preterm births","preterm births","PM2.5",-9.60588111447612,-2.74053657314458
+"london",7489022,"work absence (sick leave days)","work absence (sick leave days)","PM2.5",-17961.452220676,-4.11984687001854
 "luton",195617,"asthma emergency room visits, adults","asthma emergency room visits, adults","O3_8h",0,0
 "luton",195617,"asthma emergency room visits, adults","asthma emergency room visits, adults","PM2.5",0,0
 "luton",195617,"asthma emergency room visits, children","asthma emergency room visits, children","O3_8h",0,0
@@ -481,7 +481,7 @@
 "luton",195617,"deaths","chronic obstructive pulmonary disease","O3_8h",0,0
 "luton",195617,"deaths","chronic obstructive pulmonary disease","PM2.5",NA,0
 "luton",195617,"deaths","lower respiratory infections in children","PM2.5",0,0
-"luton",195617,"deaths","non-communicable diseases and lower respiratory infections","NO2",16.3568315872044,22.0131314852061
+"luton",195617,"deaths","non-communicable diseases and lower respiratory infections","NO2",18.2798420595281,24.6011316213576
 "luton",195617,"deaths","non-communicable diseases and lower respiratory infections","PM2.5",0,0
 "luton",195617,"disability","chronic obstructive pulmonary disease","PM2.5",0,0
 "luton",195617,"disability","diabetes","PM2.5",0,0
@@ -489,295 +489,295 @@
 "luton",195617,"disability","lower respiratory infections","PM2.5",0,0
 "luton",195617,"disability","lung cancer","PM2.5",0,0
 "luton",195617,"disability","stroke","PM2.5",0,0
-"luton",195617,"new cases of asthma in children","new cases of asthma in children","NO2",10.7423975855638,0
-"luton",195617,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.248043282794571
+"luton",195617,"new cases of asthma in children","new cases of asthma in children","NO2",11.3189946113572,0
+"luton",195617,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.26135697910754
 "luton",195617,"preterm births","preterm births","PM2.5",0,0
 "luton",195617,"work absence (sick leave days)","work absence (sick leave days)","PM2.5",0,0
-"manchester",395514,"asthma emergency room visits, adults","asthma emergency room visits, adults","O3_8h",-12.6252968618361,-0.00858544559321669
-"manchester",395514,"asthma emergency room visits, adults","asthma emergency room visits, adults","PM2.5",2.31211589973463,0.00157228344645006
-"manchester",395514,"asthma emergency room visits, children","asthma emergency room visits, children","O3_8h",-2.69083994208818,-0.00182982310639248
-"manchester",395514,"asthma emergency room visits, children","asthma emergency room visits, children","PM2.5",1.37277277126154,0.000933511985380846
+"manchester",395514,"asthma emergency room visits, adults","asthma emergency room visits, adults","O3_8h",-15.4150680763089,-0.0104825438746662
+"manchester",395514,"asthma emergency room visits, adults","asthma emergency room visits, adults","PM2.5",2.52380851974608,0.00171623851471367
+"manchester",395514,"asthma emergency room visits, children","asthma emergency room visits, children","O3_8h",-3.27655566460457,-0.00222812110475139
+"manchester",395514,"asthma emergency room visits, children","asthma emergency room visits, children","PM2.5",1.49652826149378,0.00101766810779745
 "manchester",395514,"deaths","chronic obstructive pulmonary disease","O3_8h",0,0
-"manchester",395514,"deaths","chronic obstructive pulmonary disease","PM2.5",NA,0.588403395490997
-"manchester",395514,"deaths","lower respiratory infections in children","PM2.5",0.00156975207915629,0.0131809285143439
-"manchester",395514,"deaths","non-communicable diseases and lower respiratory infections","NO2",18.4981403260303,24.8949188635801
-"manchester",395514,"deaths","non-communicable diseases and lower respiratory infections","PM2.5",5.09133091813788,6.85194662170017
-"manchester",395514,"disability","chronic obstructive pulmonary disease","PM2.5",3.89851428113289,0.326617516449131
-"manchester",395514,"disability","diabetes","PM2.5",3.20875842968479,0.268829772988372
-"manchester",395514,"disability","ischaemic heart disease","PM2.5",1.020788313666,0.0855216422942029
-"manchester",395514,"disability","lower respiratory infections","PM2.5",0.0380954002349831,0.00319163253373286
-"manchester",395514,"disability","lung cancer","PM2.5",0.173438559763252,0.0145306820910056
-"manchester",395514,"disability","stroke","PM2.5",1.81566604813017,0.152116496843754
-"manchester",395514,"new cases of asthma in children","new cases of asthma in children","NO2",14.6152437829786,0
-"manchester",395514,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.337467778296039
-"manchester",395514,"preterm births","preterm births","PM2.5",0.940736633011451,0.268390074553343
-"manchester",395514,"work absence (sick leave days)","work absence (sick leave days)","PM2.5",1743.32512951836,0.399869258344434
-"middlesbrough",142587,"asthma emergency room visits, adults","asthma emergency room visits, adults","O3_8h",0.34645159859366,0.00023559377517688
-"middlesbrough",142587,"asthma emergency room visits, adults","asthma emergency room visits, adults","PM2.5",-1.21185682838234,-0.00082408603779409
-"middlesbrough",142587,"asthma emergency room visits, children","asthma emergency room visits, children","O3_8h",0.0745954811101299,5.07263671959154e-05
-"middlesbrough",142587,"asthma emergency room visits, children","asthma emergency room visits, children","PM2.5",-0.723534680559944,-0.000492017550377774
-"middlesbrough",142587,"deaths","chronic obstructive pulmonary disease","O3_8h",0.0494502890643942,0.0613267200673697
-"middlesbrough",142587,"deaths","chronic obstructive pulmonary disease","PM2.5",NA,-0.414395791197551
-"middlesbrough",142587,"deaths","lower respiratory infections in children","PM2.5",-0.00135984418678158,-0.0114183693429144
+"manchester",395514,"deaths","chronic obstructive pulmonary disease","PM2.5",NA,0.616865209263347
+"manchester",395514,"deaths","lower respiratory infections in children","PM2.5",0.00161943938585318,0.0135981439755234
+"manchester",395514,"deaths","non-communicable diseases and lower respiratory infections","NO2",18.0909510967609,24.3469209218346
+"manchester",395514,"deaths","non-communicable diseases and lower respiratory infections","PM2.5",5.29502215985082,7.12607563393021
+"manchester",395514,"disability","chronic obstructive pulmonary disease","PM2.5",4.08709032999448,0.342416417337872
+"manchester",395514,"disability","diabetes","PM2.5",2.93927824838659,0.246252724092111
+"manchester",395514,"disability","ischaemic heart disease","PM2.5",1.04437096209891,0.0874973965192735
+"manchester",395514,"disability","lower respiratory infections","PM2.5",0.0398189911438915,0.00333603497564932
+"manchester",395514,"disability","lung cancer","PM2.5",0.18236516200523,0.0152785528038857
+"manchester",395514,"disability","stroke","PM2.5",1.9412891038634,0.162641196130071
+"manchester",395514,"new cases of asthma in children","new cases of asthma in children","NO2",14.0528313931527,0
+"manchester",395514,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.324481606973894
+"manchester",395514,"preterm births","preterm births","PM2.5",1.01070097990206,0.288350747518673
+"manchester",395514,"work absence (sick leave days)","work absence (sick leave days)","PM2.5",1896.61430762697,0.43502944098888
+"middlesbrough",142587,"asthma emergency room visits, adults","asthma emergency room visits, adults","O3_8h",-0.447950665213227,-0.000304615099883988
+"middlesbrough",142587,"asthma emergency room visits, adults","asthma emergency room visits, adults","PM2.5",0.649590575769466,0.000441734131653831
+"middlesbrough",142587,"asthma emergency room visits, children","asthma emergency room visits, children","O3_8h",-0.0962904853716608,-6.54793889086068e-05
+"middlesbrough",142587,"asthma emergency room visits, children","asthma emergency room visits, children","PM2.5",0.386441012553561,0.000262787348651986
+"middlesbrough",142587,"deaths","chronic obstructive pulmonary disease","O3_8h",-0.0643316790040571,-0.0797821599102935
+"middlesbrough",142587,"deaths","chronic obstructive pulmonary disease","PM2.5",NA,0.179052614113566
+"middlesbrough",142587,"deaths","lower respiratory infections in children","PM2.5",0.000495060792092522,0.00415693726256021
 "middlesbrough",142587,"deaths","non-communicable diseases and lower respiratory infections","NO2",0,0
-"middlesbrough",142587,"deaths","non-communicable diseases and lower respiratory infections","PM2.5",-4.33514248904929,-5.83426326240335
-"middlesbrough",142587,"disability","chronic obstructive pulmonary disease","PM2.5",-2.74561282685486,-0.230027435574153
-"middlesbrough",142587,"disability","diabetes","PM2.5",-8.23562466749927,-0.689980613466967
-"middlesbrough",142587,"disability","ischaemic heart disease","PM2.5",-0.92893375756918,-0.077826067820594
-"middlesbrough",142587,"disability","lower respiratory infections","PM2.5",-0.020521158381034,-0.00171926259639733
-"middlesbrough",142587,"disability","lung cancer","PM2.5",-0.119400287074176,-0.0100033557440626
-"middlesbrough",142587,"disability","stroke","PM2.5",-1.11900862683408,-0.0937505398788718
-"middlesbrough",142587,"new cases of asthma in children","new cases of asthma in children","NO2",0.406626707788092,0
-"middlesbrough",142587,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.00938906074443297
-"middlesbrough",142587,"preterm births","preterm births","PM2.5",0,0
-"middlesbrough",142587,"work absence (sick leave days)","work absence (sick leave days)","PM2.5",-926.960085936458,-0.212618309575282
+"middlesbrough",142587,"deaths","non-communicable diseases and lower respiratory infections","PM2.5",1.59802307394824,2.15062995884454
+"middlesbrough",142587,"disability","chronic obstructive pulmonary disease","PM2.5",1.1863275748323,0.0993905211690664
+"middlesbrough",142587,"disability","diabetes","PM2.5",1.34621248077414,0.112785678177763
+"middlesbrough",142587,"disability","ischaemic heart disease","PM2.5",0.32827282891202,0.0275026967621669
+"middlesbrough",142587,"disability","lower respiratory infections","PM2.5",0.0110871210814414,0.000928878975695021
+"middlesbrough",142587,"disability","lung cancer","PM2.5",0.0523736780650923,0.00438786661362593
+"middlesbrough",142587,"disability","stroke","PM2.5",0.529874801195351,0.0443929094816879
+"middlesbrough",142587,"new cases of asthma in children","new cases of asthma in children","NO2",3.00098237371844,0
+"middlesbrough",142587,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.0692930524733225
+"middlesbrough",142587,"preterm births","preterm births","PM2.5",0.270772207439769,0.0772507101260596
+"middlesbrough",142587,"work absence (sick leave days)","work absence (sick leave days)","PM2.5",492.28084990408,0.112915241692578
 "newport",117636,"asthma emergency room visits, adults","asthma emergency room visits, adults","O3_8h",0,0
-"newport",117636,"asthma emergency room visits, adults","asthma emergency room visits, adults","PM2.5",-1.19782695844886,-0.00081454545539734
+"newport",117636,"asthma emergency room visits, adults","asthma emergency room visits, adults","PM2.5",-0.706345283959593,-0.000480328428853933
 "newport",117636,"asthma emergency room visits, children","asthma emergency room visits, children","O3_8h",0,0
-"newport",117636,"asthma emergency room visits, children","asthma emergency room visits, children","PM2.5",-0.7125613239332,-0.000484555456034578
+"newport",117636,"asthma emergency room visits, children","asthma emergency room visits, children","PM2.5",-0.41950979255318,-0.000285274757433556
 "newport",117636,"deaths","chronic obstructive pulmonary disease","O3_8h",0,0
-"newport",117636,"deaths","chronic obstructive pulmonary disease","PM2.5",NA,-0.330646429694029
-"newport",117636,"deaths","lower respiratory infections in children","PM2.5",-0.000915658649632455,-0.00768862253129369
-"newport",117636,"deaths","non-communicable diseases and lower respiratory infections","NO2",0,0
-"newport",117636,"deaths","non-communicable diseases and lower respiratory infections","PM2.5",-2.95882239957974,-3.98200263761807
-"newport",117636,"disability","chronic obstructive pulmonary disease","PM2.5",-2.19072465938465,-0.183538906330273
-"newport",117636,"disability","diabetes","PM2.5",-2.52861868696334,-0.211847667091994
-"newport",117636,"disability","ischaemic heart disease","PM2.5",-0.607102088354619,-0.0508630114013189
-"newport",117636,"disability","lower respiratory infections","PM2.5",-0.0203293064932875,-0.00170318924573524
-"newport",117636,"disability","lung cancer","PM2.5",-0.0966556606298816,-0.0080978109990425
-"newport",117636,"disability","stroke","PM2.5",-0.976882645602039,-0.0818432255366968
-"newport",117636,"new cases of asthma in children","new cases of asthma in children","NO2",2.3663259561387,0
-"newport",117636,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.0546387576560578
-"newport",117636,"preterm births","preterm births","PM2.5",-0.499080049543142,-0.142386431020742
-"newport",117636,"work absence (sick leave days)","work absence (sick leave days)","PM2.5",-907.669535872792,-0.208193605418607
-"northampton",199112,"asthma emergency room visits, adults","asthma emergency room visits, adults","O3_8h",-1.74546022928945,-0.00118694665144762
-"northampton",199112,"asthma emergency room visits, adults","asthma emergency room visits, adults","PM2.5",-1.874982364637,-0.00127502420386578
-"northampton",199112,"asthma emergency room visits, children","asthma emergency room visits, children","O3_8h",-0.379176152667668,-0.000257847103683875
-"northampton",199112,"asthma emergency room visits, children","asthma emergency room visits, children","PM2.5",-1.11440678050898,-0.000757818123999354
-"northampton",199112,"deaths","chronic obstructive pulmonary disease","O3_8h",-0.241024783528653,-0.298911486837054
-"northampton",199112,"deaths","chronic obstructive pulmonary disease","PM2.5",NA,-0.499937987840511
-"northampton",199112,"deaths","lower respiratory infections in children","PM2.5",-0.00136419656045667,-0.0114549154491696
+"newport",117636,"deaths","chronic obstructive pulmonary disease","PM2.5",NA,-0.184269765702367
+"newport",117636,"deaths","lower respiratory infections in children","PM2.5",-0.000499329664421899,-0.00419278222289338
+"newport",117636,"deaths","non-communicable diseases and lower respiratory infections","NO2",1.38658902378218,1.86608062409461
+"newport",117636,"deaths","non-communicable diseases and lower respiratory infections","PM2.5",-1.62151739858714,-2.1822487754029
+"newport",117636,"disability","chronic obstructive pulmonary disease","PM2.5",-1.22089423459605,-0.102286515835193
+"newport",117636,"disability","diabetes","PM2.5",-1.16789670265868,-0.0978463827457558
+"newport",117636,"disability","ischaemic heart disease","PM2.5",-0.325281401088009,-0.0272520749467625
+"newport",117636,"disability","lower respiratory infections","PM2.5",-0.0114354332208318,-0.00095806056583755
+"newport",117636,"disability","lung cancer","PM2.5",-0.054015650201602,-0.00452543103500069
+"newport",117636,"disability","stroke","PM2.5",-0.557523340501241,-0.046709304033644
+"newport",117636,"new cases of asthma in children","new cases of asthma in children","NO2",2.32323488574595,0
+"newport",117636,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.0536437795355583
+"newport",117636,"preterm births","preterm births","PM2.5",-0.288501246214226,-0.0823087655599208
+"newport",117636,"work absence (sick leave days)","work absence (sick leave days)","PM2.5",-533.011659905762,-0.122257732379695
+"northampton",199112,"asthma emergency room visits, adults","asthma emergency room visits, adults","O3_8h",-0.92447742826846,-0.000628662497952639
+"northampton",199112,"asthma emergency room visits, adults","asthma emergency room visits, adults","PM2.5",-1.18295962486348,-0.000804435381550331
+"northampton",199112,"asthma emergency room visits, children","asthma emergency room visits, children","O3_8h",-0.201047453345609,-0.000136716149429398
+"northampton",199112,"asthma emergency room visits, children","asthma emergency room visits, children","PM2.5",-0.702139566037602,-0.000477468459476988
+"northampton",199112,"deaths","chronic obstructive pulmonary disease","O3_8h",-0.127143382966116,-0.157679293753533
+"northampton",199112,"deaths","chronic obstructive pulmonary disease","PM2.5",NA,-0.299262193252143
+"northampton",199112,"deaths","lower respiratory infections in children","PM2.5",-0.000798023144608896,-0.00670085815559846
 "northampton",199112,"deaths","non-communicable diseases and lower respiratory infections","NO2",0,0
-"northampton",199112,"deaths","non-communicable diseases and lower respiratory infections","PM2.5",-4.4156360909158,-5.94259208098656
-"northampton",199112,"disability","chronic obstructive pulmonary disease","PM2.5",-3.31237956852837,-0.277511151734242
-"northampton",199112,"disability","diabetes","PM2.5",-3.36180126030342,-0.281651700944077
-"northampton",199112,"disability","ischaemic heart disease","PM2.5",-0.895472638444332,-0.0750226953463526
-"northampton",199112,"disability","lower respiratory infections","PM2.5",-0.0312424349493539,-0.00261749111972374
-"northampton",199112,"disability","lung cancer","PM2.5",-0.146516244076112,-0.012275130551962
-"northampton",199112,"disability","stroke","PM2.5",-1.50138127716511,-0.125785719540416
-"northampton",199112,"new cases of asthma in children","new cases of asthma in children","NO2",2.09309531962224,0
-"northampton",199112,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.0483298286202659
-"northampton",199112,"preterm births","preterm births","PM2.5",-0.77282498934353,-0.220485255094846
-"northampton",199112,"work absence (sick leave days)","work absence (sick leave days)","PM2.5",-1417.57592876452,-0.325151645946041
-"norwich",178388,"asthma emergency room visits, adults","asthma emergency room visits, adults","O3_8h",-0.887369134407095,-0.000603428141763608
-"norwich",178388,"asthma emergency room visits, adults","asthma emergency room visits, adults","PM2.5",-1.45116478214554,-0.000986820066113734
-"norwich",178388,"asthma emergency room visits, children","asthma emergency room visits, children","O3_8h",-0.192539963454337,-0.000130930892069082
-"norwich",178388,"asthma emergency room visits, children","asthma emergency room visits, children","PM2.5",-0.863946319662295,-0.000587500175567491
-"norwich",178388,"deaths","chronic obstructive pulmonary disease","O3_8h",-0.123075451110174,-0.152634370399134
-"norwich",178388,"deaths","chronic obstructive pulmonary disease","PM2.5",NA,-0.416968666974984
-"norwich",178388,"deaths","lower respiratory infections in children","PM2.5",-0.00117803688525271,-0.00989176582592729
+"northampton",199112,"deaths","non-communicable diseases and lower respiratory infections","PM2.5",-2.59391165802015,-3.49090336258489
+"northampton",199112,"disability","chronic obstructive pulmonary disease","PM2.5",-1.98278586278909,-0.166117794486165
+"northampton",199112,"disability","diabetes","PM2.5",-1.63317634488411,-0.136827509975031
+"northampton",199112,"disability","ischaemic heart disease","PM2.5",-0.517434743616079,-0.0433506814896851
+"northampton",199112,"disability","lower respiratory infections","PM2.5",-0.0191456266401099,-0.00160402055067958
+"northampton",199112,"disability","lung cancer","PM2.5",-0.0881392914884174,-0.0073843096142686
+"northampton",199112,"disability","stroke","PM2.5",-0.923660678256319,-0.0773842892493219
+"northampton",199112,"new cases of asthma in children","new cases of asthma in children","NO2",3.66091973323699,0
+"northampton",199112,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.084531087352402
+"northampton",199112,"preterm births","preterm births","PM2.5",-0.479470529972802,-0.136791878587304
+"northampton",199112,"work absence (sick leave days)","work absence (sick leave days)","PM2.5",-891.228452724623,-0.204422488021446
+"norwich",178388,"asthma emergency room visits, adults","asthma emergency room visits, adults","O3_8h",-8.29977677714993,-0.00564400843289963
+"norwich",178388,"asthma emergency room visits, adults","asthma emergency room visits, adults","PM2.5",-1.25568614792729,-0.000853890821195127
+"norwich",178388,"asthma emergency room visits, children","asthma emergency room visits, children","O3_8h",-1.77893438490088,-0.00120970972347082
+"norwich",178388,"asthma emergency room visits, children","asthma emergency room visits, children","PM2.5",-0.747182153077295,-0.000508098288196184
+"norwich",178388,"deaths","chronic obstructive pulmonary disease","O3_8h",-0.314746133346632,-0.390338426270887
+"norwich",178388,"deaths","chronic obstructive pulmonary disease","PM2.5",NA,-0.356294199799282
+"norwich",178388,"deaths","lower respiratory infections in children","PM2.5",-0.00100388730236236,-0.00842946280791552
 "norwich",178388,"deaths","non-communicable diseases and lower respiratory infections","NO2",0,0
-"norwich",178388,"deaths","non-communicable diseases and lower respiratory infections","PM2.5",-3.8152031562926,-5.13452549012867
-"norwich",178388,"disability","chronic obstructive pulmonary disease","PM2.5",-2.76265962338726,-0.231455616143806
-"norwich",178388,"disability","diabetes","PM2.5",-3.80026553069979,-0.318386236390473
-"norwich",178388,"disability","ischaemic heart disease","PM2.5",-0.790101906520611,-0.0661947356967218
-"norwich",178388,"disability","lower respiratory infections","PM2.5",-0.0246841129228528,-0.00206803491720677
-"norwich",178388,"disability","lung cancer","PM2.5",-0.121429466721268,-0.0101733604096784
-"norwich",178388,"disability","stroke","PM2.5",-1.20745683703914,-0.101160730702427
-"norwich",178388,"new cases of asthma in children","new cases of asthma in children","NO2",1.3111537272419,0
-"norwich",178388,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.0302747009839284
-"norwich",178388,"preterm births","preterm births","PM2.5",-0.610514828977014,-0.174178526396418
-"norwich",178388,"work absence (sick leave days)","work absence (sick leave days)","PM2.5",-1101.87520255682,-0.252738868140018
-"nottingham",245615,"asthma emergency room visits, adults","asthma emergency room visits, adults","O3_8h",-6.21679867727488,-0.00422754311378329
-"nottingham",245615,"asthma emergency room visits, adults","asthma emergency room visits, adults","PM2.5",-0.0304184187005916,-2.06851119338826e-05
-"nottingham",245615,"asthma emergency room visits, children","asthma emergency room visits, children","O3_8h",-1.34049228765282,-0.000911560633362868
-"nottingham",245615,"asthma emergency room visits, children","asthma emergency room visits, children","PM2.5",-0.0180837421772466,-1.22972937811719e-05
-"nottingham",245615,"deaths","chronic obstructive pulmonary disease","O3_8h",-0.882586067148707,-1.09455596113719
-"nottingham",245615,"deaths","chronic obstructive pulmonary disease","PM2.5",NA,-0.00827051817758754
-"nottingham",245615,"deaths","lower respiratory infections in children","PM2.5",-2.2831440589878e-05,-0.000191711538586766
-"nottingham",245615,"deaths","non-communicable diseases and lower respiratory infections","NO2",10.5387868039649,14.1831685661981
-"nottingham",245615,"deaths","non-communicable diseases and lower respiratory infections","PM2.5",-0.0740736029974585,-0.0996887418980002
-"nottingham",245615,"disability","chronic obstructive pulmonary disease","PM2.5",-0.05479698702419,-0.00459089143198729
-"nottingham",245615,"disability","diabetes","PM2.5",-0.0619759512283622,-0.00519234503455833
-"nottingham",245615,"disability","ischaemic heart disease","PM2.5",-0.0150325223017731,-0.00125942467978969
-"nottingham",245615,"disability","lower respiratory infections","PM2.5",-0.00050002858526399,-4.1892393587681e-05
-"nottingham",245615,"disability","lung cancer","PM2.5",-0.00241509528971484,-0.000202336677162501
-"nottingham",245615,"disability","stroke","PM2.5",-0.0245020686719215,-0.00205278325033095
-"nottingham",245615,"new cases of asthma in children","new cases of asthma in children","NO2",8.46444875935799,0
-"nottingham",245615,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.195445163949162
-"nottingham",245615,"preterm births","preterm births","PM2.5",-0.0125751379525818,-0.00358765896232636
-"nottingham",245615,"work absence (sick leave days)","work absence (sick leave days)","PM2.5",-23.0121375193412,-0.00527833059191145
+"norwich",178388,"deaths","non-communicable diseases and lower respiratory infections","PM2.5",-3.26265012843885,-4.39089599257928
+"norwich",178388,"disability","chronic obstructive pulmonary disease","PM2.5",-2.36065603435762,-0.197775756488565
+"norwich",178388,"disability","diabetes","PM2.5",-3.19506606417085,-0.267682626640815
+"norwich",178388,"disability","ischaemic heart disease","PM2.5",-0.669216537969888,-0.0560669598303717
+"norwich",178388,"disability","lower respiratory infections","PM2.5",-0.0208230601558818,-0.00174455592631779
+"norwich",178388,"disability","lung cancer","PM2.5",-0.103668400829571,-0.00868533835494064
+"norwich",178388,"disability","stroke","PM2.5",-1.03420489028291,-0.0866456830486688
+"norwich",178388,"new cases of asthma in children","new cases of asthma in children","NO2",2.2631917834455,0
+"norwich",178388,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.0522573769112697
+"norwich",178388,"preterm births","preterm births","PM2.5",-0.524926373275131,-0.149760329846338
+"norwich",178388,"work absence (sick leave days)","work absence (sick leave days)","PM2.5",-952.175951423771,-0.218402112757025
+"nottingham",245615,"asthma emergency room visits, adults","asthma emergency room visits, adults","O3_8h",-9.13879458591259,-0.00621455673981871
+"nottingham",245615,"asthma emergency room visits, adults","asthma emergency room visits, adults","PM2.5",-0.317052171542905,-0.000215601597236182
+"nottingham",245615,"asthma emergency room visits, children","asthma emergency room visits, children","O3_8h",-1.96154560144056,-0.00133388887596677
+"nottingham",245615,"asthma emergency room visits, children","asthma emergency room visits, children","PM2.5",-0.188373808741609,-0.00012809782643819
+"nottingham",245615,"deaths","chronic obstructive pulmonary disease","O3_8h",-1.319717072772,-1.63667232328259
+"nottingham",245615,"deaths","chronic obstructive pulmonary disease","PM2.5",NA,-0.0833294186117053
+"nottingham",245615,"deaths","lower respiratory infections in children","PM2.5",-0.000225959854254471,-0.0018973446352373
+"nottingham",245615,"deaths","non-communicable diseases and lower respiratory infections","NO2",13.9640812522082,18.792952353647
+"nottingham",245615,"deaths","non-communicable diseases and lower respiratory infections","PM2.5",-0.731776908371359,-0.984830174226224
+"nottingham",245615,"disability","chronic obstructive pulmonary disease","PM2.5",-0.552105801879634,-0.046255422661854
+"nottingham",245615,"disability","diabetes","PM2.5",-0.528279852212336,-0.0442592846599892
+"nottingham",245615,"disability","ischaemic heart disease","PM2.5",-0.147745754053012,-0.012378138894666
+"nottingham",245615,"disability","lower respiratory infections","PM2.5",-0.00524376986585806,-0.000439323025878359
+"nottingham",245615,"disability","lung cancer","PM2.5",-0.0244501649634588,-0.00204843475777021
+"nottingham",245615,"disability","stroke","PM2.5",-0.252008832121724,-0.0211132993071722
+"nottingham",245615,"new cases of asthma in children","new cases of asthma in children","NO2",10.7025184476828,0
+"nottingham",245615,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.247122468591203
+"nottingham",245615,"preterm births","preterm births","PM2.5",-0.130102840631408,-0.037118051823799
+"nottingham",245615,"work absence (sick leave days)","work absence (sick leave days)","PM2.5",-239.483390477115,-0.0549306862583663
 "oxford",157568,"asthma emergency room visits, adults","asthma emergency room visits, adults","O3_8h",0,0
-"oxford",157568,"asthma emergency room visits, adults","asthma emergency room visits, adults","PM2.5",0.217079342243464,0.000147618143370251
+"oxford",157568,"asthma emergency room visits, adults","asthma emergency room visits, adults","PM2.5",1.35288940295528,0.000919990911090757
 "oxford",157568,"asthma emergency room visits, children","asthma emergency room visits, children","O3_8h",0,0
-"oxford",157568,"asthma emergency room visits, children","asthma emergency room visits, children","PM2.5",0.129182756951407,8.78467685572295e-05
+"oxford",157568,"asthma emergency room visits, children","asthma emergency room visits, children","PM2.5",0.802722068882748,0.000545866503123545
 "oxford",157568,"deaths","chronic obstructive pulmonary disease","O3_8h",0,0
-"oxford",157568,"deaths","chronic obstructive pulmonary disease","PM2.5",NA,0.0618168107915502
-"oxford",157568,"deaths","lower respiratory infections in children","PM2.5",0.000174429993305442,0.0014646575743045
-"oxford",157568,"deaths","non-communicable diseases and lower respiratory infections","NO2",10.6999570685422,14.4000725678522
-"oxford",157568,"deaths","non-communicable diseases and lower respiratory infections","PM2.5",0.566803036019451,0.762807252223015
-"oxford",157568,"disability","chronic obstructive pulmonary disease","PM2.5",0.409572279037974,0.0343139644846749
-"oxford",157568,"disability","diabetes","PM2.5",0.560780491418058,0.0469821881290767
-"oxford",157568,"disability","ischaemic heart disease","PM2.5",0.116422821580169,0.00975390369263012
-"oxford",157568,"disability","lower respiratory infections","PM2.5",0.00360770441002012,0.000302253466195056
-"oxford",157568,"disability","lung cancer","PM2.5",0.0179834918463313,0.001506656900645
-"oxford",157568,"disability","stroke","PM2.5",0.179171558988443,0.0150109927513506
-"oxford",157568,"new cases of asthma in children","new cases of asthma in children","NO2",8.23950243735914,0
-"oxford",157568,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.190251125680075
-"oxford",157568,"preterm births","preterm births","PM2.5",0.0908522385671457,0.0259199421248408
-"oxford",157568,"work absence (sick leave days)","work absence (sick leave days)","PM2.5",164.649157530701,0.0377658391966317
-"plymouth",247923,"asthma emergency room visits, adults","asthma emergency room visits, adults","O3_8h",-5.73349319467735,-0.00389888605556497
-"plymouth",247923,"asthma emergency room visits, adults","asthma emergency room visits, adults","PM2.5",-1.3794557852509,-0.00093805656390699
-"plymouth",247923,"asthma emergency room visits, children","asthma emergency room visits, children","O3_8h",-1.2450823740724,-0.000846680050271447
-"plymouth",247923,"asthma emergency room visits, children","asthma emergency room visits, children","PM2.5",-0.816496570771498,-0.000555233430320088
-"plymouth",247923,"deaths","chronic obstructive pulmonary disease","O3_8h",-0.792753603789933,-0.983148516659124
-"plymouth",247923,"deaths","chronic obstructive pulmonary disease","PM2.5",NA,-0.318114529933959
-"plymouth",247923,"deaths","lower respiratory infections in children","PM2.5",-0.000811448363762471,-0.00681358732876042
-"plymouth",247923,"deaths","non-communicable diseases and lower respiratory infections","NO2",0,0
-"plymouth",247923,"deaths","non-communicable diseases and lower respiratory infections","PM2.5",-2.69614017724416,-3.62848317584038
-"plymouth",247923,"disability","chronic obstructive pulmonary disease","PM2.5",-2.1076935440669,-0.176582559702447
-"plymouth",247923,"disability","diabetes","PM2.5",-1.18804901762513,-0.0995347436418235
-"plymouth",247923,"disability","ischaemic heart disease","PM2.5",-0.521545517689937,-0.0436950821310207
-"plymouth",247923,"disability","lower respiratory infections","PM2.5",-0.0205621324882568,-0.0017226954069951
-"plymouth",247923,"disability","lung cancer","PM2.5",-0.0947664823495398,-0.00793953564757307
-"plymouth",247923,"disability","stroke","PM2.5",-1.03799421148173,-0.0869631523689628
-"plymouth",247923,"new cases of asthma in children","new cases of asthma in children","NO2",8.22409339589186,0
-"plymouth",247923,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.189895329015521
-"plymouth",247923,"preterm births","preterm births","PM2.5",-0.540330527993454,-0.154155101016296
-"plymouth",247923,"work absence (sick leave days)","work absence (sick leave days)","PM2.5",-1031.84155299232,-0.236675138525654
+"oxford",157568,"deaths","chronic obstructive pulmonary disease","PM2.5",NA,0.340004410887364
+"oxford",157568,"deaths","lower respiratory infections in children","PM2.5",0.000906225179912408,0.00760941136688547
+"oxford",157568,"deaths","non-communicable diseases and lower respiratory infections","NO2",12.4605834633523,16.7695351449198
+"oxford",157568,"deaths","non-communicable diseases and lower respiratory infections","PM2.5",2.95265676318238,3.97370488361958
+"oxford",157568,"disability","chronic obstructive pulmonary disease","PM2.5",2.25272672056303,0.188733438856373
+"oxford",157568,"disability","diabetes","PM2.5",1.85702719331715,0.155581733481169
+"oxford",157568,"disability","ischaemic heart disease","PM2.5",0.585711974027298,0.0490709476779755
+"oxford",157568,"disability","lower respiratory infections","PM2.5",0.0214696775332576,0.00179872952853171
+"oxford",157568,"disability","lung cancer","PM2.5",0.100049108347818,0.00838211404012557
+"oxford",157568,"disability","stroke","PM2.5",1.04967599753741,0.0879418523746706
+"oxford",157568,"new cases of asthma in children","new cases of asthma in children","NO2",9.05043101174532,0
+"oxford",157568,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.208975566299642
+"oxford",157568,"preterm births","preterm births","PM2.5",0.546012375670054,0.155776119554335
+"oxford",157568,"work absence (sick leave days)","work absence (sick leave days)","PM2.5",1018.3400692275,0.23357828171554
+"plymouth",247923,"asthma emergency room visits, adults","asthma emergency room visits, adults","O3_8h",-16.1434125049488,-0.0109778321465889
+"plymouth",247923,"asthma emergency room visits, adults","asthma emergency room visits, adults","PM2.5",-1.9244904417265,-0.00130869065202365
+"plymouth",247923,"asthma emergency room visits, children","asthma emergency room visits, children","O3_8h",-3.4633048068431,-0.00235511412660382
+"plymouth",247923,"asthma emergency room visits, children","asthma emergency room visits, children","PM2.5",-1.13786282682501,-0.000773768688305452
+"plymouth",247923,"deaths","chronic obstructive pulmonary disease","O3_8h",-1.54845323023471,-1.92034383589467
+"plymouth",247923,"deaths","chronic obstructive pulmonary disease","PM2.5",NA,-0.431040904275421
+"plymouth",247923,"deaths","lower respiratory infections in children","PM2.5",-0.00108432447231605,-0.00910487939193146
+"plymouth",247923,"deaths","non-communicable diseases and lower respiratory infections","NO2",10.1866415149064,13.7092491210652
+"plymouth",247923,"deaths","non-communicable diseases and lower respiratory infections","PM2.5",-3.64415585838918,-4.90432891208953
+"plymouth",247923,"disability","chronic obstructive pulmonary disease","PM2.5",-2.8558963696461,-0.239266990505632
+"plymouth",247923,"disability","diabetes","PM2.5",-1.44240333423397,-0.120844547633298
+"plymouth",247923,"disability","ischaemic heart disease","PM2.5",-0.696553860044602,-0.0583572806035001
+"plymouth",247923,"disability","lower respiratory infections","PM2.5",-0.0274059858883202,-0.00229607342725493
+"plymouth",247923,"disability","lung cancer","PM2.5",-0.12880787386244,-0.0107915233409937
+"plymouth",247923,"disability","stroke","PM2.5",-1.43008796917836,-0.119812766380602
+"plymouth",247923,"new cases of asthma in children","new cases of asthma in children","NO2",8.25314169581188,0
+"plymouth",247923,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.190566057836938
+"plymouth",247923,"preterm births","preterm births","PM2.5",-0.743804361894504,-0.212205734460367
+"plymouth",247923,"work absence (sick leave days)","work absence (sick leave days)","PM2.5",-1435.49648096635,-0.329262111513671
 "portsmouth",195845,"asthma emergency room visits, adults","asthma emergency room visits, adults","O3_8h",0,0
-"portsmouth",195845,"asthma emergency room visits, adults","asthma emergency room visits, adults","PM2.5",0.0394012828536674,2.67936329691875e-05
+"portsmouth",195845,"asthma emergency room visits, adults","asthma emergency room visits, adults","PM2.5",-2.22874208428136,-0.00151558764243798
 "portsmouth",195845,"asthma emergency room visits, children","asthma emergency room visits, children","O3_8h",0,0
-"portsmouth",195845,"asthma emergency room visits, children","asthma emergency room visits, children","PM2.5",0.0232756778767467,1.58279102854322e-05
+"portsmouth",195845,"asthma emergency room visits, children","asthma emergency room visits, children","PM2.5",-1.31912426871336,-0.00089702996798154
 "portsmouth",195845,"deaths","chronic obstructive pulmonary disease","O3_8h",0,0
-"portsmouth",195845,"deaths","chronic obstructive pulmonary disease","PM2.5",NA,0.00861694938959554
-"portsmouth",195845,"deaths","lower respiratory infections in children","PM2.5",2.13887412578023e-05,0.000179597449351742
-"portsmouth",195845,"deaths","non-communicable diseases and lower respiratory infections","NO2",8.50392184869366,11.4446339315281
-"portsmouth",195845,"deaths","non-communicable diseases and lower respiratory infections","PM2.5",0.0726887851806168,0.0978250449759364
-"portsmouth",195845,"disability","chronic obstructive pulmonary disease","PM2.5",0.0570922950352895,0.00478319233125448
-"portsmouth",195845,"disability","diabetes","PM2.5",0.0259516321623323,0.00217422767582908
-"portsmouth",195845,"disability","ischaemic heart disease","PM2.5",0.013772909363702,0.00115389431107789
-"portsmouth",195845,"disability","lower respiratory infections","PM2.5",0.000540190625799131,4.52571692404599e-05
-"portsmouth",195845,"disability","lung cancer","PM2.5",0.00258415596095496,0.000216500579764252
-"portsmouth",195845,"disability","stroke","PM2.5",0.0290468236938324,0.00243354281438142
-"portsmouth",195845,"new cases of asthma in children","new cases of asthma in children","NO2",6.69385607459708,0
-"portsmouth",195845,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.154561960872564
-"portsmouth",195845,"preterm births","preterm births","PM2.5",0.0150644746510942,0.00429786120029353
-"portsmouth",195845,"work absence (sick leave days)","work absence (sick leave days)","PM2.5",29.3231569917261,0.00672589916824177
-"preston",192001,"asthma emergency room visits, adults","asthma emergency room visits, adults","O3_8h",-7.02008370906458,-0.00477379244255135
-"preston",192001,"asthma emergency room visits, adults","asthma emergency room visits, adults","PM2.5",-0.00296624764836295,-2.01710566331349e-06
-"preston",192001,"asthma emergency room visits, children","asthma emergency room visits, children","O3_8h",-1.50865746809866,-0.00102591620243909
-"preston",192001,"asthma emergency room visits, children","asthma emergency room visits, children","PM2.5",-0.00176569677950944,-1.20070789625697e-06
-"preston",192001,"deaths","chronic obstructive pulmonary disease","O3_8h",-1.00908568998162,-1.25143688347114
-"preston",192001,"deaths","chronic obstructive pulmonary disease","PM2.5",NA,-0.000849751181364059
-"preston",192001,"deaths","lower respiratory infections in children","PM2.5",-2.39975074662474e-06,-2.01502794380067e-05
-"preston",192001,"deaths","non-communicable diseases and lower respiratory infections","NO2",0,0
-"preston",192001,"deaths","non-communicable diseases and lower respiratory infections","PM2.5",-0.00778056130175742,-0.0104711305518746
-"preston",192001,"disability","chronic obstructive pulmonary disease","PM2.5",-0.0056300951716679,-0.000471689359005541
-"preston",192001,"disability","diabetes","PM2.5",-0.00773257242934733,-0.000647834898248315
-"preston",192001,"disability","ischaemic heart disease","PM2.5",-0.00160688128123354,-0.000134624509610236
-"preston",192001,"disability","lower respiratory infections","PM2.5",-5.00641860633477e-05,-4.19437737965927e-06
-"preston",192001,"disability","lung cancer","PM2.5",-0.000247377782636615,-2.07253099931404e-05
-"preston",192001,"disability","stroke","PM2.5",-0.00246145512920037,-0.000206220704395324
-"preston",192001,"new cases of asthma in children","new cases of asthma in children","NO2",2.94370476250216,0
-"preston",192001,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.0679705053786398
-"preston",192001,"preterm births","preterm births","PM2.5",-0.00124575548072614,-0.000355411275180173
-"preston",192001,"work absence (sick leave days)","work absence (sick leave days)","PM2.5",-2.2514634388499,-0.000516421750733629
-"reading",246814,"asthma emergency room visits, adults","asthma emergency room visits, adults","O3_8h",-0.258382104319082,-0.000175704818917729
-"reading",246814,"asthma emergency room visits, adults","asthma emergency room visits, adults","PM2.5",-1.3433691661767,-0.000913516966296316
-"reading",246814,"asthma emergency room visits, children","asthma emergency room visits, children","O3_8h",-0.0558150054299489,-3.7955281182527e-05
-"reading",246814,"asthma emergency room visits, children","asthma emergency room visits, children","PM2.5",-0.797794889457911,-0.00054251592599709
-"reading",246814,"deaths","chronic obstructive pulmonary disease","O3_8h",-0.0364340462575763,-0.0451843780498505
-"reading",246814,"deaths","chronic obstructive pulmonary disease","PM2.5",NA,-0.349994740817893
-"reading",246814,"deaths","lower respiratory infections in children","PM2.5",-0.00094829171700099,-0.00796263658351259
-"reading",246814,"deaths","non-communicable diseases and lower respiratory infections","NO2",11.6230840607599,15.6424229429168
-"reading",246814,"deaths","non-communicable diseases and lower respiratory infections","PM2.5",-3.08095684809277,-4.14637198137856
-"reading",246814,"disability","chronic obstructive pulmonary disease","PM2.5",-2.31891845943784,-0.194278982569108
-"reading",246814,"disability","diabetes","PM2.5",-2.21815312176176,-0.185836862837702
-"reading",246814,"disability","ischaemic heart disease","PM2.5",-0.617347757116498,-0.0517213935038447
-"reading",246814,"disability","lower respiratory infections","PM2.5",-0.0216669221013897,-0.00181525467794263
-"reading",246814,"disability","lung cancer","PM2.5",-0.10257779177233,-0.00859396713092917
-"reading",246814,"disability","stroke","PM2.5",-1.05902029025482,-0.0887247171945078
-"reading",246814,"new cases of asthma in children","new cases of asthma in children","NO2",8.99682094139234,0
-"reading",246814,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.20773770317502
-"reading",246814,"preterm births","preterm births","PM2.5",-0.548235583311412,-0.156410395762652
-"reading",246814,"work absence (sick leave days)","work absence (sick leave days)","PM2.5",-1013.53734084989,-0.232476672267098
-"sheffield",448596,"asthma emergency room visits, adults","asthma emergency room visits, adults","O3_8h",-7.92777210712654,-0.00539103807585686
-"sheffield",448596,"asthma emergency room visits, adults","asthma emergency room visits, adults","PM2.5",4.09114864314947,0.00278206005560916
-"sheffield",448596,"asthma emergency room visits, children","asthma emergency room visits, children","O3_8h",-1.71114184739739,-0.00116360948925598
-"sheffield",448596,"asthma emergency room visits, children","asthma emergency room visits, children","PM2.5",2.42708149884908,0.00165046227322066
-"sheffield",448596,"deaths","chronic obstructive pulmonary disease","O3_8h",-1.12127736340065,-1.39057352917807
-"sheffield",448596,"deaths","chronic obstructive pulmonary disease","PM2.5",NA,1.01873403585248
-"sheffield",448596,"deaths","lower respiratory infections in children","PM2.5",0.00269919355129751,0.0226646473149779
-"sheffield",448596,"deaths","non-communicable diseases and lower respiratory infections","NO2",27.1583133630766,36.5498366716395
-"sheffield",448596,"deaths","non-communicable diseases and lower respiratory infections","PM2.5",8.8007521234818,11.8441100667973
-"sheffield",448596,"disability","chronic obstructive pulmonary disease","PM2.5",6.74970473977794,0.565490245743197
-"sheffield",448596,"disability","diabetes","PM2.5",5.27722445138397,0.442125850967698
-"sheffield",448596,"disability","ischaemic heart disease","PM2.5",1.7446306086934,0.146165147910394
-"sheffield",448596,"disability","lower respiratory infections","PM2.5",0.065183409124641,0.00546106584885748
-"sheffield",448596,"disability","lung cancer","PM2.5",0.300417341859093,0.0251689641284971
-"sheffield",448596,"disability","stroke","PM2.5",3.16938602877212,0.265531153341141
-"sheffield",448596,"new cases of asthma in children","new cases of asthma in children","NO2",20.5826445293417,0
-"sheffield",448596,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.475255796202565
-"sheffield",448596,"preterm births","preterm births","PM2.5",1.64816590833617,0.470218077506543
-"sheffield",448596,"work absence (sick leave days)","work absence (sick leave days)","PM2.5",3078.30165692474,0.706074948196851
-"southampton",249189,"asthma emergency room visits, adults","asthma emergency room visits, adults","O3_8h",1.34890738420648,0.000917283061469963
-"southampton",249189,"asthma emergency room visits, adults","asthma emergency room visits, adults","PM2.5",-0.848475180025424,-0.000576979501949208
-"southampton",249189,"asthma emergency room visits, children","asthma emergency room visits, children","O3_8h",0.291872127432725,0.000198478681148859
-"southampton",249189,"asthma emergency room visits, children","asthma emergency room visits, children","PM2.5",-0.50321658886287,-0.00034219699485608
-"southampton",249189,"deaths","chronic obstructive pulmonary disease","O3_8h",0.189033755781279,0.234433821185268
-"southampton",249189,"deaths","chronic obstructive pulmonary disease","PM2.5",NA,-0.208155459727176
-"southampton",249189,"deaths","lower respiratory infections in children","PM2.5",-0.000546580450111946,-0.00458953865131078
-"southampton",249189,"deaths","non-communicable diseases and lower respiratory infections","NO2",-3.67368928762882,-4.9440751953226
-"southampton",249189,"deaths","non-communicable diseases and lower respiratory infections","PM2.5",-1.78476439676717,-2.4019476587925
-"southampton",249189,"disability","chronic obstructive pulmonary disease","PM2.5",-1.37915083199857,-0.115545253158653
-"southampton",249189,"disability","diabetes","PM2.5",-0.990908956122382,-0.0830183497960232
-"southampton",249189,"disability","ischaemic heart disease","PM2.5",-0.353119225527223,-0.0295843278067019
-"southampton",249189,"disability","lower respiratory infections","PM2.5",-0.0135415376943835,-0.00113450999321631
-"southampton",249189,"disability","lung cancer","PM2.5",-0.0615701929632522,-0.00515835060814698
-"southampton",249189,"disability","stroke","PM2.5",-0.655026289927719,-0.0548781008858858
-"southampton",249189,"new cases of asthma in children","new cases of asthma in children","NO2",-2.9538886574957,0
-"southampton",249189,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,-0.0682056527678245
-"southampton",249189,"preterm births","preterm births","PM2.5",-0.340626610608611,-0.0971800163914585
-"southampton",249189,"work absence (sick leave days)","work absence (sick leave days)","PM2.5",-637.950462368623,-0.146327712443583
-"sunderland",177862,"asthma emergency room visits, adults","asthma emergency room visits, adults","O3_8h",-2.07545589318437,-0.00141135007335295
-"sunderland",177862,"asthma emergency room visits, adults","asthma emergency room visits, adults","PM2.5",1.32169101304729,0.000898775403678759
-"sunderland",177862,"asthma emergency room visits, children","asthma emergency room visits, children","O3_8h",-0.448720757179842,-0.00030513877728767
-"sunderland",177862,"asthma emergency room visits, children","asthma emergency room visits, children","PM2.5",0.785833530583856,0.000534381971052668
-"sunderland",177862,"deaths","chronic obstructive pulmonary disease","O3_8h",-0.291719714998879,-0.361781773946206
-"sunderland",177862,"deaths","chronic obstructive pulmonary disease","PM2.5",NA,0.360180760588458
-"sunderland",177862,"deaths","lower respiratory infections in children","PM2.5",0.000994567231668284,0.00835120383492316
+"portsmouth",195845,"deaths","chronic obstructive pulmonary disease","PM2.5",NA,-0.513538118103437
+"portsmouth",195845,"deaths","lower respiratory infections in children","PM2.5",-0.00130990907029029,-0.0109990730670457
+"portsmouth",195845,"deaths","non-communicable diseases and lower respiratory infections","NO2",4.5381745695251,6.10750517110684
+"portsmouth",195845,"deaths","non-communicable diseases and lower respiratory infections","PM2.5",-4.35357369792499,-5.85906810448104
+"portsmouth",195845,"disability","chronic obstructive pulmonary disease","PM2.5",-3.40248833143076,-0.285060463658508
+"portsmouth",195845,"disability","diabetes","PM2.5",-1.91859642991272,-0.160740003964834
+"portsmouth",195845,"disability","ischaemic heart disease","PM2.5",-0.84158956070879,-0.0705083712322172
+"portsmouth",195845,"disability","lower respiratory infections","PM2.5",-0.0331330484662711,-0.00277588671530975
+"portsmouth",195845,"disability","lung cancer","PM2.5",-0.15296335296511,-0.0128152693181049
+"portsmouth",195845,"disability","stroke","PM2.5",-1.67562187641322,-0.140383596497403
+"portsmouth",195845,"new cases of asthma in children","new cases of asthma in children","NO2",3.65605541407743,0
+"portsmouth",195845,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.0844187696241401
+"portsmouth",195845,"preterm births","preterm births","PM2.5",-0.872484176892439,-0.248917800227648
+"portsmouth",195845,"work absence (sick leave days)","work absence (sick leave days)","PM2.5",-1666.90822343438,-0.382341391027328
+"preston",192001,"asthma emergency room visits, adults","asthma emergency room visits, adults","O3_8h",-10.0840108042481,-0.0068573220153724
+"preston",192001,"asthma emergency room visits, adults","asthma emergency room visits, adults","PM2.5",0.213197446354442,0.000144978379227003
+"preston",192001,"asthma emergency room visits, children","asthma emergency room visits, children","O3_8h",-2.15492372091114,-0.00146538973030722
+"preston",192001,"asthma emergency room visits, children","asthma emergency room visits, children","PM2.5",0.126784046638644,8.6215599238245e-05
+"preston",192001,"deaths","chronic obstructive pulmonary disease","O3_8h",0,0
+"preston",192001,"deaths","chronic obstructive pulmonary disease","PM2.5",NA,0.0583229213044774
+"preston",192001,"deaths","lower respiratory infections in children","PM2.5",0.000161117380314942,0.00135287393503002
+"preston",192001,"deaths","non-communicable diseases and lower respiratory infections","NO2",4.84298703384843,6.51772378952975
+"preston",192001,"deaths","non-communicable diseases and lower respiratory infections","PM2.5",0.521539041009021,0.70189067015776
+"preston",192001,"disability","chronic obstructive pulmonary disease","PM2.5",0.386423231689832,0.0323745373573713
+"preston",192001,"disability","diabetes","PM2.5",0.437697352005614,0.0366702830255888
+"preston",192001,"disability","ischaemic heart disease","PM2.5",0.106417754179738,0.00891567917154776
+"preston",192001,"disability","lower respiratory infections","PM2.5",0.00356386740122405,0.000298580801710836
+"preston",192001,"disability","lung cancer","PM2.5",0.0170438333163352,0.00142793231141806
+"preston",192001,"disability","stroke","PM2.5",0.172701439870039,0.0144689261882477
+"preston",192001,"new cases of asthma in children","new cases of asthma in children","NO2",4.57791018241006,0
+"preston",192001,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.105704509718544
+"preston",192001,"preterm births","preterm births","PM2.5",0.0884643116463515,0.0252386718714987
+"preston",192001,"work absence (sick leave days)","work absence (sick leave days)","PM2.5",161.413607004572,0.0370236958251428
+"reading",246814,"asthma emergency room visits, adults","asthma emergency room visits, adults","O3_8h",-8.5563034039472,-0.00581845149128314
+"reading",246814,"asthma emergency room visits, adults","asthma emergency room visits, adults","PM2.5",-2.91529328079871,-0.0019824557097129
+"reading",246814,"asthma emergency room visits, children","asthma emergency room visits, children","O3_8h",-1.82991444017634,-0.00124437714521119
+"reading",246814,"asthma emergency room visits, children","asthma emergency room visits, children","PM2.5",-1.73183148403701,-0.00117767884157751
+"reading",246814,"deaths","chronic obstructive pulmonary disease","O3_8h",0,0
+"reading",246814,"deaths","chronic obstructive pulmonary disease","PM2.5",NA,-0.763919565774586
+"reading",246814,"deaths","lower respiratory infections in children","PM2.5",-0.00207090327090984,-0.0173890057776865
+"reading",246814,"deaths","non-communicable diseases and lower respiratory infections","NO2",16.1431179519266,21.7255142698261
+"reading",246814,"deaths","non-communicable diseases and lower respiratory infections","PM2.5",-6.71406487939603,-9.03583265514386
+"reading",246814,"disability","chronic obstructive pulmonary disease","PM2.5",-5.06141086137674,-0.424044988951826
+"reading",246814,"disability","diabetes","PM2.5",-4.84246896289682,-0.405702037260134
+"reading",246814,"disability","ischaemic heart disease","PM2.5",-1.35205415094828,-0.113275093289933
+"reading",246814,"disability","lower respiratory infections","PM2.5",-0.0478032364612467,-0.00400495502780762
+"reading",246814,"disability","lung cancer","PM2.5",-0.224059139550052,-0.0187716741353839
+"reading",246814,"disability","stroke","PM2.5",-2.31069296247227,-0.193589850454481
+"reading",246814,"new cases of asthma in children","new cases of asthma in children","NO2",11.6721201890354,0
+"reading",246814,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.269510692170978
+"reading",246814,"preterm births","preterm births","PM2.5",-1.19404925118711,-0.340659602593121
+"reading",246814,"work absence (sick leave days)","work absence (sick leave days)","PM2.5",-2201.18021602783,-0.504888207920607
+"sheffield",448596,"asthma emergency room visits, adults","asthma emergency room visits, adults","O3_8h",-17.4874237564591,-0.0118917857433071
+"sheffield",448596,"asthma emergency room visits, adults","asthma emergency room visits, adults","PM2.5",3.8442738282356,0.00261418041563133
+"sheffield",448596,"asthma emergency room visits, children","asthma emergency room visits, children","O3_8h",-3.74809974165936,-0.0025487801801506
+"sheffield",448596,"asthma emergency room visits, children","asthma emergency room visits, children","PM2.5",2.27744084317329,0.00154870373859788
+"sheffield",448596,"deaths","chronic obstructive pulmonary disease","O3_8h",-0.517984443386007,-0.642388296606723
+"sheffield",448596,"deaths","chronic obstructive pulmonary disease","PM2.5",NA,0.911450926716335
+"sheffield",448596,"deaths","lower respiratory infections in children","PM2.5",0.00235800476115904,0.0197997458363142
+"sheffield",448596,"deaths","non-communicable diseases and lower respiratory infections","NO2",19.9793608052857,26.8883551225887
+"sheffield",448596,"deaths","non-communicable diseases and lower respiratory infections","PM2.5",7.76617189117894,10.4517651884959
+"sheffield",448596,"disability","chronic obstructive pulmonary disease","PM2.5",6.03889182418862,0.505938341502827
+"sheffield",448596,"disability","diabetes","PM2.5",3.82980844496024,0.320861341671243
+"sheffield",448596,"disability","ischaemic heart disease","PM2.5",1.51653967732271,0.127055690266645
+"sheffield",448596,"disability","lower respiratory infections","PM2.5",0.0590575099053874,0.00494783802801976
+"sheffield",448596,"disability","lung cancer","PM2.5",0.270492944569101,0.0226618982004859
+"sheffield",448596,"disability","stroke","PM2.5",2.92197508367764,0.244803064997286
+"sheffield",448596,"new cases of asthma in children","new cases of asthma in children","NO2",15.1700726593986,0
+"sheffield",448596,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.350278845360009
+"sheffield",448596,"preterm births","preterm births","PM2.5",1.52235141444054,0.434323481493581
+"sheffield",448596,"work absence (sick leave days)","work absence (sick leave days)","PM2.5",2882.14589585946,0.661082389224883
+"southampton",249189,"asthma emergency room visits, adults","asthma emergency room visits, adults","O3_8h",-7.80826066464664,-0.0053097679878418
+"southampton",249189,"asthma emergency room visits, adults","asthma emergency room visits, adults","PM2.5",-2.12031092119089,-0.00144185235830883
+"southampton",249189,"asthma emergency room visits, children","asthma emergency room visits, children","O3_8h",-1.67313683799202,-0.00113776534918626
+"southampton",249189,"asthma emergency room visits, children","asthma emergency room visits, children","PM2.5",-1.25659427938558,-0.000854508368117946
+"southampton",249189,"deaths","chronic obstructive pulmonary disease","O3_8h",0,0
+"southampton",249189,"deaths","chronic obstructive pulmonary disease","PM2.5",NA,-0.509345704227991
+"southampton",249189,"deaths","lower respiratory infections in children","PM2.5",-0.0013265641930624,-0.0111389231653969
+"southampton",249189,"deaths","non-communicable diseases and lower respiratory infections","NO2",4.20186399232892,5.65489618530077
+"southampton",249189,"deaths","non-communicable diseases and lower respiratory infections","PM2.5",-4.35588824620146,-5.86218303876817
+"southampton",249189,"disability","chronic obstructive pulmonary disease","PM2.5",-3.3747111542576,-0.282733291826367
+"southampton",249189,"disability","diabetes","PM2.5",-2.27264487251489,-0.190402181575686
+"southampton",249189,"disability","ischaemic heart disease","PM2.5",-0.853864883590454,-0.07153679775168
+"southampton",249189,"disability","lower respiratory infections","PM2.5",-0.0328978404504847,-0.00275618098835199
+"southampton",249189,"disability","lung cancer","PM2.5",-0.150875814576167,-0.0126403753572468
+"southampton",249189,"disability","stroke","PM2.5",-1.6191796306653,-0.135654865293769
+"southampton",249189,"new cases of asthma in children","new cases of asthma in children","NO2",3.15201604984745,0
+"southampton",249189,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.0727804386495636
+"southampton",249189,"preterm births","preterm births","PM2.5",-0.843531158610402,-0.240657568338532
+"southampton",249189,"work absence (sick leave days)","work absence (sick leave days)","PM2.5",-1591.18639680237,-0.364972955189891
+"sunderland",177862,"asthma emergency room visits, adults","asthma emergency room visits, adults","O3_8h",-2.35402079543434,-0.00160077958448601
+"sunderland",177862,"asthma emergency room visits, adults","asthma emergency room visits, adults","PM2.5",1.25675436336391,0.000854617228313582
+"sunderland",177862,"asthma emergency room visits, children","asthma emergency room visits, children","O3_8h",-0.508737982784538,-0.000345951649311486
+"sunderland",177862,"asthma emergency room visits, children","asthma emergency room visits, children","PM2.5",0.746348963457642,0.000507531703170373
+"sunderland",177862,"deaths","chronic obstructive pulmonary disease","O3_8h",-0.331381442030066,-0.410969021928976
+"sunderland",177862,"deaths","chronic obstructive pulmonary disease","PM2.5",NA,0.326613614478605
+"sunderland",177862,"deaths","lower respiratory infections in children","PM2.5",0.000883315309202951,0.00741704126455908
 "sunderland",177862,"deaths","non-communicable diseases and lower respiratory infections","NO2",0,0
-"sunderland",177862,"deaths","non-communicable diseases and lower respiratory infections","PM2.5",3.22400695758463,4.3388897591908
-"sunderland",177862,"disability","chronic obstructive pulmonary disease","PM2.5",2.38640675717325,0.199933151979847
-"sunderland",177862,"disability","diabetes","PM2.5",2.70054665441589,0.226251791763093
-"sunderland",177862,"disability","ischaemic heart disease","PM2.5",0.655610250444894,0.0549270250965133
-"sunderland",177862,"disability","lower respiratory infections","PM2.5",0.0218629433168376,0.00183167733486884
-"sunderland",177862,"disability","lung cancer","PM2.5",0.105206856362106,0.00881423015550064
-"sunderland",177862,"disability","stroke","PM2.5",1.06686833369617,0.0893822262538448
-"sunderland",177862,"new cases of asthma in children","new cases of asthma in children","NO2",4.46946451965963,0
-"sunderland",177862,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.103200486014412
-"sunderland",177862,"preterm births","preterm births","PM2.5",0.547152103749926,0.156101281447253
-"sunderland",177862,"work absence (sick leave days)","work absence (sick leave days)","PM2.5",1000.17627494322,0.229412023324493
-"swansea",171146,"asthma emergency room visits, adults","asthma emergency room visits, adults","O3_8h",-2.60000818612491,-0.00176805575886054
-"swansea",171146,"asthma emergency room visits, adults","asthma emergency room visits, adults","PM2.5",-0.142614049422058,-9.69803067239191e-05
-"swansea",171146,"asthma emergency room visits, children","asthma emergency room visits, children","O3_8h",-0.562516405167329,-0.000382522014706403
-"swansea",171146,"asthma emergency room visits, children","asthma emergency room visits, children","PM2.5",-0.084729561384421,-5.7617737417484e-05
-"swansea",171146,"deaths","chronic obstructive pulmonary disease","O3_8h",-0.364517400797133,-0.452063213811773
-"swansea",171146,"deaths","chronic obstructive pulmonary disease","PM2.5",NA,-0.037453555052856
-"swansea",171146,"deaths","lower respiratory infections in children","PM2.5",-0.000101553447344346,-0.000852726202822174
-"swansea",171146,"deaths","non-communicable diseases and lower respiratory infections","NO2",0,0
-"swansea",171146,"deaths","non-communicable diseases and lower respiratory infections","PM2.5",-0.328977377230018,-0.44273991708073
-"swansea",171146,"disability","chronic obstructive pulmonary disease","PM2.5",-0.248151557879623,-0.0207901368810879
-"swansea",171146,"disability","diabetes","PM2.5",-0.237436067851235,-0.0198923931540623
-"swansea",171146,"disability","ischaemic heart disease","PM2.5",-0.0663758026356973,-0.00556096457414748
-"swansea",171146,"disability","lower respiratory infections","PM2.5",-0.00235344690869144,-0.000197171775958785
-"swansea",171146,"disability","lung cancer","PM2.5",-0.0109883584390778,-0.000920604641771701
-"swansea",171146,"disability","stroke","PM2.5",-0.113274060058608,-0.0094901004604497
-"swansea",171146,"new cases of asthma in children","new cases of asthma in children","NO2",2.60114589522823,0
-"swansea",171146,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.0600607789593532
-"swansea",171146,"preterm births","preterm births","PM2.5",-0.0584934995014388,-0.0166880656510864
-"swansea",171146,"work absence (sick leave days)","work absence (sick leave days)","PM2.5",-107.711669209006,-0.0247059969206955
+"sunderland",177862,"deaths","non-communicable diseases and lower respiratory infections","PM2.5",2.86885953692513,3.86093002561221
+"sunderland",177862,"disability","chronic obstructive pulmonary disease","PM2.5",2.16400491604024,0.181300326301582
+"sunderland",177862,"disability","diabetes","PM2.5",2.03478886085949,0.170474605530791
+"sunderland",177862,"disability","ischaemic heart disease","PM2.5",0.575079890092034,0.0481801917132167
+"sunderland",177862,"disability","lower respiratory infections","PM2.5",0.0203482677997482,0.00170477782394175
+"sunderland",177862,"disability","lung cancer","PM2.5",0.0957968341925328,0.00802585852232971
+"sunderland",177862,"disability","stroke","PM2.5",0.990636658433758,0.0829955366963735
+"sunderland",177862,"new cases of asthma in children","new cases of asthma in children","NO2",4.57514958894707,0
+"sunderland",177862,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.105640767275614
+"sunderland",177862,"preterm births","preterm births","PM2.5",0.512824694519155,0.146307747742525
+"sunderland",177862,"work absence (sick leave days)","work absence (sick leave days)","PM2.5",948.164257160635,0.217481944061847
+"swansea",171146,"asthma emergency room visits, adults","asthma emergency room visits, adults","O3_8h",-2.82632655702645,-0.00192195662007466
+"swansea",171146,"asthma emergency room visits, adults","asthma emergency room visits, adults","PM2.5",0.0273050147671121,1.85679371558908e-05
+"swansea",171146,"asthma emergency room visits, children","asthma emergency room visits, children","O3_8h",-0.611539402875366,-0.000415858599520572
+"swansea",171146,"asthma emergency room visits, children","asthma emergency room visits, children","PM2.5",0.0162013519690127,1.10172321006557e-05
+"swansea",171146,"deaths","chronic obstructive pulmonary disease","O3_8h",-0.396105557395928,-0.491237869285593
+"swansea",171146,"deaths","chronic obstructive pulmonary disease","PM2.5",NA,0.00686398141543381
+"swansea",171146,"deaths","lower respiratory infections in children","PM2.5",1.82951445452245e-05,0.000153621068965236
+"swansea",171146,"deaths","non-communicable diseases and lower respiratory infections","NO2",5.1131668563817,6.88133357094531
+"swansea",171146,"deaths","non-communicable diseases and lower respiratory infections","PM2.5",0.0596036143606682,0.0802149360601306
+"swansea",171146,"disability","chronic obstructive pulmonary disease","PM2.5",0.0454778639595901,0.0038101353255976
+"swansea",171146,"disability","diabetes","PM2.5",0.0374883390814773,0.00314077295185626
+"swansea",171146,"disability","ischaemic heart disease","PM2.5",0.0118259805542635,0.000990780620428733
+"swansea",171146,"disability","lower respiratory infections","PM2.5",0.000433642193809147,3.63305418823147e-05
+"swansea",171146,"disability","lung cancer","PM2.5",0.00201985294973372,0.000169223274935095
+"swansea",171146,"disability","stroke","PM2.5",0.0211905664354219,0.00177534560147254
+"swansea",171146,"new cases of asthma in children","new cases of asthma in children","NO2",4.16713422380643,0
+"swansea",171146,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.0962196422619466
+"swansea",171146,"preterm births","preterm births","PM2.5",0.011021870557455,0.00314451522012474
+"swansea",171146,"work absence (sick leave days)","work absence (sick leave days)","PM2.5",20.5536167166501,0.00471441576422937
 "swindon",164076,"asthma emergency room visits, adults","asthma emergency room visits, adults","O3_8h",0,0
 "swindon",164076,"asthma emergency room visits, adults","asthma emergency room visits, adults","PM2.5",0,0
 "swindon",164076,"asthma emergency room visits, children","asthma emergency room visits, children","O3_8h",0,0
@@ -793,8 +793,8 @@
 "swindon",164076,"disability","lower respiratory infections","PM2.5",0,0
 "swindon",164076,"disability","lung cancer","PM2.5",0,0
 "swindon",164076,"disability","stroke","PM2.5",0,0
-"swindon",164076,"new cases of asthma in children","new cases of asthma in children","NO2",1.82417349818452,0
-"swindon",164076,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.0421203906551182
+"swindon",164076,"new cases of asthma in children","new cases of asthma in children","NO2",2.61062254043957,0
+"swindon",164076,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.0602795958639944
 "swindon",164076,"preterm births","preterm births","PM2.5",0,0
 "swindon",164076,"work absence (sick leave days)","work absence (sick leave days)","PM2.5",0,0
 "telford",43932,"asthma emergency room visits, adults","asthma emergency room visits, adults","O3_8h",0,0
@@ -812,83 +812,83 @@
 "telford",43932,"disability","lower respiratory infections","PM2.5",0,0
 "telford",43932,"disability","lung cancer","PM2.5",0,0
 "telford",43932,"disability","stroke","PM2.5",0,0
-"telford",43932,"new cases of asthma in children","new cases of asthma in children","NO2",0.919280649917864,0
-"telford",43932,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.021226303383295
+"telford",43932,"new cases of asthma in children","new cases of asthma in children","NO2",0.85103713934585,0
+"telford",43932,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.019650552322428
 "telford",43932,"preterm births","preterm births","PM2.5",0,0
 "telford",43932,"work absence (sick leave days)","work absence (sick leave days)","PM2.5",0,0
 "warrington",81293,"asthma emergency room visits, adults","asthma emergency room visits, adults","O3_8h",0,0
-"warrington",81293,"asthma emergency room visits, adults","asthma emergency room visits, adults","PM2.5",0.633919954805979,0.000431077806882524
+"warrington",81293,"asthma emergency room visits, adults","asthma emergency room visits, adults","PM2.5",0.658030044739295,0.000447473133474466
 "warrington",81293,"asthma emergency room visits, children","asthma emergency room visits, children","O3_8h",0,0
-"warrington",81293,"asthma emergency room visits, children","asthma emergency room visits, children","PM2.5",0.376246855297984,0.000255855124923371
+"warrington",81293,"asthma emergency room visits, children","asthma emergency room visits, children","PM2.5",0.389941708530683,0.000265167889496203
 "warrington",81293,"deaths","chronic obstructive pulmonary disease","O3_8h",0,0
-"warrington",81293,"deaths","chronic obstructive pulmonary disease","PM2.5",NA,0.160261809271722
-"warrington",81293,"deaths","lower respiratory infections in children","PM2.5",0.000427338904458056,0.00358828863860285
-"warrington",81293,"deaths","non-communicable diseases and lower respiratory infections","NO2",1.37592550237968,1.85172958688565
-"warrington",81293,"deaths","non-communicable diseases and lower respiratory infections","PM2.5",1.38936387455044,1.86981503650129
-"warrington",81293,"disability","chronic obstructive pulmonary disease","PM2.5",1.06182757773629,0.0889599117324883
-"warrington",81293,"disability","diabetes","PM2.5",0.874674716255711,0.0732802454788685
-"warrington",81293,"disability","ischaemic heart disease","PM2.5",0.276995713619328,0.0232067001747934
-"warrington",81293,"disability","lower respiratory infections","PM2.5",0.0102394975580757,0.000857865079086947
-"warrington",81293,"disability","lung cancer","PM2.5",0.0471963890223521,0.00395411335093735
-"warrington",81293,"disability","stroke","PM2.5",0.494654166789903,0.0414421248217628
-"warrington",81293,"new cases of asthma in children","new cases of asthma in children","NO2",3.0084443829158,0
-"warrington",81293,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.0694653511843708
-"warrington",81293,"preterm births","preterm births","PM2.5",0.256827325625873,0.0732722662786164
-"warrington",81293,"work absence (sick leave days)","work absence (sick leave days)","PM2.5",477.54540423998,0.109535349078569
-"wigan",80597,"asthma emergency room visits, adults","asthma emergency room visits, adults","O3_8h",-2.00858655362666,-0.00136587763156329
-"wigan",80597,"asthma emergency room visits, adults","asthma emergency room visits, adults","PM2.5",1.48067138863326,0.00100688512814064
-"wigan",80597,"asthma emergency room visits, children","asthma emergency room visits, children","O3_8h",-0.432180121375225,-0.000293890825629038
-"wigan",80597,"asthma emergency room visits, children","asthma emergency room visits, children","PM2.5",0.877082836837083,0.000596433260842453
-"wigan",80597,"deaths","chronic obstructive pulmonary disease","O3_8h",-0.287420731195711,-0.356450307108315
-"wigan",80597,"deaths","chronic obstructive pulmonary disease","PM2.5",NA,0.350320272541489
-"wigan",80597,"deaths","lower respiratory infections in children","PM2.5",0.00090623304469729,0.00760947740608282
+"warrington",81293,"deaths","chronic obstructive pulmonary disease","PM2.5",NA,0.157101270641636
+"warrington",81293,"deaths","lower respiratory infections in children","PM2.5",0.000407305858232551,0.00342007471888317
+"warrington",81293,"deaths","non-communicable diseases and lower respiratory infections","NO2",4.11647952123769,5.53998520276085
+"warrington",81293,"deaths","non-communicable diseases and lower respiratory infections","PM2.5",1.33885124011206,1.80183480098763
+"warrington",81293,"disability","chronic obstructive pulmonary disease","PM2.5",1.04088717344921,0.08720552471516
+"warrington",81293,"disability","diabetes","PM2.5",0.671733898652988,0.0562778643019292
+"warrington",81293,"disability","ischaemic heart disease","PM2.5",0.262395484294952,0.0219834929995378
+"warrington",81293,"disability","lower respiratory infections","PM2.5",0.0102362703819189,0.000857594706276817
+"warrington",81293,"disability","lung cancer","PM2.5",0.0466178264832586,0.0039056413828998
+"warrington",81293,"disability","stroke","PM2.5",0.502372978934257,0.0420888068833689
+"warrington",81293,"new cases of asthma in children","new cases of asthma in children","NO2",3.26459583026109,0
+"warrington",81293,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.0753799196395067
+"warrington",81293,"preterm births","preterm births","PM2.5",0.261478662195842,0.0745992822839252
+"warrington",81293,"work absence (sick leave days)","work absence (sick leave days)","PM2.5",493.696448250175,0.113239939737241
+"wigan",80597,"asthma emergency room visits, adults","asthma emergency room visits, adults","O3_8h",-2.86567620555618,-0.0019487151407068
+"wigan",80597,"asthma emergency room visits, adults","asthma emergency room visits, adults","PM2.5",1.27400711772296,0.000866349434336435
+"wigan",80597,"asthma emergency room visits, children","asthma emergency room visits, children","O3_8h",-0.614271024732485,-0.000417716155116464
+"wigan",80597,"asthma emergency room visits, children","asthma emergency room visits, children","PM2.5",0.753718977412271,0.000512543454935195
+"wigan",80597,"deaths","chronic obstructive pulmonary disease","O3_8h",-0.103209954307022,-0.127997795274978
+"wigan",80597,"deaths","chronic obstructive pulmonary disease","PM2.5",NA,0.29081514018425
+"wigan",80597,"deaths","lower respiratory infections in children","PM2.5",0.000739950901681205,0.00621323587889533
 "wigan",80597,"deaths","non-communicable diseases and lower respiratory infections","NO2",0,0
-"wigan",80597,"deaths","non-communicable diseases and lower respiratory infections","PM2.5",2.9868937482621,4.01978124322498
-"wigan",80597,"disability","chronic obstructive pulmonary disease","PM2.5",2.32107529619834,0.194459682347356
-"wigan",80597,"disability","diabetes","PM2.5",1.47309849072313,0.12341618776503
-"wigan",80597,"disability","ischaemic heart disease","PM2.5",0.582259115394475,0.0487816671905962
-"wigan",80597,"disability","lower respiratory infections","PM2.5",0.0225973889506788,0.00189320918818359
-"wigan",80597,"disability","lung cancer","PM2.5",0.10393263198675,0.00870747564060974
-"wigan",80597,"disability","stroke","PM2.5",1.12306871960058,0.0940906944404093
-"wigan",80597,"new cases of asthma in children","new cases of asthma in children","NO2",2.54131923577086,0
-"wigan",80597,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.0586793740269584
-"wigan",80597,"preterm births","preterm births","PM2.5",0.585510678810945,0.167044897820978
-"wigan",80597,"work absence (sick leave days)","work absence (sick leave days)","PM2.5",1109.76017400688,0.254547456585405
+"wigan",80597,"deaths","non-communicable diseases and lower respiratory infections","PM2.5",2.46773655912773,3.32109608497922
+"wigan",80597,"disability","chronic obstructive pulmonary disease","PM2.5",1.92681922957276,0.161428910099207
+"wigan",80597,"disability","diabetes","PM2.5",1.06920546144094,0.0895780308102928
+"wigan",80597,"disability","ischaemic heart disease","PM2.5",0.47437517073778,0.0397431505846584
+"wigan",80597,"disability","lower respiratory infections","PM2.5",0.0185331222589791,0.00155270493520336
+"wigan",80597,"disability","lung cancer","PM2.5",0.0866109891590465,0.00725626844904365
+"wigan",80597,"disability","stroke","PM2.5",0.951559738368658,0.0797216724337968
+"wigan",80597,"new cases of asthma in children","new cases of asthma in children","NO2",1.86742395440855,0
+"wigan",80597,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.0431190490140856
+"wigan",80597,"preterm births","preterm births","PM2.5",0.496083435542912,0.141531503693894
+"wigan",80597,"work absence (sick leave days)","work absence (sick leave days)","PM2.5",951.782970038068,0.21831197399141
 "worthing",99551,"asthma emergency room visits, adults","asthma emergency room visits, adults","O3_8h",0,0
-"worthing",99551,"asthma emergency room visits, adults","asthma emergency room visits, adults","PM2.5",0.179377980742466,0.000121980489737294
+"worthing",99551,"asthma emergency room visits, adults","asthma emergency room visits, adults","PM2.5",0.360256358809579,0.000244981278620027
 "worthing",99551,"asthma emergency room visits, children","asthma emergency room visits, children","O3_8h",0,0
-"worthing",99551,"asthma emergency room visits, children","asthma emergency room visits, children","PM2.5",0.106506247326179,7.24263042495777e-05
+"worthing",99551,"asthma emergency room visits, children","asthma emergency room visits, children","PM2.5",0.213559553906176,0.00014522461935255
 "worthing",99551,"deaths","chronic obstructive pulmonary disease","O3_8h",0,0
-"worthing",99551,"deaths","chronic obstructive pulmonary disease","PM2.5",NA,0.0456832518883795
-"worthing",99551,"deaths","lower respiratory infections in children","PM2.5",0.000121881250635052,0.00102341514509922
-"worthing",99551,"deaths","non-communicable diseases and lower respiratory infections","NO2",3.44925120470963,4.64202494780078
-"worthing",99551,"deaths","non-communicable diseases and lower respiratory infections","PM2.5",0.395202727084765,0.531866428302258
-"worthing",99551,"disability","chronic obstructive pulmonary disease","PM2.5",0.302678079800707,0.0253583687474327
-"worthing",99551,"disability","diabetes","PM2.5",0.249103029169049,0.0208698511432689
-"worthing",99551,"disability","ischaemic heart disease","PM2.5",0.0792865221024428,0.00664262461787462
-"worthing",99551,"disability","lower respiratory infections","PM2.5",0.00296211044660416,0.000248165605600072
-"worthing",99551,"disability","lung cancer","PM2.5",0.01346702069696,0.00112826695936377
-"worthing",99551,"disability","stroke","PM2.5",0.140963073079011,0.0118098859001035
-"worthing",99551,"new cases of asthma in children","new cases of asthma in children","NO2",2.5893906944585,0
-"worthing",99551,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.059789349926346
-"worthing",99551,"preterm births","preterm births","PM2.5",0.0730188900146187,0.0208321273426879
-"worthing",99551,"work absence (sick leave days)","work absence (sick leave days)","PM2.5",135.26377659462,0.0310256676232852
+"worthing",99551,"deaths","chronic obstructive pulmonary disease","PM2.5",NA,0.0876010040131211
+"worthing",99551,"deaths","lower respiratory infections in children","PM2.5",0.000229909285950562,0.00193050730948985
+"worthing",99551,"deaths","non-communicable diseases and lower respiratory infections","NO2",4.85500957260242,6.53390380122496
+"worthing",99551,"deaths","non-communicable diseases and lower respiratory infections","PM2.5",0.75310694876714,1.01353628282157
+"worthing",99551,"disability","chronic obstructive pulmonary disease","PM2.5",0.580407536400699,0.0486265419072583
+"worthing",99551,"disability","diabetes","PM2.5",0.417944818275998,0.0350154158005081
+"worthing",99551,"disability","ischaemic heart disease","PM2.5",0.147901757070237,0.0123912088270476
+"worthing",99551,"disability","lower respiratory infections","PM2.5",0.00559440338775868,0.000468699101441627
+"worthing",99551,"disability","lung cancer","PM2.5",0.0258786289395418,0.00216811146601354
+"worthing",99551,"disability","stroke","PM2.5",0.275707854163294,0.0230988033128781
+"worthing",99551,"new cases of asthma in children","new cases of asthma in children","NO2",3.49721875691891,0
+"worthing",99551,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.0807512116552696
+"worthing",99551,"preterm births","preterm births","PM2.5",0.143776517326222,0.0410191214523856
+"worthing",99551,"work absence (sick leave days)","work absence (sick leave days)","PM2.5",270.533875689307,0.0620527854484702
 "york",145854,"asthma emergency room visits, adults","asthma emergency room visits, adults","O3_8h",0,0
-"york",145854,"asthma emergency room visits, adults","asthma emergency room visits, adults","PM2.5",-1.27637065562908,-0.000867956685739908
+"york",145854,"asthma emergency room visits, adults","asthma emergency room visits, adults","PM2.5",-0.481593082476637,-0.000327492593078827
 "york",145854,"asthma emergency room visits, children","asthma emergency room visits, children","O3_8h",0,0
-"york",145854,"asthma emergency room visits, children","asthma emergency room visits, children","PM2.5",-0.760986235950125,-0.000517485331032952
+"york",145854,"asthma emergency room visits, children","asthma emergency room visits, children","PM2.5",-0.28665043270593,-0.000194927827931555
 "york",145854,"deaths","chronic obstructive pulmonary disease","O3_8h",0,0
-"york",145854,"deaths","chronic obstructive pulmonary disease","PM2.5",NA,-0.403168430716033
-"york",145854,"deaths","lower respiratory infections in children","PM2.5",-0.00121451260196477,-0.0101980459200104
+"york",145854,"deaths","chronic obstructive pulmonary disease","PM2.5",NA,-0.13771914515443
+"york",145854,"deaths","lower respiratory infections in children","PM2.5",-0.000388831848796244,-0.00326495175329735
 "york",145854,"deaths","non-communicable diseases and lower respiratory infections","NO2",0,0
-"york",145854,"deaths","non-communicable diseases and lower respiratory infections","PM2.5",-3.96569293426006,-5.33705562268615
-"york",145854,"disability","chronic obstructive pulmonary disease","PM2.5",-2.67122504202556,-0.223795227152427
-"york",145854,"disability","diabetes","PM2.5",-5.72418889011215,-0.479572530495089
-"york",145854,"disability","ischaemic heart disease","PM2.5",-0.832687655910707,-0.0697625696711233
-"york",145854,"disability","lower respiratory infections","PM2.5",-0.0213336981435867,-0.00178733717561472
-"york",145854,"disability","lung cancer","PM2.5",-0.116482386893504,-0.00975889407442862
-"york",145854,"disability","stroke","PM2.5",-1.11869894663922,-0.0937245948729427
-"york",145854,"new cases of asthma in children","new cases of asthma in children","NO2",4.29068621085253,0
-"york",145854,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.0990724728538711
-"york",145854,"preterm births","preterm births","PM2.5",0,0
-"york",145854,"work absence (sick leave days)","work absence (sick leave days)","PM2.5",-972.787050111925,-0.223129713252509
+"york",145854,"deaths","non-communicable diseases and lower respiratory infections","PM2.5",-1.26151814823086,-1.69775941752097
+"york",145854,"disability","chronic obstructive pulmonary disease","PM2.5",-0.912469333597159,-0.0764466784225516
+"york",145854,"disability","diabetes","PM2.5",-1.2520645403464,-0.104897963970812
+"york",145854,"disability","ischaemic heart disease","PM2.5",-0.26011373685429,-0.021792328204826
+"york",145854,"disability","lower respiratory infections","PM2.5",-0.00809109667895097,-0.000677872058958012
+"york",145854,"disability","lung cancer","PM2.5",-0.0400842445072986,-0.00335825790175356
+"york",145854,"disability","stroke","PM2.5",-0.398999501594222,-0.0334281772176228
+"york",145854,"new cases of asthma in children","new cases of asthma in children","NO2",2.83674143979466,0
+"york",145854,"new cases of asthma in children","number of children suffering from asthma due to pollution exposure (increased prevalence)","NO2",NA,0.0655007090885972
+"york",145854,"preterm births","preterm births","PM2.5",-0.202049903691709,-0.0576443893140637
+"york",145854,"work absence (sick leave days)","work absence (sick leave days)","PM2.5",-365.463437083701,-0.0838269299651776

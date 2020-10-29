@@ -13,7 +13,7 @@ plot_cost_causes <- function(hi.detailed, filename="plot_cost_causes.jpg"){
     theme_crea() +
     rcrea::CREAtheme.scale_fill_crea_d(palette="dramatic")
 
-  ggsave(file.path("results", "plots", filename), plot = plt, width=10, height=6)
+  ggsave(file.path(dir_results_plots_health, filename), plot = plt, width=10, height=6)
   plt
 }
 
@@ -33,7 +33,7 @@ plot_death <- function(hi.detailed, filename="plot_death.jpg"){
     theme_crea() +
     rcrea::CREAtheme.scale_fill_crea_d(palette="dramatic")
 
-  ggsave(file.path("results", "plots", filename), plot = plt, width=10, height=6)
+  ggsave(file.path(dir_results_plots_health, filename), plot = plt, width=10, height=6)
   plt
 }
 
@@ -53,7 +53,7 @@ plot_causes <- function(hi.detailed, filename="plot_causes.jpg"){
     theme_crea() +
     rcrea::CREAtheme.scale_fill_crea_d(palette="dramatic")
 
-  ggsave(file.path("results", "plots", filename), plot = plt, width=12, height=10, scale=1.5)
+  ggsave(file.path(dir_results_plots_health, filename), plot = plt, width=12, height=10, scale=1.5)
   plt
 
 }

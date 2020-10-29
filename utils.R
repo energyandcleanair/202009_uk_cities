@@ -233,16 +233,20 @@ utils.anomaly_lockdown <- function(m, lockdown_running_day=7,
                                    process_anomaly="anomaly_gbm_lag1_city_mad",
                                    process_observation="city_day_mad"){
 
-  m.offset <- m %>%
-    filter(process_id==process_anomaly) %>%
-    dplyr::select_at(setdiff(names(.), "geometry")) %>% #running average doesn't work with geometry fields
-    # rcrea::utils.running_average(running_day) %>%
-    rcrea::utils.add_lockdown() %>%
-    filter(date>=lubridate::date(movement)-lockdown_running_day,
-           date<=lubridate::date(movement)) %>%
-    group_by(region_id, country, poll) %>%
-    dplyr::summarise(offset=mean(value, na.rm=T)) %>%
-    ungroup()
+  if(!is.null(lockdown_running_day)){
+    m.offset <- m %>%
+      filter(process_id==process_anomaly) %>%
+      dplyr::select_at(setdiff(names(.), "geometry")) %>% #running average doesn't work with geometry fields
+      rcrea::utils.add_lockdown() %>%
+      filter(date>=lubridate::date(movement)-lockdown_running_day,
+             date<=lubridate::date(movement)) %>%
+      group_by(region_id, country, poll) %>%
+      dplyr::summarise(offset=mean(value, na.rm=T)) %>%
+      ungroup()
+  }else{
+    m.offset <- tibble(region_id=unique(m$region_id), offset=0)
+  }
+
 
 
   ren <- function(p){
@@ -253,17 +257,26 @@ utils.anomaly_lockdown <- function(m, lockdown_running_day=7,
 
    m %>%
     filter(process_id %in% c(process_anomaly, process_observation)) %>%
-    rowwise() %>%
-    mutate(process_id=ren(process_id),
+    mutate(process_id=purrr::map_chr(process_id, ren),
            unit=gsub("Δ ","",unit)) %>%
     tidyr::pivot_wider(names_from=process_id, values_from=value) %>%
     left_join(m.offset) %>%
     mutate(anomaly_lockdown=anomaly-offset,
            anomaly_lockdown_relative=anomaly_lockdown/(observation-anomaly)) %>%
-    select(-c(anomaly,observation,offset)) %>%
+    dplyr::select(-c(anomaly,observation,offset)) %>%
     tidyr::pivot_longer(cols=c(anomaly_lockdown, anomaly_lockdown_relative), names_to="process_id")
 
 
 }
 
+utils.transport.apple <- function(){
+  read.csv("data/applemobilitytrends.csv") %>%
+    filter(geo_type=="city",
+               country=="United Kingdom") %>%
+    tidyr::pivot_longer(cols=!c(geo_type, region, transportation_type, alternative_name, sub.region, country),
+                        names_to="date", names_pattern = "X(.*)") %>%
+    mutate(date=lubridate::date(gsub("\\.","-",date)),
+           region_id=tolower(region),
+           country="GB")
+}
 

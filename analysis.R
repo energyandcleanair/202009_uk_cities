@@ -48,21 +48,33 @@ plot_poll("pm25", ms.city, mc.city)
 plot_poll("pm10", ms.city, mc.city)
 plot_poll("o3", ms.city, mc.city)
 
-
-
 # Transportation ----------------------------------------------------------
-tc <- rcrea::transport.tomtom_congestion(cities=tibble(city=city, country="GB"))
-plot_traffic_poll(mc.city, tc, n_day=14)
-plot_traffic_poll(mc.city, tc, n_day=30)
+tc.tomtom <- rcrea::transport.tomtom_congestion(cities=tibble(city=city, country="GB"))
+tc.apple <- utils.transport.apple() %>% filter(region_id %in% tolower(city))
 
+plot_traffic_poll_tomtom(mc.city, tc.tomtom, n_day=14)
+plot_traffic_poll_tomtom(mc.city, tc.tomtom, n_day=30)
+
+plot_traffic_poll_apple(mc.city, tc.apple, n_day=14)
+plot_traffic_poll_apple(mc.city, tc.apple, n_day=30)
+
+plot_corr_traffic_poll_tomtom(mc.city, tc.tomtom, tc.apple, date_from=date_from, date_to=date_to)
+plot_corr_traffic_poll_apple(mc.city, tc.tomtom, tc.apple, date_from=date_from, date_to=date_to)
 
 # Other charts ------------------------------------------------------------
-# plot_corr_traffic_poll(mc.city, tc)
-
-
+plot_predicted_vs_observed(mc.city, poll="no2", date_from=date_from, date_to=date_to)
+plot_predicted_vs_observed(mc.city, poll="pm25", date_from=date_from, date_to=date_to)
+plot_predicted_vs_observed(mc.city, poll="pm10", date_from=date_from, date_to=date_to)
+plot_predicted_vs_observed(mc.city, poll="o3", date_from=date_from, date_to=date_to)
+plot_anomaly_average(mc.city, process_anomaly = "anomaly_gbm_lag1_city_mad", date_from=date_from, date_to=date_to, filename=paste0("plot_anomaly_lockdown.jpg"))
 
 # Other tables ------------------------------------------------------------
-table_impact(mc.city, tc, n_day=7, date_from = date_from, date_to=date_to)
+table_impact(mc.city, tc.tomtom, tc.apple, n_day=7, date_from = date_from, date_to=date_to)
+table_impact(mc.city, tc.tomtom, tc.apple, n_day=14, date_from = date_from, date_to=date_to)
+table_impact(mc.city, tc.tomtom, tc.apple, n_day=30, date_from = date_from, date_to=date_to)
+t.impact <- table_impact(mc.city, tc.tomtom, tc.apple, n_day=NULL, date_from = date_from, date_to=date_to)
+
+
 
 
 

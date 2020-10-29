@@ -12,11 +12,17 @@ require(ggrepel)
 dir_results <- "results"
 dir.create(dir_results, showWarnings = F)
 
-dir_results_plots <- file.path(dir_results, "plots")
-dir.create(dir_results_plots, showWarnings = F)
+dir_results_plots_poll <- file.path(dir_results, "plots", "poll")
+dir.create(dir_results_plots, showWarnings = F, recursive = T)
+
+dir_results_plots_health <- file.path(dir_results, "plots", "health")
+dir.create(dir_results_plots_health, showWarnings = F, recursive = T)
+
+dir_results_plots_traffic <- file.path(dir_results, "plots", "traffic")
+dir.create(dir_results_plots_traffic, showWarnings = F, recursive = T)
 
 dir_results_data <- file.path(dir_results, "data")
-dir.create(dir_results_data, showWarnings = F)
+dir.create(dir_results_data, showWarnings = F, recursive = T)
 
 country <- "GB"
 city <- c(
