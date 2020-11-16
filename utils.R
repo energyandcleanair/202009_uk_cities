@@ -280,3 +280,33 @@ utils.transport.apple <- function(){
            country="GB")
 }
 
+utils.transport.mapbox <- function(date0="2020-03-23"){
+
+  fs <- Sys.glob("data/mapbox/GB/adm2/total/2020/*/*/data/adm2.csv")
+  t <- do.call("rbind",lapply(fs, read.csv)) %>%
+    rename(region_code=geography, date=agg_day_period, value=activity_index_total) %>%
+    mutate(date=lubridate::date(date))
+
+  # Scale
+  t.scaled <- t %>%
+    # rcrea::utils.running_average(n_day_for_scaling) %>%
+    filter(lubridate::date(date)<=lubridate::date(date0)) %>%
+    group_by(region_code) %>%
+    dplyr::summarise(mean_pre_lockdown=mean(value)) %>%
+    right_join(t) %>%
+    mutate(value=(value-mean_pre_lockdown)/mean_pre_lockdown,
+           date=lubridate::date(date)) %>%
+    select(region_code, date, value )
+
+  # Add region_id
+  c <- read.csv("data/mapbox_city.csv")
+
+  c %>% filter(PUA != "#N/A") %>%
+    rename(region_code=GSS_CD,
+           region_id=PUA) %>%
+    mutate(region_id=tolower(region_id),
+           country="GB") %>%
+    select(region_code, country, region_id) %>%
+    inner_join(t.scaled)
+}
+

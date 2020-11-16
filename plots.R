@@ -23,7 +23,7 @@ plot_city_vs_stations <- function(ms.city, mc.city, running_days, unit=NULL, fil
   # Value at lockdown
   d.lockdown.level <- d.plot %>% filter(lubridate::date(date)==lubridate::date(movement), level=="city")
 
-  unit <- d.plot$unit %>% unique()
+  unit <- ifelse(is.null(unit), d.plot$unit %>% unique(), unit)
   poll <- toupper(d.plot$poll %>% unique())
   if(is.null(subtitle)){
     subtitle <- paste0(poll," weather-corrected values. ", running_days,"-day running average")
@@ -33,11 +33,19 @@ plot_city_vs_stations <- function(ms.city, mc.city, running_days, unit=NULL, fil
     geom_line(aes(date, value, color=level, group=region_id, size=level, alpha=alpha)) +
     scale_color_manual(values=c(brewer.pal(8, "Spectral")[c(1,2,6,8)],"grey40")) +
     scale_size_manual(values=c(0.6,0.3,0.3,0.3,0.3)) +
+    scale_x_datetime(
+      limits=c(as.POSIXct("2020-01-01", tz="UTC"),NA),
+      breaks = seq(as.POSIXct("2020-01-01", tz="UTC"), max(d.plot$date), by="3 month"),
+      date_minor_breaks =  "1 month",
+                     labels = scales::date_format("%b")) +
     facet_wrap(~city, scales="free_y") +
     scale_alpha(range = c(0.8, 1), guide='none') +
     geom_hline(data=d.lockdown.level, aes(yintercept = value, linetype="Lockdown value"),
                color=rcrea::CREAtheme.pal_crea['Turquoise']) +
-    rcrea::theme_crea() +
+    rcrea::theme_crea(
+      panel.grid.major.x = element_line(colour = "grey90"),
+      panel.grid.minor.x = element_line(colour = "grey90")
+    ) +
     labs(x=NULL,
          y=paste0(unit),
          subtitle=subtitle,
@@ -124,6 +132,16 @@ plot_poll <- function(poll, ms.city, mc.city, days=c(0, 14, 30)){
                       .default = poll)
 
   for(day in days){
+
+    (plot_city_vs_stations(ms.city=NULL,
+                           mc.city=mc.city %>% filter(poll==!!poll,
+                                                      process_id=="city_day_mad"),
+                           running_days=day,
+                           subtitle = paste0(poll_name, " observed levels. ", day,"-day running average"),
+                           unit="Observed concentration [µg/m3]",
+                           file=file.path(dir_results_plots_poll,
+                                          paste0("plot_",poll,"_city_observations_",day,"day.png")),
+                           plot_add=ylim(0, NA)))
 
     (plot_city_vs_stations(ms.city=NULL,
                            mc.city=mc.city %>% filter(poll==!!poll,
@@ -240,7 +258,7 @@ plot_traffic_poll_tomtom <- function(mc.city, tc, n_day){
     dplyr::select(region_id, country, date, no2=value) %>%
     filter(region_id %in% unique(tolower(tc$city))) %>%
     full_join(tc %>%
-                mutate(ddate=lubridate::date(date),
+                mutate(date=lubridate::date(date),
                        region_id=tolower(city)) %>%
                 dplyr::select(region_id, country, date, traffic=diffRatio),
               by=c("region_id","country","date")) %>%
@@ -257,6 +275,11 @@ plot_traffic_poll_tomtom <- function(mc.city, tc, n_day){
     geom_line(aes(date,value,col=indicator)) +
     facet_wrap(~region_id) +
     scale_y_continuous(labels=scales::percent) +
+    scale_x_date(
+      limits=c(lubridate::date("2020-01-01"),NA),
+      breaks = seq(lubridate::date("2020-01-01"), max(d.plot.avg$date), by="3 month"),
+      date_minor_breaks =  "1 month",
+      labels = scales::date_format("%b")) +
     theme_light() +
     geom_vline(data=d.plot, aes(xintercept=movement, linetype="National lockdown"),
                color=rcrea::CREAtheme.pal_crea['Turquoise']) +
@@ -266,7 +289,7 @@ plot_traffic_poll_tomtom <- function(mc.city, tc, n_day){
     labs(
       subtitle=paste0("2020 vs 2019 NO2 concentration and traffic congestion levels\n",
                       n_day,"-day running average"),
-      caption="Source: CREA based on DEFRA and TomTom, using weather-corrected values",
+      caption="Source: CREA based on DEFRA and TomTom, using weather-corrected values.",
       y="Year-on-year variation",
       x=NULL)
 
@@ -305,6 +328,11 @@ plot_traffic_poll_apple <- function(mc.city, tc, n_day){
     geom_line(aes(date,value,col=indicator)) +
     facet_wrap(~region_id) +
     scale_y_continuous(labels=scales::percent) +
+      scale_x_date(
+        limits=c(lubridate::date("2020-01-01"),NA),
+        breaks = seq(lubridate::date("2020-01-01"), max(d.plot.avg$date), by="3 month"),
+        date_minor_breaks =  "1 month",
+        labels = scales::date_format("%b")) +
     theme_light() +
     geom_vline(data=d.plot, aes(xintercept=movement, linetype="National lockdown"),
                color=rcrea::CREAtheme.pal_crea['Turquoise']) +
@@ -314,7 +342,7 @@ plot_traffic_poll_apple <- function(mc.city, tc, n_day){
     labs(
       subtitle=paste0("Impact of lockdown on NO2 and traffic levels\n",
                       n_day,"-day running average"),
-      caption="Source: CREA based on DEFRA and Apple Mobility, using weather-corrected values",
+      caption="Source: CREA based on DEFRA and Apple Mobility, using weather-corrected values.",
       y="Year-on-year variation",
       x=NULL))
 
@@ -326,8 +354,62 @@ plot_traffic_poll_apple <- function(mc.city, tc, n_day){
   return(plt)
 }
 
-plot_corr_traffic_poll_tomtom <- function(mc.city, tc.tomtom, tc.apple, date_from, date_to){
-  t.impact <- table_impact(mc.city, tc.tomtom, tc.apple, n_day=NULL, date_from = date_from, date_to=date_to, save=F)
+plot_traffic_poll_mapbox <- function(mc.city, tc, n_day){
+
+  d.plot <- mc.city %>%
+    mutate(date=lubridate::date(date),
+           value=value/100) %>%
+    filter(process_id=="anomaly_percent_gbm_lag1_city_mad",
+           poll=="no2") %>%
+    dplyr::select(region_id, country, date, no2=value) %>%
+    filter(region_id %in% unique(tc$region_id)) %>%
+    full_join(tc %>%
+                mutate(date=lubridate::date(date),
+                       traffic=value) %>%
+                filter(region_id %in% unique(mc.city$region_id)) %>%
+                dplyr::select(region_id, country, date, traffic),
+              by=c("region_id","country","date")) %>%
+    utils.add_lockdown() %>%
+    mutate(movement=lubridate::date(movement),
+           first_measures=lubridate::date(first_measures))%>%
+    tidyr::pivot_longer(c(no2, traffic), names_to="indicator")
+
+  d.plot.avg <- d.plot %>%
+    rcrea::utils.rolling_average("day", n_day, "value", min_values = n_day*2/3)
+
+  (plt <- ggplot(d.plot.avg) +
+      geom_line(aes(date,value,col=indicator)) +
+      facet_wrap(~region_id) +
+      scale_y_continuous(labels=scales::percent) +
+      scale_x_date(
+        limits=c(lubridate::date("2020-01-01"),NA),
+        breaks = seq(lubridate::date("2020-01-01"), max(d.plot.avg$date), by="3 month"),
+        date_minor_breaks =  "1 month",
+        labels = scales::date_format("%b")) +
+      theme_light() +
+      geom_vline(data=d.plot, aes(xintercept=movement, linetype="National lockdown"),
+                 color=rcrea::CREAtheme.pal_crea['Turquoise']) +
+      geom_vline(data=d.plot, aes(xintercept=partial_restriction, linetype="Partial restrictions"),
+                 color=rcrea::CREAtheme.pal_crea['Turquoise']) +
+      scale_linetype_manual(values=c("dashed","dotted"), name=NULL) +
+      labs(
+        subtitle=paste0("Impact of lockdown on NO2 and traffic levels\n",
+                        n_day,"-day running average"),
+        caption="Source: CREA based on DEFRA and Mapbox Movement, using weather-corrected values.",
+        y="Impact of lockdow",
+        x=NULL))
+
+  ggsave(file.path(dir_results_plots_traffic, paste0("no2.traffic.mapbox.",n_day,"day.png")),
+         plot = plt,
+         width=10,
+         height=8)
+
+  return(plt)
+}
+
+
+plot_corr_traffic_poll_tomtom <- function(mc.city, tc.tomtom, tc.apple, tc.mapbox, date_from, date_to){
+  t.impact <- table_impact(mc.city, tc.tomtom, tc.apple, tc.mapbox, n_day=NULL, date_from = date_from, date_to=date_to, save=F)
 
   plt <- ggplot(t.impact %>% filter(region_id!="edinburgh"),
          aes(x=avg_relative_traffic_tomtom, y=avg_relative_no2)) +
@@ -352,9 +434,9 @@ plot_corr_traffic_poll_tomtom <- function(mc.city, tc.tomtom, tc.apple, date_fro
 }
 
 
-plot_corr_traffic_poll_apple <- function(mc.city, tc.tomtom, tc.apple, date_from, date_to){
+plot_corr_traffic_poll_apple <- function(mc.city, tc.tomtom, tc.apple, tc.mapbox, date_from, date_to){
 
-  t.impact <- table_impact(mc.city, tc.tomtom, tc.apple, n_day=NULL, date_from = date_from, date_to=date_to, save=F)
+  t.impact <- table_impact(mc.city, tc.tomtom, tc.apple, tc.mapbox, n_day=NULL, date_from = date_from, date_to=date_to, save=F)
 
   plt <- ggplot(t.impact %>% filter(region_id!="edinburgh"),
                 aes(x=avg_relative_traffic_apple, y=avg_relative_no2)) +
@@ -371,6 +453,33 @@ plot_corr_traffic_poll_apple <- function(mc.city, tc.tomtom, tc.apple, date_from
          caption=paste("Source: CREA based on DEFRA and Apple Mobility"))
 
   ggsave(file.path(dir_results_plots_traffic, "no2.traffic.corr.apple.png"),
+         plot = plt,
+         width=8,
+         height=6)
+
+  return(plt)
+}
+
+
+plot_corr_traffic_poll_mapbox <- function(mc.city, tc.tomtom, tc.apple, tc.mapbox, date_from, date_to){
+
+  t.impact <- table_impact(mc.city, tc.tomtom, tc.apple, tc.mapbox, n_day=NULL, date_from = date_from, date_to=date_to, save=F)
+
+  (plt <- ggplot(t.impact %>% filter(region_id!="edinburgh"),
+                aes(x=avg_relative_traffic_mapbox, y=avg_relative_no2)) +
+    geom_point() +
+    geom_text_repel(aes(label = tools::toTitleCase(region_id)),  show.legend = FALSE,
+                    box.padding = unit(0.45, "lines")) +
+    stat_smooth(method="lm", col="red") +
+    theme_light() +
+    scale_x_continuous(label=scales::percent) +
+    scale_y_continuous(label=scales::percent) +
+    labs(title="Average anomalies during lockdown",
+         y="NO2 level",
+         x="Movement index",
+         caption=paste("Source: CREA based on DEFRA and Mapbox Movement")))
+
+  ggsave(file.path(dir_results_plots_traffic, "no2.traffic.corr.mapbox.png"),
          plot = plt,
          width=8,
          height=6)
