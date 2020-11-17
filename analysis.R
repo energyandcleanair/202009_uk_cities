@@ -23,7 +23,11 @@ ms <- rcrea::measurements(country=country, source=source, poll=c("no2","pm25","p
 
 # Combining others into "Other"
 renaming_list = setNames(as.list(tolower(city)), tolower(city))
-mc <- mc %>% mutate(region_id=recode(region_id, !!!renaming_list, .default="other"))
+mc <- mc %>%
+  mutate(region_id=recode(region_id, !!!renaming_list, .default="others"),
+         region_name=tools::toTitleCase(region_id)) %>%
+  group_by(date, poll, unit, region_id, process_id, source, timezone, region_name, country) %>%
+  summarise(value=mean(value, na.rm=T))
 
 
 l <- rcrea::locations(country=country, city=city, source=source, with_meta = T)
@@ -32,7 +36,8 @@ l <- l %>% mutate(type=recode(type,
                               "Background Suburban"="Background",
                               "Industrial Urban"="Industrial",
                               "Traffic Urban"="Traffic",
-                         .default = "Unknown"))
+                         .default = "Unknown"),
+                  type=tidyr::replace_na(type, "Unknown"))
 
 write.csv(l %>% dplyr::select(id, name, city, type, source),
           file.path(dir_results_data, "stations.csv"), row.names = F)
@@ -44,7 +49,9 @@ l.all <- l.all %>% mutate(type=recode(type,
                               "Background Suburban"="Background",
                               "Industrial Urban"="Industrial",
                               "Traffic Urban"="Traffic",
-                              .default = "Unknown"))
+                              .default = "Unknown"),
+                          type=tidyr::replace_na(type, "Unknown"))
+
 write.csv(l %>% dplyr::select(id, name, city, type, source),
           file.path(dir_results_data, "stations_all.csv"), row.names = F)
 
@@ -54,11 +61,12 @@ ms.city <- ms %>%
               dplyr::select(id, city, type),
             by=c("region_id"="id")) %>%
   mutate(city=recode(tolower(city), !!!renaming_list, .default="other"),
+         type=tidyr::replace_na(type, "Unknown"),
          level=paste0("station-", type))
 
 
 mc.city <- mc %>%
-  mutate(city=tools::toTitleCase(region_id),
+  mutate(city=region_id,
          level="city")
 
 # Export csvs
