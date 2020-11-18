@@ -114,7 +114,7 @@ plot_predicted_vs_observed <- function(mc.city, poll, date_from, date_to){
 
 }
 
-plot_poll <- function(poll, ms.city, mc.city, days=c(30)){
+plot_poll <- function(poll, ms.city, mc.city, date_from, days=c(30)){
   # (plot_city_vs_stations(ms.city=ms.city %>% filter(poll==!!poll,
   #                                                   process_id=="anomaly_gbm_lag1_station"),
   #                        mc.city=mc.city %>% filter(poll==!!poll,
@@ -131,6 +131,9 @@ plot_poll <- function(poll, ms.city, mc.city, days=c(30)){
                       "o3"="O3",
                       .default = poll)
 
+  d <- file.path(dir_results_plots_poll,gsub("-","",date_from))
+  dir.create(d, showWarnings = F, recursive = T)
+
   for(day in days){
     print("1")
     (plot_city_vs_stations(ms.city=NULL,
@@ -139,8 +142,7 @@ plot_poll <- function(poll, ms.city, mc.city, days=c(30)){
                            running_days=day,
                            subtitle = paste0(poll_name, " observed levels. ", day,"-day running average"),
                            unit="Observed concentration [µg/m3]",
-                           file=file.path(dir_results_plots_poll,
-                                          paste0("plot_",poll,"_city_observations_",day,"day.png")),
+                           file=file.path(d, paste0("plot_",poll,"_city_observations_",day,"day.png")),
                            plot_add=ylim(0, NA)))
 
     print("2")
@@ -149,8 +151,7 @@ plot_poll <- function(poll, ms.city, mc.city, days=c(30)){
                                                       process_id=="anomaly_offsetted_gbm_lag1_city_mad"),
                            running_days=day,
                            unit="Weather-corrected concentration [µg/m3]",
-                           file=file.path(dir_results_plots_poll,
-                                          paste0("plot_",poll,"_city_deweathered_",day,"day.png")),
+                           file=file.path(d, paste0("plot_",poll,"_city_deweathered_",day,"day.png")),
                            plot_add=ylim(0, NA)))
     print("3")
     (plot_city_vs_stations(ms.city=ms.city %>% filter(poll==!!poll,
@@ -160,8 +161,7 @@ plot_poll <- function(poll, ms.city, mc.city, days=c(30)){
                                                       process_id=="anomaly_offsetted_gbm_lag1_city_mad"),
                            running_days=day,
                            unit="Weather-corrected concentration [µg/m3]",
-                           file=file.path(dir_results_plots_poll,
-                                          paste0("plot_",poll,"_deweathered_",day,"day.png")),
+                           file=file.path(d, paste0("plot_",poll,"_deweathered_",day,"day.png")),
                            plot_add=ylim(0, NA)))
 
     print("4")
@@ -176,8 +176,7 @@ plot_poll <- function(poll, ms.city, mc.city, days=c(30)){
                            running_days=day,
                            unit="Observed concentration [µg/m3]",
                            subtitle=paste0(poll_name, " concentration levels. 30-day running average"),
-                           file=file.path(dir_results_plots_poll,
-                                          paste0("plot_",poll,"_observations_",day,"day.png")),
+                           file=file.path(d, paste0("plot_",poll,"_observations_",day,"day.png")),
                            plot_add=ylim(0, NA)))
 
     # Version representing anomaly
@@ -189,8 +188,7 @@ plot_poll <- function(poll, ms.city, mc.city, days=c(30)){
                                                       process_id=="anomaly_gbm_lag1_city_mad"),
                            running_days=day,
                            unit=paste0("Anomaly [Δ µg/m3]"),
-                           file=file.path(dir_results_plots_poll,
-                                          paste0("plot_",poll,"_anomaly_vs_average_",day,"day.png"))))
+                           file=file.path(d, paste0("plot_",poll,"_anomaly_vs_average_",day,"day.png"))))
 
     # Version representing anomaly with lockdown at 0
     # (plot_city_vs_stations(ms.city=ms.city %>% filter(poll==!!poll,
@@ -231,8 +229,7 @@ plot_poll <- function(poll, ms.city, mc.city, days=c(30)){
                                                       process_id=="anomaly_percent_gbm_lag1_city_mad"),
                            running_days=day,
                            unit="Anomaly [%]",
-                           file=file.path(dir_results_plots_poll,
-                                          paste0("plot_",poll,"_anomaly_vs_average_",day,"day.png"))))
+                           file=file.path(d, paste0("plot_",poll,"_anomaly_vs_average_",day,"day.png"))))
 
 
 
@@ -249,8 +246,7 @@ plot_poll <- function(poll, ms.city, mc.city, days=c(30)){
                              mutate(value=value*100),
                            running_days=day,
                            unit="Anomaly [%]",
-                           file=file.path(dir_results_plots_poll,
-                                          paste0("plot_",poll,"_anomaly_vs_counterfactual_",day,"day.png"))))
+                           file=file.path(d, paste0("plot_",poll,"_anomaly_vs_counterfactual_",day,"day.png"))))
   }
 }
 

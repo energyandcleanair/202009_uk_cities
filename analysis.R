@@ -7,14 +7,7 @@ source('./tables.R')
 # Update measurements
 # utils.upload.measurements()
 
-# TODO
-# CREATE "OTHER" CITY
-# BAISSE OTHER VS CITIES
-# AXIS CHART [DONE]
-# DONNEES BRUTES [DONE]
-# CHART OBSERVED [DONE]
-
-date_from <- "2020-03-23"
+date_from <- "2020-03-16"
 date_to <- "2020-05-12"
 source <- "defra"
 
@@ -73,10 +66,10 @@ mc.city <- mc %>%
 export_measurements(mc.city)
 
 # Plots
-plot_poll("no2", ms.city, mc.city)
-plot_poll("pm25", ms.city, mc.city)
-plot_poll("pm10", ms.city, mc.city)
-plot_poll("o3", ms.city, mc.city)
+plot_poll("no2", ms.city, mc.city, date_from=date_from)
+plot_poll("pm25", ms.city, mc.city, date_from=date_from)
+plot_poll("pm10", ms.city, mc.city, date_from=date_from)
+plot_poll("o3", ms.city, mc.city, date_from=date_from)
 
 # Transportation ----------------------------------------------------------
 tc.tomtom <- rcrea::transport.tomtom_congestion(cities=tibble(city=city, country="GB"))
