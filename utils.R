@@ -321,7 +321,15 @@ utils.anomaly_lockdown <- function(m, lockdown_running_day=7,
 
 }
 
-utils.transport.apple <- function(){
+utils.transport.tomtom <- function(city){
+  rcrea::transport.tomtom_congestion(cities=tibble(city=city, country="GB")) %>%
+    mutate(date=lubridate::date(date),
+           region_id=tolower(city)) %>%
+    dplyr::select(region_id, country, date, traffic=diffRatio) %>%
+    mutate(source="tomtom")
+}
+
+utils.transport.apple <- function(city){
   read.csv("data/applemobilitytrends.csv") %>%
     filter(geo_type=="city",
            country=="United Kingdom") %>%
@@ -329,10 +337,15 @@ utils.transport.apple <- function(){
                         names_to="date", names_pattern = "X(.*)") %>%
     mutate(date=lubridate::date(gsub("\\.","-",date)),
            region_id=tolower(region),
-           country="GB")
+           country="GB") %>% filter(region_id %in% tolower(city)) %>%
+    filter(transportation_type=="driving") %>%
+    mutate(date=lubridate::date(date),
+           traffic=value/100-1) %>%
+    dplyr::select(region_id, country, date, traffic) %>%
+    mutate(source="apple")
 }
 
-utils.transport.mapbox <- function(date0="2020-03-23"){
+utils.transport.mapbox <- function(date0="2020-03-23", city){
 
   fs <- Sys.glob("data/mapbox/GB/adm2/total/2020/*/*/data/adm2.csv")
   t <- do.call("rbind",lapply(fs, read.csv)) %>%
@@ -359,6 +372,11 @@ utils.transport.mapbox <- function(date0="2020-03-23"){
     mutate(region_id=tolower(region_id),
            country="GB") %>%
     select(region_code, country, region_id) %>%
-    inner_join(t.scaled)
+    inner_join(t.scaled) %>%
+    mutate(date=lubridate::date(date),
+           traffic=value) %>%
+    filter(region_id %in% tolower(city)) %>%
+    dplyr::select(region_id, country, date, traffic) %>%
+    mutate(source="mapbox")
 }
 

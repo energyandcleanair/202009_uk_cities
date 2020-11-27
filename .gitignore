@@ -1,3 +1,6 @@
+#MAPBOX data (Slowing down Rstudio...)
+data/mapbox/*
+
 # History files
 .Rhistory
 .Rapp.history

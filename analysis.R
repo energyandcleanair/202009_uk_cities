@@ -46,15 +46,16 @@ ms <- utils.get.station.measurements(city, polls, l, use_local=T)
 
 # Export csvs
 export_measurements(mc)
+
 # Plots
 for(poll in polls){
   plot_poll(poll, ms=ms, mc=mc, date_from=date_from)
 }
 
 # Transportation ----------------------------------------------------------
-tc.tomtom <- rcrea::transport.tomtom_congestion(cities=tibble(city=city, country="GB"))
-tc.apple <- utils.transport.apple() %>% filter(region_id %in% tolower(city))
-tc.mapbox <- utils.transport.mapbox(date_from)
+tc.tomtom <- utils.transport.tomtom(city)
+tc.apple <- utils.transport.apple(city)
+tc.mapbox <- utils.transport.mapbox(date0=date_from, city=city)
 
 plot_traffic_poll_tomtom(mc, tc.tomtom, n_day=14)
 plot_traffic_poll_tomtom(mc, tc.tomtom, n_day=30)
@@ -64,6 +65,8 @@ plot_traffic_poll_apple(mc, tc.apple, n_day=30)
 
 plot_traffic_poll_mapbox(mc, tc.mapbox, n_day=14)
 plot_traffic_poll_mapbox(mc, tc.mapbox, n_day=30)
+
+# plot_traffic_poll_apple_tomtom(mc, tc.apple, tc.tomtom, n_day=30)
 
 
 # plot_corr_traffic_poll_tomtom(mc, tc.tomtom, tc.apple, tc.mapbox, date_from=date_from, date_to=date_to)
@@ -90,5 +93,22 @@ table_impact(mc, tc.tomtom, tc.apple, tc.mapbox, date_from = date_from, date_to=
 
 # Questions ---------------------------------------------------------------
 
+# - How many cities recovered their pre-covid levels
+mc %>%
+  filter(process_id=="anomaly_gbm_lag1_city_mad",
+         lubridate::date(date)>=lubridate::date("2020-03-23") - lubridate::days(30),
+         lubridate::date(date)<=lubridate::date("2020-09-30")) %>%
+  rcrea::utils.running_average(30) %>%
+  filter(lubridate::date(date)>=lubridate::date("2020-03-23")) %>%
+  group_by(poll, unit, process_id, region_name) %>%
+  arrange(date) %>%
+  summarise(
+    anomaly_lockdown=first(value),
+    anomaly_last=last(value)) %>%
+  mutate(delta_rebound=anomaly_last-anomaly_lockdown) %>%
+  arrange(poll, delta_rebound) %>%
+  write.csv(file.path("results","data","rebound_end_september.csv"), row.names = F)
+
+# - How many cities went below 10 for PM2.5
 
 

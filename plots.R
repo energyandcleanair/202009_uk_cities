@@ -64,6 +64,7 @@ plot_city_vs_stations <- function(ms, mc, running_days, unit=NULL, file=NULL, pl
 
   if(!is.null(file)){
     ggsave(file, plot=p, width=12, height=10)
+    ggsave(gsub("\\.png$|\\.jpg$","\\.svg",file), plot=p, width=12, height=10)
     write.csv(p$data, file = gsub("\\.png$|\\.jpg$","\\.csv",file), row.names=F)
   }
 
@@ -304,10 +305,7 @@ plot_poll <- function(poll, ms, mc, date_from, days=c(30)){
 
 
 # Traffic -----------------------------------------------------------------
-
-
-
-plot_traffic_poll_tomtom <- function(mc, tc, n_day){
+plot_traffic <- function(mc, tc, n_day){
 
   d.plot <- mc %>%
     mutate(date=lubridate::date(date),
@@ -315,28 +313,26 @@ plot_traffic_poll_tomtom <- function(mc, tc, n_day){
     filter(process_id=="anomaly_percent_gbm_lag1_city_mad",
            poll=="no2") %>%
     dplyr::select(region_id, country, date, no2=value) %>%
-    filter(region_id %in% unique(tolower(tc$city))) %>%
-    full_join(tc %>%
-                mutate(date=lubridate::date(date),
-                       region_id=tolower(city)) %>%
-                dplyr::select(region_id, country, date, traffic=diffRatio),
+    filter(region_id %in% unique(tolower(tc$region_id))) %>%
+    full_join(tc %>% select(region_id, country, date, traffic) %>%
+                filter(date>=lubridate::date("2020-01-01")+lubridate::days(n_day)),
               by=c("region_id","country","date")) %>%
     utils.add_lockdown() %>%
     mutate(movement=lubridate::date(movement),
-           first_measures=lubridate::date(first_measures))%>%
+           first_measures=lubridate::date(first_measures)) %>%
     tidyr::pivot_longer(c(no2, traffic), names_to="indicator")
 
   d.plot.avg <- d.plot %>%
-    rcrea::utils.rolling_average("day", n_day, "value")
+    rcrea::utils.rolling_average("day", n_day, "value", min_values = 1)
 
 
-  plt <- ggplot(d.plot.avg) +
+  ggplot(d.plot.avg) +
     geom_line(aes(date,value,col=indicator)) +
     facet_wrap(~region_id) +
     scale_y_continuous(labels=scales::percent) +
     scale_x_date(
       limits=c(lubridate::date("2020-01-01"),NA),
-      breaks = seq(lubridate::date("2020-01-01"), max(d.plot.avg$date), by="3 month"),
+      breaks = seq(lubridate::date("2020-01-01"), max(d.plot$date), by="3 month"),
       date_minor_breaks =  "1 month",
       labels = scales::date_format("%b")) +
     theme_light() +
@@ -344,7 +340,13 @@ plot_traffic_poll_tomtom <- function(mc, tc, n_day){
                color=rcrea::CREAtheme.pal_crea['Turquoise']) +
     geom_vline(data=d.plot, aes(xintercept=partial_restriction, linetype="Partial restrictions"),
                color=rcrea::CREAtheme.pal_crea['Turquoise']) +
-    scale_linetype_manual(values=c("dashed","dotted"), name=NULL) +
+    scale_linetype_manual(values=c("dashed","dotted"), name=NULL)
+}
+
+
+plot_traffic_poll_tomtom <- function(mc, tc, n_day){
+
+  plt <- plot_traffic(mc, tc, n_day) +
     labs(
       subtitle=paste0("2020 vs 2019 NO2 concentration and traffic congestion levels\n",
                       n_day,"-day running average"),
@@ -352,52 +354,16 @@ plot_traffic_poll_tomtom <- function(mc, tc, n_day){
       y="Year-on-year variation",
       x=NULL)
 
-  ggsave(file.path(dir_results_plots_traffic, paste0("no2.traffic.tomtom.",n_day,"day.png")),
-         plot=plt,
-         width=10,
-         height=8)
+  file <- file.path(dir_results_plots_traffic, paste0("no2.traffic.tomtom.",n_day,"day.png"))
+  ggsave(file, plot=plt, width=10, height=8)
+  ggsave(gsub("\\.png$|\\.jpg$","\\.svg",file), plot=plt, width=10, height=8)
 
   return(plt)
 }
 
 plot_traffic_poll_apple <- function(mc, tc, n_day){
 
-  d.plot <- mc %>%
-    mutate(date=lubridate::date(date),
-           value=value/100) %>%
-    filter(process_id=="anomaly_percent_gbm_lag1_city_mad",
-           poll=="no2") %>%
-    dplyr::select(region_id, country, date, no2=value) %>%
-    filter(region_id %in% unique(tc$region_id)) %>%
-    full_join(tc %>%
-                 filter(transportation_type=="driving") %>%
-                 mutate(date=lubridate::date(date),
-                        traffic=value/100-1) %>%
-                 dplyr::select(region_id, country, date, traffic),
-               by=c("region_id","country","date")) %>%
-    utils.add_lockdown() %>%
-    mutate(movement=lubridate::date(movement),
-           first_measures=lubridate::date(first_measures))%>%
-    tidyr::pivot_longer(c(no2, traffic), names_to="indicator")
-
-  d.plot.avg <- d.plot %>%
-    rcrea::utils.rolling_average("day", n_day, "value")
-
-  (plt <- ggplot(d.plot.avg) +
-    geom_line(aes(date,value,col=indicator)) +
-    facet_wrap(~region_id) +
-    scale_y_continuous(labels=scales::percent) +
-      scale_x_date(
-        limits=c(lubridate::date("2020-01-01"),NA),
-        breaks = seq(lubridate::date("2020-01-01"), max(d.plot.avg$date), by="3 month"),
-        date_minor_breaks =  "1 month",
-        labels = scales::date_format("%b")) +
-    theme_light() +
-    geom_vline(data=d.plot, aes(xintercept=movement, linetype="National lockdown"),
-               color=rcrea::CREAtheme.pal_crea['Turquoise']) +
-    geom_vline(data=d.plot, aes(xintercept=partial_restriction, linetype="Partial restrictions"),
-               color=rcrea::CREAtheme.pal_crea['Turquoise']) +
-    scale_linetype_manual(values=c("dashed","dotted"), name=NULL) +
+  (plt <- plot_traffic(mc, tc, n_day) +
     labs(
       subtitle=paste0("Impact of lockdown on NO2 and traffic levels\n",
                       n_day,"-day running average"),
@@ -406,52 +372,17 @@ plot_traffic_poll_apple <- function(mc, tc, n_day){
       x=NULL))
 
   file <-file.path(dir_results_plots_traffic, paste0("no2.traffic.apple.",n_day,"day.png"))
-  ggsave(file,
-         plot = plt,
-         width=10,
-         height=8)
+
+  ggsave(file, plot=plt, width=10, height=8)
+  ggsave(gsub("\\.png$|\\.jpg$","\\.svg",file), plot=plt, width=10, height=8)
   write.csv(plt$data, file = gsub("\\.png$|\\.jpg$","\\.csv",file), row.names=F)
   return(plt)
 }
 
 plot_traffic_poll_mapbox <- function(mc, tc, n_day){
 
-  d.plot <- mc %>%
-    mutate(date=lubridate::date(date),
-           value=value/100) %>%
-    filter(process_id=="anomaly_percent_gbm_lag1_city_mad",
-           poll=="no2") %>%
-    dplyr::select(region_id, country, date, no2=value) %>%
-    filter(region_id %in% unique(tc$region_id)) %>%
-    full_join(tc %>%
-                mutate(date=lubridate::date(date),
-                       traffic=value) %>%
-                filter(region_id %in% unique(mc$region_id)) %>%
-                dplyr::select(region_id, country, date, traffic),
-              by=c("region_id","country","date")) %>%
-    utils.add_lockdown() %>%
-    mutate(movement=lubridate::date(movement),
-           first_measures=lubridate::date(first_measures))%>%
-    tidyr::pivot_longer(c(no2, traffic), names_to="indicator")
 
-  d.plot.avg <- d.plot %>%
-    rcrea::utils.rolling_average("day", n_day, "value", min_values = n_day*2/3)
-
-  (plt <- ggplot(d.plot.avg) +
-      geom_line(aes(date,value,col=indicator)) +
-      facet_wrap(~region_id) +
-      scale_y_continuous(labels=scales::percent) +
-      scale_x_date(
-        limits=c(lubridate::date("2020-01-01"),NA),
-        breaks = seq(lubridate::date("2020-01-01"), max(d.plot.avg$date), by="3 month"),
-        date_minor_breaks =  "1 month",
-        labels = scales::date_format("%b")) +
-      theme_light() +
-      geom_vline(data=d.plot, aes(xintercept=movement, linetype="National lockdown"),
-                 color=rcrea::CREAtheme.pal_crea['Turquoise']) +
-      geom_vline(data=d.plot, aes(xintercept=partial_restriction, linetype="Partial restrictions"),
-                 color=rcrea::CREAtheme.pal_crea['Turquoise']) +
-      scale_linetype_manual(values=c("dashed","dotted"), name=NULL) +
+  (plt <-  plt <- plot_traffic(mc, tc, n_day) +
       labs(
         subtitle=paste0("Impact of lockdown on NO2 and traffic levels\n",
                         n_day,"-day running average"),
@@ -569,6 +500,7 @@ plot_anomaly_average <- function(m, process_anomaly="anomaly_lockdown", date_fro
     geom_hline(yintercept=0))
   file <- file.path(dir_results_plots_poll, filename)
   ggsave(file, plot = plt, width=10, height=8)
+  ggsave(gsub("\\.png$|\\.jpg$","\\.svg",file), plot = plt, width=10, height=8)
   write.csv(plt$data, file = gsub("\\.png$|\\.jpg$","\\.csv",file), row.names=F)
   plt
 }
