@@ -18,7 +18,7 @@ table_impact <- function(mc, tc.tomtom, tc.apple, tc.mapbox, date_from, date_to,
   tc.equivalent.mapbox <- tc.mapbox %>%
     mutate(process_id="relative_anomaly",
            poll="traffic_mapbox",
-           value=value) %>%
+           value=traffic) %>%
     dplyr::select(region_id, process_id, date, poll, value)
 
   t.impact <- mc %>%
@@ -66,7 +66,7 @@ table_impact <- function(mc, tc.tomtom, tc.apple, tc.mapbox, date_from, date_to,
     mutate(
       avg_relative_anomaly=ifelse(is.na(avg_relative_anomaly), avg_absolute_anomaly / avg_predicted, avg_relative_anomaly)
     ) %>%
-    tidyr::pivot_wider(names_from=c(poll), values_from=c(avg_relative_anomaly, avg_absolute_anomaly, avg_predicted, avg_predicted)) %>%
+    tidyr::pivot_wider(names_from=c(poll), values_from=c(avg_relative_anomaly, avg_absolute_anomaly, avg_observed, avg_predicted)) %>%
     arrange(avg_relative_anomaly_no2)
 
   if(save){
