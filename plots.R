@@ -64,7 +64,7 @@ plot_city_vs_stations <- function(ms, mc, running_days, unit=NULL, file=NULL, pl
 
   if(!is.null(file)){
     ggsave(file, plot=p, width=12, height=10)
-    write.csv2(p$data, file = gsub("\\.png$","\\.csv",file))
+    write.csv(p$data, file = gsub("\\.png$|\\.jpg$","\\.csv",file), row.names=F)
   }
 
   return(p)
@@ -160,7 +160,7 @@ plot_predicted_vs_observed <- function(mc, poll, date_from, date_to){
          plt,
          width=8, height=8)
 
-  write.csv2(plt$data, file = paste0(filename_base, ".csv"))
+  write.csv(plt$data, file = paste0(filename_base, ".csv"), row.names=F)
   return(plt)
 
 }
@@ -405,11 +405,12 @@ plot_traffic_poll_apple <- function(mc, tc, n_day){
       y="Year-on-year variation",
       x=NULL))
 
-  ggsave(file.path(dir_results_plots_traffic, paste0("no2.traffic.apple.",n_day,"day.png")),
+  file <-file.path(dir_results_plots_traffic, paste0("no2.traffic.apple.",n_day,"day.png"))
+  ggsave(file,
          plot = plt,
          width=10,
          height=8)
-
+  write.csv(plt$data, file = gsub("\\.png$|\\.jpg$","\\.csv",file), row.names=F)
   return(plt)
 }
 
@@ -458,10 +459,13 @@ plot_traffic_poll_mapbox <- function(mc, tc, n_day){
         y="Impact of lockdow",
         x=NULL))
 
-  ggsave(file.path(dir_results_plots_traffic, paste0("no2.traffic.mapbox.",n_day,"day.png")),
+  file <- file.path(dir_results_plots_traffic, paste0("no2.traffic.mapbox.",n_day,"day.png"))
+  ggsave(file,
          plot = plt,
          width=10,
          height=8)
+  write.csv(plt$data, file = gsub("\\.png$|\\.jpg$","\\.csv",file), row.names=F)
+
 
   return(plt)
 }
@@ -563,10 +567,10 @@ plot_anomaly_average <- function(m, process_anomaly="anomaly_lockdown", date_fro
           y="µg/m3",
           x=NULL) +
     geom_hline(yintercept=0))
-
-  ggsave(file.path(dir_results_plots_poll, filename), plot = plt, width=10, height=8)
+  file <- file.path(dir_results_plots_poll, filename)
+  ggsave(file, plot = plt, width=10, height=8)
+  write.csv(plt$data, file = gsub("\\.png$|\\.jpg$","\\.csv",file), row.names=F)
   plt
-
 }
 
 plot_anomaly_min <- function(m, process_anomaly="anomaly_lockdown", date_from="2020-03-23", date_to="2020-12-31", filename=paste("anomaly_average.jpg")){
@@ -581,7 +585,10 @@ plot_anomaly_min <- function(m, process_anomaly="anomaly_lockdown", date_from="2
      theme_light() +
      geom_hline(yintercept=0))
 
-  ggsave(file.path(dir_results_plots_poll, filename), plot = plt, width=10, height=6)
+  file <- file.path(dir_results_plots_poll, filename)
+  ggsave(file, plot = plt, width=10, height=6)
+  write.csv(plt$data, file = gsub("\\.png$|\\.jpg$","\\.csv",file), row.names=F)
+
   plt
 
 }

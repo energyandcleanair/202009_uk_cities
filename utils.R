@@ -26,14 +26,13 @@ utils.get.city.measurements <- function(city, polls, use_local=T){
   return(mc)
 }
 
-utils.get.station.measurements <- function(city, polls, use_local=T){
+utils.get.station.measurements <- function(city, polls, l, use_local=T){
   file <- file.path("data","m.station.RDS")
   if(!use_local || !file.exists(file)){
 
     ms <- rcrea::measurements(country=country, source=source, poll=polls,
                               date_from="2020-01-01", # Too time consuming otherwise
                               with_metadata = T, deweathered=NULL, aggregate_level="station")
-    l <- rcrea::locations(country=country, city=city, source=source, with_meta = T)
 
     ms <- ms %>%
       left_join(l %>%

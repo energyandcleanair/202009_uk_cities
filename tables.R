@@ -1,7 +1,7 @@
 table_impact <- function(mc.city, tc.tomtom, tc.apple, tc.mapbox, date_from, date_to, save=T){
 
   # width <- ifelse(is.null(n_day), 1, n_day)
-
+  width = 30
 
   tc.equivalent.tomtom <- tc.tomtom %>%
     mutate(process_id="anomaly_lockdown_relative",
@@ -48,7 +48,7 @@ table_impact <- function(mc.city, tc.tomtom, tc.apple, tc.mapbox, date_from, dat
            date<=lubridate::date(date_to)) %>%
     group_by(region_id, poll, process_id) %>%
     arrange(date) %>%
-    mutate(value_rolled=value, zoo::rollapply(value, width, mean,  na.rm=T, align='right',fill=NA)) %>%
+    mutate(value_rolled=zoo::rollapply(value, width, mean,  na.rm=T, align='right',fill=NA)) %>%
     dplyr::summarise(min=min(value_rolled, na.rm=T),
                      avg=mean(value, na.rm=T)) %>%
     tidyr::pivot_wider(names_from=c(process_id,poll), values_from=c(min, avg)) %>%
