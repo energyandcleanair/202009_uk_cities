@@ -1,6 +1,7 @@
-table_impact <- function(mc.city, tc.tomtom, tc.apple, tc.mapbox, n_day, date_from, date_to, save=T){
+table_impact <- function(mc.city, tc.tomtom, tc.apple, tc.mapbox, date_from, date_to, save=T){
 
-  width <- ifelse(is.null(n_day), 1, n_day)
+  # width <- ifelse(is.null(n_day), 1, n_day)
+
 
   tc.equivalent.tomtom <- tc.tomtom %>%
     mutate(process_id="anomaly_lockdown_relative",
@@ -23,9 +24,17 @@ table_impact <- function(mc.city, tc.tomtom, tc.apple, tc.mapbox, n_day, date_fr
 
 
   t.impact <- mc.city %>%
-    filter(date>=lubridate::date(date_from)-ifelse(!is.null(n_day), n_day, 0),
+    filter(date>=lubridate::date(date_from), #-ifelse(!is.null(n_day), n_day, 0),
            date<=lubridate::date(date_to)) %>%
-    rbind(utils.anomaly_lockdown(., n_day)) %>%
+
+    # Old version: take n_day before lockdown as reference for anomaly
+    # rbind(utils.anomaly_lockdown(., n_day)) %>%
+
+    # New version: simply consider anomaly
+    mutate(process_id=recode(process_id,
+                      "anomaly_vs_counterfactual_gbm_lag1_city"="anomaly_lockdown_relative",
+                      "anomaly_gbm_lag1_city_mad"="anomaly_lockdown")) %>%
+
 
     bind_rows(tc.equivalent.tomtom) %>%
     bind_rows(tc.equivalent.apple) %>%
@@ -46,7 +55,8 @@ table_impact <- function(mc.city, tc.tomtom, tc.apple, tc.mapbox, n_day, date_fr
     arrange(avg_relative_no2)
 
   if(save){
-    filename <- paste0("lockdown_impact_",n_day,"day_",
+    filename <- paste0("lockdown_impact_",
+                       # n_day,"day_",
                        gsub("-","",date_from),"_",
                        gsub("-","",date_to),".csv")
     write.csv(t.impact, file.path("results","data", filename),
