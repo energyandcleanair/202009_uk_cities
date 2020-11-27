@@ -1,3 +1,56 @@
+utils.get.city.measurements <- function(city, polls, use_local=T){
+  file <- file.path("data","m.city.RDS")
+  if(!use_local || !file.exists(file)){
+
+    mc <- rcrea::measurements(country=country, source=source, poll=polls, with_metadata = T, deweathered=NULL, aggregate_level="city")
+
+    # Combining others into "Other"
+    renaming_list = setNames(as.list(tolower(city)), tolower(city))
+    mc <- mc %>%
+      mutate(region_id=recode(region_id, !!!renaming_list, .default="others"),
+             region_name=tools::toTitleCase(region_id)) %>%
+      group_by(date, poll, unit, region_id, process_id, source, timezone, region_name, country) %>%
+      summarise(value=mean(value, na.rm=T))
+
+    mc <- mc %>%
+      mutate(city=region_id,
+             level="city") %>%
+      ungroup()
+
+    saveRDS(mc, file)
+
+  }else{
+    mc <- readRDS(file)
+  }
+
+  return(mc)
+}
+
+utils.get.station.measurements <- function(city, polls, use_local=T){
+  file <- file.path("data","m.station.RDS")
+  if(!use_local || !file.exists(file)){
+
+    ms <- rcrea::measurements(country=country, source=source, poll=polls,
+                              date_from="2020-01-01", # Too time consuming otherwise
+                              with_metadata = T, deweathered=NULL, aggregate_level="station")
+    l <- rcrea::locations(country=country, city=city, source=source, with_meta = T)
+
+    ms <- ms %>%
+      left_join(l %>%
+                  mutate(id=tolower(id)) %>%
+                  dplyr::select(id, city, type),
+                by=c("region_id"="id")) %>%
+      mutate(city=recode(tolower(city), !!!renaming_list, .default="other"),
+             type=tidyr::replace_na(type, "Unknown"),
+             level=paste0("station-", type))
+    saveRDS(ms, file)
+  }else{
+    ms <- readRDS(file)
+  }
+
+  return(ms)
+}
+
 utils.read.stations <- function(){
   require(rdefra)
   ukair_catalogue(
@@ -24,8 +77,8 @@ utils.upload.stations <- function(){
       timezone="Europe/London"
     ) %>%
     dplyr::rename(id=UK.AIR.ID,
-           name=Site.Name,
-           type=Environment.Type)
+                  name=Site.Name,
+                  type=Environment.Type)
 
   s.filtered.geocoded <- s.filtered %>%
     filter(!is.na(Latitude))
@@ -46,7 +99,7 @@ utils.upload.stations <- function(){
                        "GLASGOW"="Glasgow",
                        "Royal Borough of Greenwich"="Greenwich",
                        "City of Nottingham"="Nottingham"
-                       ))
+    ))
 
   s.result$city[stringr::str_detect(s.result$city,"London Borough of *")] <- "London"
   s.result$city[stringr::str_detect(s.result$name, "^London")] <- "London"
@@ -255,7 +308,7 @@ utils.anomaly_lockdown <- function(m, lockdown_running_day=7,
     return(p)
   }
 
-   m %>%
+  m %>%
     filter(process_id %in% c(process_anomaly, process_observation)) %>%
     mutate(process_id=purrr::map_chr(process_id, ren),
            unit=gsub("Δ ","",unit)) %>%
@@ -272,7 +325,7 @@ utils.anomaly_lockdown <- function(m, lockdown_running_day=7,
 utils.transport.apple <- function(){
   read.csv("data/applemobilitytrends.csv") %>%
     filter(geo_type=="city",
-               country=="United Kingdom") %>%
+           country=="United Kingdom") %>%
     tidyr::pivot_longer(cols=!c(geo_type, region, transportation_type, alternative_name, sub.region, country),
                         names_to="date", names_pattern = "X(.*)") %>%
     mutate(date=lubridate::date(gsub("\\.","-",date)),
