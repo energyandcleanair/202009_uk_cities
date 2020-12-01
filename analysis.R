@@ -66,6 +66,8 @@ plot_traffic_poll_apple(mc, tc.apple, n_day=30)
 plot_traffic_poll_mapbox(mc, tc.mapbox, n_day=14)
 plot_traffic_poll_mapbox(mc, tc.mapbox, n_day=30)
 
+plot_traffic_poll_tomtom_apple(mc, tc.tomtom, tc.apple, n_day=30)
+
 # plot_traffic_poll_apple_tomtom(mc, tc.apple, tc.tomtom, n_day=30)
 
 

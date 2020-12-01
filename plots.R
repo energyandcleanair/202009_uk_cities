@@ -322,15 +322,22 @@ plot_traffic <- function(mc, tc, n_day){
            value=value/100) %>%
     filter(process_id=="anomaly_percent_gbm_lag1_city_mad",
            poll=="no2") %>%
-    dplyr::select(region_id, country, date, no2=value) %>%
+    dplyr::select(region_id, country, date, value) %>%
     filter(region_id %in% unique(tolower(tc$region_id))) %>%
-    full_join(tc %>% select(region_id, country, date, traffic) %>%
-                filter(date>=lubridate::date("2020-01-01")+lubridate::days(n_day)),
-              by=c("region_id","country","date")) %>%
+    mutate(indicator="no2") %>%
+    bind_rows(.,
+              tc %>%
+                mutate(indicator=paste0("traffic - ", source)) %>%
+                select(region_id, country, date, value=traffic, indicator)) %>%
+    #
+    #
+    # full_join(tc %>% select(region_id, country, date, traffic, source) %>%
+    #             filter(date>=lubridate::date("2020-01-01")+lubridate::days(n_day)),
+    #           by=c("region_id","country","date")) %>%
     utils.add_lockdown() %>%
     mutate(movement=lubridate::date(movement),
-           first_measures=lubridate::date(first_measures)) %>%
-    tidyr::pivot_longer(c(no2, traffic), names_to="indicator")
+           first_measures=lubridate::date(first_measures))
+    # tidyr::pivot_longer(c(no2, traffic), names_to="indicator")
 
   d.plot.avg <- d.plot %>%
     rcrea::utils.rolling_average("day", n_day, "value", min_values = 1)
@@ -401,6 +408,29 @@ plot_traffic_poll_mapbox <- function(mc, tc, n_day){
         x=NULL))
 
   file <- file.path(dir_results_plots_traffic, paste0("no2.traffic.mapbox.",n_day,"day.png"))
+  ggsave(file,
+         plot = plt,
+         width=10,
+         height=8)
+  write.csv(plt$data, file = gsub("\\.png$|\\.jpg$","\\.csv",file), row.names=F)
+
+
+  return(plt)
+}
+
+plot_traffic_poll_tomtom_apple <- function(mc, tc.tomtom, tc.apple, n_day){
+
+  tc <- bind_rows(tc.tomtom, tc.apple)
+
+  (plt <-  plt <- plot_traffic(mc, tc, n_day) +
+     labs(
+       subtitle=paste0("Impact of lockdown on NO2 and traffic levels\n",
+                       n_day,"-day running average"),
+       caption="Source: CREA based on DEFRA, Apple Mobility and TomTom. Chance in NO2 concentrations are weather-corrected values.",
+       y="Impact of lockdow",
+       x=NULL))
+
+  file <- file.path(dir_results_plots_traffic, paste0("no2.traffic.mapbox.apple.",n_day,"day.png"))
   ggsave(file,
          plot = plt,
          width=10,
