@@ -340,7 +340,7 @@ plot_traffic <- function(mc, tc, n_day){
     # tidyr::pivot_longer(c(no2, traffic), names_to="indicator")
 
   d.plot.avg <- d.plot %>%
-    rcrea::utils.rolling_average("day", n_day, "value", min_values = 1)
+    rcrea::utils.rolling_average("day", n_day, "value", min_values = n_day/3)
 
 
   ggplot(d.plot.avg) +
