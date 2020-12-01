@@ -183,7 +183,7 @@ plot_poll <- function(poll, ms, mc, date_from, days=c(30)){
                       "o3"="O3",
                       .default = poll)
 
-  d <- file.path(dir_results_plots_poll,gsub("-","",date_from))
+  d <- file.path(dir_results_plots_poll)
   dir.create(d, showWarnings = F, recursive = T)
 
   for(day in days){
@@ -204,6 +204,16 @@ plot_poll <- function(poll, ms, mc, date_from, days=c(30)){
                            running_days=day,
                            unit="Weather-corrected concentration [µg/m3]",
                            file=file.path(d, paste0("plot_",poll,"_city_deweathered_",day,"day.png")),
+                           plot_add=ylim(0, NA)))
+
+    print("2bis")
+    (plot_city_vs_stations(ms=NULL,
+                           mc=mc %>% filter(poll==!!poll,
+                                            process_id=="anomaly_offsetted_gbm_lag1_city_mad",
+                                            tolower(region_id) != "others"),
+                           running_days=day,
+                           unit="Weather-corrected concentration [µg/m3]",
+                           file=file.path(d, paste0("plot_",poll,"_city_deweathered_wo_others_",day,"day.png")),
                            plot_add=ylim(0, NA)))
 
     print("3")

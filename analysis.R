@@ -9,7 +9,7 @@ source('./tables.R')
 date_from <- "2020-03-23"
 date_to <- "2020-05-12"
 source <- "defra"
-polls <- c("no2","pm25")
+polls <- c("no2","pm25","o3","pm10")
 
 
 
@@ -80,9 +80,9 @@ for(poll in polls){
 }
 
 
-plot_anomaly_average(mc, process_anomaly = "anomaly_gbm_lag1_city_mad", date_from=date_from, date_to=date_to, filename=paste0("plot_anomaly_lockdown.jpg"))
+plot_anomaly_average(mc %>% filter(tolower(region_id)!="others"), process_anomaly = "anomaly_gbm_lag1_city_mad", date_from=date_from, date_to=date_to, filename=paste0("plot_anomaly_lockdown.jpg"))
 
-# Other tables ------------------------------------------------------------
+ # Other tables ------------------------------------------------------------
 table_impact(mc, tc.tomtom, tc.apple, tc.mapbox, date_from = date_from, date_to=date_to)
 # table_impact(mc, tc.tomtom, tc.apple, tc.mapbox, n_day=7, date_from = date_from, date_to=date_to)
 # table_impact(mc, tc.tomtom, tc.apple, tc.mapbox, n_day=14, date_from = date_from, date_to=date_to)
