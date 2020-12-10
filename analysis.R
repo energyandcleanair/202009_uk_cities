@@ -111,6 +111,28 @@ mc %>%
   arrange(poll, delta_rebound) %>%
   write.csv(file.path("results","data","rebound_end_september.csv"), row.names = F)
 
+mc %>%
+  filter(process_id %in% c("anomaly_offsetted_gbm_lag1_city_mad","anomaly_gbm_lag1_city_mad"),
+         lubridate::date(date)>=lubridate::date("2020-03-23") - lubridate::days(30),
+         lubridate::date(date)<=lubridate::date("2020-09-30")) %>%
+  select(-c(unit)) %>%
+  rcrea::utils.running_average(30) %>%
+  filter(lubridate::date(date)>=lubridate::date("2020-03-23")) %>%
+  tidyr::pivot_wider(names_from="process_id", values_from="value") %>%
+  rename(anomaly=anomaly_gbm_lag1_city_mad, offsetted=anomaly_offsetted_gbm_lag1_city_mad) %>%
+  group_by(poll, region_name) %>%
+  arrange(date) %>%
+  summarise(
+    anomaly_lockdown=first(anomaly),
+    offsetted_lockdown=first(offsetted),
+    anomaly_last=last(anomaly),
+    offsetted_last=last(offsetted)) %>%
+  mutate(delta_rebound=anomaly_last-anomaly_lockdown,
+         delta_rebound_relative=(anomaly_last-anomaly_lockdown)/offsetted_lockdown) %>%
+  arrange(poll, desc(delta_rebound)) %>%
+  write.csv(file.path("results","data","rebound_end_september_with_relative.csv"), row.names = F)
+
+
 # - How many cities went below 10 for PM2.5
 
 
